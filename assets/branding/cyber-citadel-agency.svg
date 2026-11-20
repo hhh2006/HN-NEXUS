@@ -1,0 +1,18 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" role="img" aria-labelledby="t d">
+  <title id="t">CYBER CITADEL AGENCY Emblem</title>
+  <desc id="d">HN // CIT secondary identity mark</desc>
+  <defs>
+    <linearGradient id="cg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#22d3ee"/><stop offset="100%" stop-color="#a78bfa"/>
+    </linearGradient>
+    <filter id="cglo" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="640" height="360" rx="28" fill="#0b1220"/>
+  <g transform="translate(320,150)" filter="url(#cglo)" fill="none" stroke="url(#cg)" stroke-width="3">
+    <path d="M0 -90 L70 -55 L70 20 L0 55 L-70 20 L-70 -55 Z"/>
+    <path d="M0 -60 L45 -38 L45 10 L0 32 L-45 10 L-45 -38 Z" stroke="#22d3ee" opacity="0.6"/>
+    <path d="M-18 -20 L-18 20 M18 -20 L18 20 M-18 0 L18 0 M-18 -20 L18 -20 M-18 20 L18 20" stroke="#e6f7ff" stroke-width="4" stroke-linecap="round"/>
+  </g>
+  <text x="320" y="250" text-anchor="middle" font-family="monospace" font-size="34" font-weight="700" fill="#eef4ff" letter-spacing="4">CYBER CITADEL AGENCY</text>
+  <text x="320" y="285" text-anchor="middle" font-family="monospace" font-size="16" fill="#22d3ee" letter-spacing="6">HN // CIT  ·  ENGINEERED BY HN</text>
+</svg>

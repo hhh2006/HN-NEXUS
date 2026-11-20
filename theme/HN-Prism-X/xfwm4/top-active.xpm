@@ -1,0 +1,7 @@
+/* XPM */
+static char * top_active_xpm[] = {
+"24 2 1 1",
+"  c #654a9a",
+"                        ",
+"                        ",
+};

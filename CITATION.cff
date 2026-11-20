@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: "If you use or adapt HN NEXUS, please cite this project."
+title: "HN NEXUS"
+abstract: "HN // CIT Command Center — a cinematic, context-aware ZSH command environment with a responsive terminal HUD, Prism visual profiles, local operator utilities, and recovery-aware setup for Kali Linux."
+authors:
+  - family-names: "Al-Nasiri"
+    given-names: "Hani Khaled Nasser"
+    affiliation: "Al-Razi University"
+version: "1.0.0"
+date-released: "2026-11-21"
+repository-code: "https://github.com/hhh2006/HN-NEXUS"
+url: "https://hhh2006.github.io/HN-NEXUS/"
+license: MIT
+keywords:
+  - zsh
+  - kali-linux
+  - terminal
+  - command-line
+  - cybersecurity
+  - developer-tools

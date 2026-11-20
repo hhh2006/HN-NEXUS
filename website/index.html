@@ -1,0 +1,334 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#050810">
+  <meta name="description" content="HN NEXUS — a cinematic, context-aware ZSH command environment by Hani Khaled Nasser Al-Nasiri. HN // CIT · CYBER CITADEL AGENCY · ENGINEERED BY HN.">
+  <meta name="author" content="Hani Khaled Nasser Al-Nasiri">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://hhh2006.github.io/HN-NEXUS/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="HN NEXUS — HN // CIT Command Center">
+  <meta property="og:description" content="A cinematic, recovery-aware ZSH command environment engineered for control and designed for precision.">
+  <meta property="og:image" content="https://hhh2006.github.io/HN-NEXUS/assets/og-cover.svg">
+  <meta property="og:url" content="https://hhh2006.github.io/HN-NEXUS/">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>HN NEXUS — HN // CIT Command Center</title>
+  <link rel="icon" href="assets/hn-nexus-mark.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <canvas id="fx-canvas" class="fx-canvas" aria-hidden="true"></canvas>
+  <div class="fx-grid" aria-hidden="true"></div>
+  <div class="aurora aurora-a" aria-hidden="true"></div>
+  <div class="aurora aurora-b" aria-hidden="true"></div>
+  <div class="aurora aurora-c" aria-hidden="true"></div>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="HN NEXUS home">
+      <span class="brand-mark"><img src="assets/hn-nexus-mark.svg" alt="" width="34" height="34"></span>
+      <span class="brand-text"><strong>HN NEXUS</strong><small>HN // CIT · COMMAND CENTER</small></span>
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+    <nav id="site-nav" class="site-nav" aria-label="Primary">
+      <a href="#capabilities">Capabilities</a>
+      <a href="#experience">Experience</a>
+      <a href="#architecture">Architecture</a>
+      <a href="#docs">Docs</a>
+      <a href="#install">Install</a>
+      <a class="nav-cta" href="https://github.com/hhh2006/HN-NEXUS" target="_blank" rel="noopener">GitHub ↗</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section id="top" class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <div class="status-pill reveal"><i></i> HN // CIT · CYBER CITADEL AGENCY · PACK v1.0.0 · BASELINE 4.4.2</div>
+          <p class="overline reveal delay-1">ENGINEERED FOR CONTROL. DESIGNED FOR PRECISION.</p>
+          <h1 class="reveal delay-1">HN NEXUS<br><em>Command Center</em></h1>
+          <p class="hero-lead reveal delay-2">A cinematic, context-aware ZSH command environment for Kali Linux — combining a responsive three-row HUD, visual profiles, on-demand operator utilities, and recovery-aware setup under one unified identity.</p>
+          <p class="hero-sub reveal delay-2">Local-first. Explicitly invoked. Transparent in behavior and limitations. Crafted by <strong>Hani Khaled Nasser Al-Nasiri</strong> — Cybersecurity Student, Al-Razi University.</p>
+          <div class="hero-actions reveal delay-3">
+            <a class="button button-primary" href="#install"><span>Deploy the System ↗</span></a>
+            <a class="button button-ghost" href="docs/COMMAND-REFERENCE.html">Explore Commands</a>
+            <a class="button button-ghost" href="https://github.com/hhh2006/HN-NEXUS" target="_blank" rel="noopener">View Source</a>
+          </div>
+          <div class="hero-proof reveal delay-3" aria-label="Key principles">
+            <span><b>01</b> CONTEXT-AWARE HUD</span>
+            <span><b>02</b> NATIVE-FIRST</span>
+            <span><b>03</b> RECOVERY-AWARE</span>
+            <span><b>04</b> NO BACKGROUND AGENT</span>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal delay-2" aria-label="Cinematic command center preview">
+          <div class="orb orb-1" aria-hidden="true"></div>
+          <div class="orb orb-2" aria-hidden="true"></div>
+          <div class="orb orb-3" aria-hidden="true"></div>
+          <div class="emblem" aria-hidden="true"><strong>HN</strong><small>// CIT</small></div>
+          <div class="float-chip chip-a"><i></i>SESSION READY</div>
+          <div class="float-chip chip-b">ZSH · PRISM · KALI</div>
+          <div class="float-chip chip-c">LOCAL HEURISTICS</div>
+
+          <div class="terminal" role="img" aria-label="Illustrative terminal preview mockup">
+            <div class="t-bar">
+              <div class="traffic" aria-hidden="true"><i></i><i></i><i></i></div>
+              <span>HN-NEXUS · OPERATOR SESSION (illustrative mockup)</span>
+              <b>● LIVE HUD</b>
+            </div>
+            <div class="t-body">
+              <div class="t-line t-dim">╭─( <span class="t-cyan">◈ HN</span> ⬡ CIT )──────────────────────────╮</div>
+              <div class="t-line">│ <span class="t-green">● kali@operator</span> <span class="t-cyan">⌂ ~/security-lab</span> <span class="t-violet">⑂ main</span></div>
+              <div class="t-line t-dim">╰─ <span class="t-green">◈ READY</span> <span class="t-cyan">❯</span> <span class="cursor"></span></div>
+              <div class="t-cmd"><span>$</span>hnstatus</div>
+              <div class="t-out">HN NEXUS · context/session snapshot (read-only)</div>
+              <div class="t-cmd"><span>$</span>hnsuggest</div>
+              <div class="t-out t-cyan">◆ Git workspace detected</div>
+              <div class="t-out">↳ git status · git log --oneline · hnanalyze &lt;file&gt;</div>
+              <div class="t-cmd"><span>$</span>hnexplain "Permission denied"</div>
+              <div class="t-out t-amber">Heuristic guidance ready · no command executed</div>
+              <div class="t-cmd"><span>$</span>hnstyle royal</div>
+              <div class="t-out t-green">Visual profile pinned for this session</div>
+            </div>
+            <div class="t-foot"><span>USER CONTROLLED</span><span>RECOVERY-AWARE</span><span>CYBER CITADEL</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="ticker" aria-label="Project principles">
+      <div class="ticker-track">
+        <span>CONTEXT-AWARE <b>✦</b> NATIVE-FIRST <b>✦</b> USER-CONTROLLED <b>✦</b> RECOVERY-AWARE <b>✦</b> LOCAL HEURISTICS <b>✦</b> CINEMATIC HUD <b>✦</b> HN // CIT <b>✦</b> ENGINEERED BY HN <b>✦</b> </span>
+        <span aria-hidden="true">CONTEXT-AWARE <b>✦</b> NATIVE-FIRST <b>✦</b> USER-CONTROLLED <b>✦</b> RECOVERY-AWARE <b>✦</b> LOCAL HEURISTICS <b>✦</b> CINEMATIC HUD <b>✦</b> HN // CIT <b>✦</b> ENGINEERED BY HN <b>✦</b> </span>
+      </div>
+    </div>
+
+    <section id="capabilities" class="section">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">01 / Capabilities</div>
+            <h2>Signal, structure,<br><em>and speed.</em></h2>
+          </div>
+          <p>HN NEXUS enhances the interactive terminal with a responsive HUD, practical utilities, and clear guidance — while preserving native command behavior and keeping every action user-invoked.</p>
+        </div>
+
+        <div class="grid cards-3">
+          <article class="card reveal" data-tilt>
+            <div class="icon">⌘</div>
+            <div class="kicker">HUD / PROMPT</div>
+            <h3>Three-row responsive HUD</h3>
+            <p>An event-driven ZSH prompt with identity, context, and status rows that adapts to terminal width and session state.</p>
+            <div class="meta"><span class="pill">precmd/preexec</span><span class="pill">vcs_info</span><span class="pill">width-aware</span></div>
+          </article>
+          <article class="card reveal delay-1" data-tilt>
+            <div class="icon">◈</div>
+            <div class="kicker">VISUAL PROFILES</div>
+            <h3>Prism palettes & glyphs</h3>
+            <p>Automatic rotation and pinnable profiles via <code>hnstyle</code>, with Nerd Font detection and readable fallbacks.</p>
+            <div class="meta"><span class="pill">15 profiles</span><span class="pill">hnstyle</span><span class="pill">fallback-safe</span></div>
+          </article>
+          <article class="card reveal delay-2" data-tilt>
+            <div class="icon">⌕</div>
+            <div class="kicker">CONTEXT ASSIST</div>
+            <h3>Advisory local intelligence</h3>
+            <p><code>hnsuggest</code>, <code>hnhistory-search</code>, <code>hnexplain</code>, and <code>hnwhy</code> provide heuristic guidance — never auto-executed.</p>
+            <div class="meta"><span class="pill">no AI claims</span><span class="pill">read-only</span><span class="pill">local</span></div>
+          </article>
+          <article class="card reveal" data-tilt>
+            <div class="icon">▤</div>
+            <div class="kicker">OPERATIONS</div>
+            <h3>On-demand operator utilities</h3>
+            <p>Inspect files, logs, processes, services, containers, and listening sockets with explicit commands and clear scope.</p>
+            <div class="meta"><span class="pill">hnops</span><span class="pill">hnports</span><span class="pill">hnreport</span></div>
+          </article>
+          <article class="card reveal delay-1" data-tilt>
+            <div class="icon">≋</div>
+            <div class="kicker">OUTPUT TRIAGE</div>
+            <h3>Analyze supplied text safely</h3>
+            <p><code>hnoutput</code>, <code>hnnet</code>, and <code>hnanalyze</code> classify text you provide — no scanning, capture, or connections.</p>
+            <div class="meta"><span class="pill">heuristic</span><span class="pill">passive</span><span class="pill">file/stdin</span></div>
+          </article>
+          <article class="card reveal delay-2" data-tilt>
+            <div class="icon">⛨</div>
+            <div class="kicker">RECOVERY</div>
+            <h3>Backup & rollback discipline</h3>
+            <p>Guided setup, timestamped backups, verification helpers, and rollback paths designed to reduce installation risk.</p>
+            <div class="meta"><span class="pill">setup.sh</span><span class="pill">rollback</span><span class="pill">verify</span></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience" class="section">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">02 / Experience</div>
+            <h2>Familiar commands,<br><em>refined presentation.</em></h2>
+          </div>
+          <p>Interactive wrappers enhance readability in the terminal while preserving native behavior for pipes, redirections, and scripting contexts. Bypass anytime with <code>command &lt;name&gt;</code>.</p>
+        </div>
+
+        <div class="showcase">
+          <div class="panel reveal" data-tilt>
+            <div class="panel-head"><span>ILLUSTRATIVE PREVIEW — NOT A REAL SCREENSHOT</span><span>SVG MOCKUP</span></div>
+            <div class="panel-body">
+              <span class="mock-label">HUD / TERMINAL MOCKUP</span>
+              <img src="assets/terminal-mockup.svg" alt="Illustrative SVG mockup of the HN NEXUS three-row HUD and example commands">
+              <p class="mock-note">This is a high-quality SVG preview for presentation. Add genuine, privacy-scrubbed Kali screenshots in <code>assets/screenshots/</code> before final release claims.</p>
+            </div>
+          </div>
+
+          <div class="panel reveal delay-1" data-tilt>
+            <div class="panel-head"><span>OPERATOR WORKFLOW</span><span>USER CONTROLLED</span></div>
+            <div class="panel-body">
+              <ul class="list">
+                <li><span>1</span><div><strong>Discover</strong><br>Use <code>hnhelp</code>, <code>hnmenu</code>, and <code>hnsearch</code> to find commands and built-in guidance.</div></li>
+                <li><span>2</span><div><strong>Understand context</strong><br>Run <code>hnstatus</code>, <code>hnprism</code>, and <code>hnsuggest</code> for local, advisory insights.</div></li>
+                <li><span>3</span><div><strong>Inspect safely</strong><br>Use read-only viewers/utilities (<code>hncat</code>, <code>hnlog</code>, <code>hnports</code>, <code>hnservices</code>) when needed.</div></li>
+                <li><span>4</span><div><strong>Triage output</strong><br>Classify supplied logs or command output with <code>hnoutput</code>, <code>hnanalyze</code>, or <code>hnexplain</code>.</div></li>
+                <li><span>5</span><div><strong>Recover with confidence</strong><br>Rely on backups, diagnostics, and rollback paths — not assumptions.</div></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="architecture" class="section">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">03 / Architecture</div>
+            <h2>Layered by design.<br><em>Predictable by intent.</em></h2>
+          </div>
+          <p>HN NEXUS is structured to keep the interactive core, HUD, utilities, and recovery concerns understandable, modular, and maintainable.</p>
+        </div>
+
+        <div class="showcase">
+          <div class="arch reveal">
+            <div class="layer"><b>01</b><div><h3>Interactive Shell Core</h3><p>ZSH entry, hooks, completion, correction, and prompt rendering.</p></div><i>FOUNDATION</i></div>
+            <div class="layer"><b>02</b><div><h3>HUD &amp; Context Engine</h3><p>Three-row responsive geometry, palettes, context markers, Git/runtime/status.</p></div><i>INTERFACE</i></div>
+            <div class="layer"><b>03</b><div><h3>Prism &amp; Operator Utilities</h3><p>Explicit <code>hn*</code> tools, viewers, analyzers, and safe interactive wrappers.</p></div><i>TOOLING</i></div>
+            <div class="layer"><b>04</b><div><h3>Recovery &amp; Verification</h3><p>Guided install, backups, rollback scripts, diagnostics, and test coverage.</p></div><i>ASSURANCE</i></div>
+          </div>
+          <div class="panel reveal delay-1" data-tilt>
+            <div class="panel-head"><span>ARCHITECTURE PREVIEW</span><span>SVG DIAGRAM</span></div>
+            <div class="panel-body">
+              <span class="mock-label">ILLUSTRATIVE DIAGRAM</span>
+              <img src="assets/architecture-mockup.svg" alt="Illustrative SVG diagram of HN NEXUS layered architecture">
+              <p class="mock-note">See <a href="docs/ARCHITECTURE.html">Architecture documentation</a> for detailed component responsibilities and boundaries.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="docs" class="section">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">04 / Documentation</div>
+            <h2>Learn it deeply.<br><em>Operate it clearly.</em></h2>
+          </div>
+          <p>From first install to advanced workflows — the project includes detailed, behavior-accurate documentation and publishing guidance.</p>
+        </div>
+
+        <div class="docs-grid">
+          <a class="doc-link reveal" href="docs/COMMAND-REFERENCE.html"><small>REFERENCE</small><strong>Command Reference</strong><span>Every command with purpose, usage, examples, and notes.</span></a>
+          <a class="doc-link reveal delay-1" href="docs/TUTORIAL.html"><small>LEARN</small><strong>Beginner → Advanced Tutorial</strong><span>Guided workflows from first run to power usage and recovery.</span></a>
+          <a class="doc-link reveal delay-2" href="docs/INSTALLATION-AND-RECOVERY.html"><small>SETUP</small><strong>Installation &amp; Recovery</strong><span>Requirements, guided install modes, backups, rollback, and safety.</span></a>
+          <a class="doc-link reveal" href="docs/ARCHITECTURE.html"><small>DESIGN</small><strong>Architecture</strong><span>Layers, runtime components, boundaries, and data/control flow.</span></a>
+          <a class="doc-link reveal delay-1" href="docs/FAQ.html"><small>ANSWERS</small><strong>FAQ</strong><span>Common questions, scope, compatibility, and practical guidance.</span></a>
+          <a class="doc-link reveal delay-2" href="docs/TROUBLESHOOTING.html"><small>SUPPORT</small><strong>Troubleshooting</strong><span>Diagnostics, common issues, fixes, and safe recovery steps.</span></a>
+          <a class="doc-link reveal" href="docs/CHANGELOG.html"><small>HISTORY</small><strong>Changelog</strong><span>Version history and release milestones (pack vs baseline noted).</span></a>
+          <a class="doc-link reveal delay-1" href="docs/TEST-REPORT-v1.0.0.html"><small>VALIDATION</small><strong>Test Report v1.0.0</strong><span>Feasible checks, results, and documented environment limitations.</span></a>
+          <a class="doc-link reveal delay-2" href="SECURITY.html"><small>POLICY</small><strong>Security &amp; Responsible Use</strong><span>Disclosure guidance, privacy considerations, and safe handling.</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section id="install" class="section">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">05 / Deployment</div>
+            <h2>Install with intent.<br><em>Recover with confidence.</em></h2>
+          </div>
+          <p>Run from the extracted project directory as a normal user (no sudo). Review scripts first and keep independent backups.</p>
+        </div>
+
+        <div class="steps">
+          <div class="step reveal">
+            <h3>Check prerequisites</h3>
+            <p>Validate environment without changing files.</p>
+            <code>./setup.sh --check</code>
+          </div>
+          <div class="step reveal delay-1">
+            <h3>Preview the plan</h3>
+            <p>See the guided actions before applying.</p>
+            <code>./setup.sh --dry-run</code>
+          </div>
+          <div class="step reveal delay-2">
+            <h3>Run guided setup</h3>
+            <p>Install core (and optional XFCE visual on supported X11 sessions).</p>
+            <code>./setup.sh</code>
+          </div>
+          <div class="step reveal delay-3">
+            <h3>Verify &amp; explore</h3>
+            <p>Open a new ZSH session and confirm.</p>
+            <code>hnhelp &amp;&amp; hnstatus &amp;&amp; hndoctor</code>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-tight">
+      <div class="container">
+        <div class="profile reveal">
+          <div class="avatar" aria-hidden="true">HN</div>
+          <div>
+            <div class="eyebrow">06 / Creator</div>
+            <h3>Hani Khaled Nasser Al-Nasiri</h3>
+            <p>Cybersecurity Student — Al-Razi University · GitHub <a href="https://github.com/hhh2006" target="_blank" rel="noopener">@hhh2006</a></p>
+            <div class="tags">
+              <span class="pill">HN // CIT</span>
+              <span class="pill">CYBER CITADEL AGENCY</span>
+              <span class="pill">ENGINEERED BY HN</span>
+              <span class="pill">Control · Precision · Recovery</span>
+            </div>
+          </div>
+          <div class="seal">CYBER<br>CITADEL<br>AGENCY</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="final-cta">
+      <div class="container reveal">
+        <div class="eyebrow">HN // CIT — COMMAND CENTER</div>
+        <h2>Take command.<br><em>Stay in control.</em></h2>
+        <p>HN NEXUS is built to make the terminal clearer, more expressive, and more recoverable — without surrendering user agency. Explore the source, read the docs, and deploy it on your terms.</p>
+        <div class="hero-actions" style="justify-content:center">
+          <a class="button button-primary" href="https://github.com/hhh2006/HN-NEXUS" target="_blank" rel="noopener"><span>Open Repository ↗</span></a>
+          <a class="button button-ghost" href="docs/TUTORIAL.html">Start Tutorial</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-brand">HN <b>NEXUS</b> <span>· HN // CIT</span></div>
+    <div>CYBER CITADEL AGENCY · ENGINEERED BY HN · Pack v1.0.0 / Baseline 4.4.2</div>
+    <div>© <span id="year">2026</span> Hani Khaled Nasser Al-Nasiri · MIT (see LICENSE)</div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

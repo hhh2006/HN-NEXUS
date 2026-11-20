@@ -1,0 +1,23 @@
+title: "HN NEXUS — HN // CIT Command Center"
+description: "HN NEXUS by Hani Khaled Nasser Al-Nasiri — a cinematic, recovery-aware ZSH command environment for Kali Linux. HN // CIT · CYBER CITADEL AGENCY."
+url: "https://hhh2006.github.io"
+baseurl: "/HN-NEXUS"
+markdown: kramdown
+author: "Hani Khaled Nasser Al-Nasiri"
+lang: en
+kramdown:
+  input: GFM
+  hard_wrap: false
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+      image: /assets/og-cover.svg
+exclude:
+  - README.md
+  - node_modules
+  - vendor
+  - Gemfile
+  - Gemfile.lock
+plugins: []

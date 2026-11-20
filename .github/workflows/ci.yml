@@ -1,0 +1,23 @@
+name: CI
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  static-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install ZSH and ShellCheck
+        run: sudo apt-get update && sudo apt-get install -y zsh shellcheck
+      - name: Validate installer script syntax
+        run: bash -n setup.sh install.sh install-all.sh uninstall.sh apply-prism-theme.sh
+      - name: Run project tests
+        run: bash tests/run-all.sh
+      - name: ShellCheck Bash scripts
+        run: find . -type f -name '*.sh' -not -path './theme/*' -print0 | xargs -0 -r shellcheck -S warning
+      - name: Validate website links and assets
+        run: python3 tests/website-check.py

@@ -1,0 +1,15 @@
+# HN//CIT COMMAND CENTER — XFWM4 window decoration
+# Minimal geometric frame; paired with the generated XPM title strips.
+active_text_color=#E8FAFF
+inactive_text_color=#8EA6B8
+title_shadow_active=false
+title_shadow_inactive=false
+show_app_icon=false
+full_width_title=true
+title_alignment=center
+title_vertical_offset_active=3
+title_vertical_offset_inactive=3
+title_horizontal_offset_active=2
+title_horizontal_offset_inactive=2
+button_layout=O|HMC
+maximized_offset=0

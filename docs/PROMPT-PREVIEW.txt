@@ -1,0 +1,9 @@
+HN NEXUS v4.3.6 — ROUNDED PREMIUM HUD (conceptual preview)
+
+╭─( HN ◈ CIT )──────────────────────────────────────────────────────────────╮
+│ ● kali@kali │ ⌂ ~/Desktop/HN-NEXUS │ ◎ ACTIVE DIR       21:20:20 · 327ms ─╯
+╰─ ◆ READY │ ⌘ ❯ ›
+
+The live prompt uses the installed Kali/Nerd Font glyph when available,
+shrinks optional context/path text on narrow terminals, and reserves the
+physical final terminal column to avoid delayed autowrap.

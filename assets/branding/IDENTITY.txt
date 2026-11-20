@@ -1,0 +1,22 @@
+HN // CIT · CYBER CITADEL AGENCY · ENGINEERED BY HN
+
+Author: Hani Khaled Nasser Al-Nasiri
+Cybersecurity Student — Al-Razi University
+GitHub: @hhh2006 (https://github.com/hhh2006)
+
+Primary identity: HN // CIT
+Secondary identity: CYBER CITADEL AGENCY
+Signature: ENGINEERED BY HN
+
+Design & Engineering Philosophy
+- Control: user-owned actions, explicit invocation, and native shell behavior preserved.
+- Precision: readable state, clear signal, and context-aware presentation without noise.
+- Security-minded pragmatism: local heuristics and transparent limitations over hype.
+- Recovery & trust: backups, rollback paths, and verification over blind automation.
+- Craft: cinematic visual identity and disciplined engineering can coexist.
+
+Founder / Creator Statement
+HN NEXUS is engineered as a refined command environment that balances aesthetic presence with operational clarity. It is built to help operators stay oriented, work deliberately, and recover safely.
+
+Intellectual Property & Attribution
+HN NEXUS, HN // CIT, Cyber Citadel Agency branding, marks, visual identity, and associated project assets are attributed to Hani Khaled Nasser Al-Nasiri unless otherwise noted. The source code in this repository is licensed under the MIT License (see LICENSE). Branding and identity elements remain subject to applicable attribution and intellectual-property rights. No affiliation with third-party products or platforms is implied.

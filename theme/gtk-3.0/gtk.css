@@ -1,0 +1,58 @@
+/* HN//CIT — deep-space glassless terminal skin */
+@define-color cit_bg #070B14;
+@define-color cit_panel #0B1422;
+@define-color cit_text #E4EDF7;
+@define-color cit_muted #8292A8;
+@define-color cit_teal #35D6C8;
+@define-color cit_cyan #49C8F5;
+@define-color cit_blue #4D8DFF;
+@define-color cit_violet #9B82F6;
+@define-color cit_orchid #D078E8;
+@define-color cit_gold #E9BD75;
+
+VteTerminal, vte-terminal {
+  background-color: @cit_bg;
+  color: @cit_text;
+  padding: 4px 6px;
+  -VteTerminal-cursor-shape: block;
+}
+terminal-window {
+  background-color: @cit_bg;
+  color: @cit_text;
+}
+terminal-window menubar, terminal-window toolbar,
+terminal-window .menubar, terminal-window .toolbar {
+  background-image: linear-gradient(100deg,
+    #102B38 0%, #10243C 28%, #211D43 58%, #35203F 82%, #352B2A 100%);
+  color: @cit_text;
+  border-bottom: 1px solid @cit_violet;
+  box-shadow: inset 0 -1px 0 alpha(@cit_cyan, 0.38);
+}
+terminal-window menu, terminal-window popover {
+  background-image: linear-gradient(145deg, #101D2C, #17172D 70%, #21182B);
+  color: @cit_text;
+  border: 1px solid alpha(@cit_orchid, 0.62);
+  border-radius: 6px;
+}
+/* Slim auto-hide scrollbar: scrolling remains available; hover reveals the thumb. */
+terminal-window scrollbar {
+  opacity: 0;
+  min-width: 8px;
+  min-height: 8px;
+  background-color: transparent;
+  transition: opacity 180ms ease-in-out;
+}
+terminal-window scrollbar:hover,
+terminal-window scrollbar:active {
+  opacity: 1;
+}
+terminal-window scrollbar slider {
+  background-image: linear-gradient(180deg, @cit_teal, @cit_blue 42%, @cit_violet 76%, @cit_orchid);
+  border: 1px solid alpha(@cit_cyan, 0.72);
+  border-radius: 8px;
+  min-width: 6px;
+  min-height: 22px;
+}
+terminal-window scrollbar slider:hover {
+  background-image: linear-gradient(180deg, @cit_gold, @cit_orchid);
+}

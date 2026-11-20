@@ -1,0 +1,30 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#050810"/><stop offset="50%" stop-color="#0b1220"/><stop offset="100%" stop-color="#120a24"/></linearGradient>
+    <linearGradient id="line" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#22d3ee" stop-opacity="0"/><stop offset="50%" stop-color="#22d3ee" stop-opacity="0.9"/><stop offset="100%" stop-color="#8b5cf6" stop-opacity="0"/></linearGradient>
+    <linearGradient id="txt" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#22d3ee"/><stop offset="100%" stop-color="#a78bfa"/></linearGradient>
+    <filter id="og"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#1b2a40" stroke-width="1"/></pattern>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#grid)" opacity="0.45"/>
+  <circle cx="180" cy="120" r="220" fill="#22d3ee" opacity="0.06"/><circle cx="1050" cy="520" r="260" fill="#8b5cf6" opacity="0.07"/>
+  <rect x="0" y="180" width="1200" height="2" fill="url(#line)" opacity="0.5"/><rect x="0" y="460" width="1200" height="2" fill="url(#line)" opacity="0.35"/>
+  <g filter="url(#og)">
+    <path d="M120 315 L170 285 L220 315 L220 375 L170 405 L120 375 Z" fill="none" stroke="url(#txt)" stroke-width="3"/>
+    <text x="170" y="358" text-anchor="middle" font-family="monospace" font-size="38" font-weight="700" fill="#eef4ff">HN</text>
+  </g>
+  <text x="260" y="305" font-family="'Segoe UI', Arial, sans-serif" font-size="86" font-weight="700" fill="#eef4ff" letter-spacing="-2">HN NEXUS</text>
+  <text x="262" y="360" font-family="monospace" font-size="28" fill="url(#txt)" letter-spacing="6">HN // CIT COMMAND CENTER</text>
+  <text x="262" y="410" font-family="'Segoe UI', Arial, sans-serif" font-size="26" fill="#93a4bd">A cinematic, context-aware ZSH environment for Kali Linux</text>
+  <text x="262" y="455" font-family="monospace" font-size="18" fill="#64748b">ENGINEERED BY HN  ·  CYBER CITADEL AGENCY</text>
+  <g font-family="monospace" font-size="16" fill="#22d3ee">
+    <rect x="262" y="490" width="170" height="34" rx="6" fill="#22d3ee" fill-opacity="0.12" stroke="#22d3ee" stroke-opacity="0.4"/>
+    <text x="347" y="513" text-anchor="middle">ZSH HUD</text>
+    <rect x="445" y="490" width="170" height="34" rx="6" fill="#8b5cf6" fill-opacity="0.12" stroke="#8b5cf6" stroke-opacity="0.4"/>
+    <text x="530" y="513" text-anchor="middle" fill="#a78bfa">PRISM TOOLS</text>
+    <rect x="628" y="490" width="170" height="34" rx="6" fill="#10b981" fill-opacity="0.12" stroke="#10b981" stroke-opacity="0.4"/>
+    <text x="713" y="513" text-anchor="middle" fill="#6ee7b7">RECOVERY</text>
+  </g>
+  <text x="60" y="585" font-family="monospace" font-size="14" fill="#475569">github.com/hhh2006/HN-NEXUS  ·  Hani Khaled Nasser Al-Nasiri</text>
+</svg>
