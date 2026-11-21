@@ -122,4 +122,4 @@ The recovery operation deliberately retains timestamped backups, release copies,
 
 When opening an issue, include the HN NEXUS version, Linux distribution, desktop/session type (XFCE/X11 or other), the exact command, the full error text and the output of `./diagnostics.sh`. Remove usernames, hostnames, IP addresses, tokens, keys and private paths first. Never upload `.zshrc`, shell history, private logs or screenshots containing secrets without reviewing/redacting them.
 
-See also [Troubleshooting](TROUBLESHOOTING.md), [Security](../SECURITY.md), and [Support](../SUPPORT.md).
+See also [Troubleshooting](troubleshooting.html), [Security](../SECURITY.html), and [Support](../SUPPORT.html).

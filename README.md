@@ -9,6 +9,7 @@
     <a href="https://github.com/hhh2006/HN-NEXUS/actions/workflows/ci.yml"><img alt="CI" src="https://img.shields.io/github/actions/workflow/status/hhh2006/HN-NEXUS/ci.yml?branch=main&label=CI&style=flat-square"></a>
     <a href="https://github.com/hhh2006/HN-NEXUS/actions/workflows/pages.yml"><img alt="Pages" src="https://img.shields.io/github/actions/workflow/status/hhh2006/HN-NEXUS/pages.yml?branch=main&label=Pages&style=flat-square"></a>
     <a href="https://hhh2006.github.io/HN-NEXUS/"><img alt="Website" src="https://img.shields.io/badge/website-live-22d3ee?style=flat-square"></a>
+    <a href="https://github.com/hhh2006/HN-NEXUS/releases/tag/v1.0.0"><img alt="Release" src="https://img.shields.io/badge/release-v1.0.0-7c3aed?style=flat-square"></a>
     <img alt="Pack" src="https://img.shields.io/badge/pack-v1.0.0-8b5cf6?style=flat-square">
     <img alt="Baseline" src="https://img.shields.io/badge/terminal%20baseline-4.4.2-64748b?style=flat-square">
     <img alt="Shell" src="https://img.shields.io/badge/shell-ZSH-10b981?style=flat-square">
@@ -186,11 +187,22 @@ hnstyle auto
 - [Changelog](docs/CHANGELOG.md) · [Publishing checklist](docs/PUBLISHING-CHECKLIST.md)
 - [Test report v1.0.0](docs/TEST-REPORT-v1.0.0.md) (and historical reports in `docs/`)
 
-## Website
+## Website & project links
 
-- **Project site:** https://hhh2006.github.io/HN-NEXUS/
-- **Source:** `website/` (Jekyll-compatible, deployed via GitHub Actions)
-- Includes cinematic presentation, responsive design, motion effects with reduced-motion support, and linked documentation.
+- **Live site (GitHub Pages):** https://hhh2006.github.io/HN-NEXUS/
+- **Repository:** https://github.com/hhh2006/HN-NEXUS
+- **Latest release (v1.0.0):** https://github.com/hhh2006/HN-NEXUS/releases/tag/v1.0.0
+- **Deployments:** https://github.com/hhh2006/HN-NEXUS/deployments (`github-pages`)
+- **Actions / CI:** https://github.com/hhh2006/HN-NEXUS/actions
+
+The site is a cinematic, responsive experience built from `website/` and deployed via **GitHub Actions** (repository Pages source must be **GitHub Actions**). Current deployment status in GitHub shows Pages configured and a successful Pages deploy for the latest published commit.
+
+**If the website does not open:**
+1. **Check deployment status:** [Pages workflow](https://github.com/hhh2006/HN-NEXUS/actions/workflows/pages.yml) and [Pages settings](https://github.com/hhh2006/HN-NEXUS/settings/pages). A successful Pages deployment means GitHub published the site.
+2. **Use the exact URL:** `https://hhh2006.github.io/HN-NEXUS/` and wait a few minutes after a fresh deploy for DNS/edge propagation and caching.
+3. **Refresh/cache:** hard-refresh (`Ctrl+F5`) or try an incognito/private window.
+4. **Network/DNS/ISP:** some networks, ISPs, or regions may block or delay `github.io`. Try another browser, device, network, or DNS/VPN.
+5. **Fallback access:** while Pages is unavailable to you, browse the full documentation in this repository (`docs/`, `README.md`) or download assets from the [v1.0.0 release](https://github.com/hhh2006/HN-NEXUS/releases/tag/v1.0.0).
 
 ## Validation & quality notes
 
