@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 520" role="img" aria-labelledby="title desc">
+  <title id="title">HN NEXUS Terminal Theater (Illustrative)</title>
+  <desc id="desc">Illustrative cinematic mockup of the HN NEXUS three-row HUD and command workflow. Not a real runtime screenshot.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#040913"/>
+      <stop offset="100%" stop-color="#081425"/>
+    </linearGradient>
+    <linearGradient id="bar" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#17f1d1"/>
+      <stop offset="50%" stop-color="#4f8dff"/>
+      <stop offset="100%" stop-color="#ff5dd8"/>
+    </linearGradient>
+    <linearGradient id="panel" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0f2138" stop-opacity=".95"/>
+      <stop offset="100%" stop-color="#091526" stop-opacity=".98"/>
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="1200" height="520" rx="28" fill="#03070f"/>
+  <rect x="18" y="18" width="1164" height="484" rx="22" fill="url(#bg)" stroke="#284565" stroke-width="1.5"/>
+  <rect x="18" y="18" width="1164" height="54" rx="22" fill="#0d1b2d"/>
+  <rect x="18" y="50" width="1164" height="22" fill="#0d1b2d"/>
+  <circle cx="52" cy="45" r="7" fill="#ff6b87"/><circle cx="78" cy="45" r="7" fill="#ffd166"/><circle cx="104" cy="45" r="7" fill="#5ff0b6"/>
+  <text x="132" y="50" font-family="'DM Mono',Consolas,monospace" font-size="15" fill="#8fbde0" letter-spacing="2">HN NEXUS — Terminal Theater (Illustrative Mockup)</text>
+  <rect x="36" y="86" width="1128" height="3" rx="1.5" fill="url(#bar)" opacity=".7"/>
+
+  <!-- HUD rows -->
+  <g transform="translate(42,108)" font-family="'DM Mono',Consolas,monospace">
+    <rect x="0" y="0" width="1116" height="118" rx="14" fill="url(#panel)" stroke="#23415f"/>
+    <text x="22" y="34" font-size="15" fill="#5ff0b6">ROW 1 · CONTEXT</text>
+    <text x="210" y="34" font-size="16" fill="#e8f6ff">kali@hn-nexus  ~/engagements/recon   main  ●  14:22  ⚡ 3 jobs</text>
+    <text x="22" y="68" font-size="15" fill="#4de7f7">ROW 2 · STATUS</text>
+    <text x="210" y="68" font-size="16" fill="#e8f6ff">python venv  ·  docker up  ·  git clean  ·  last exit 0  ·  profile: aurora</text>
+    <text x="22" y="100" font-size="15" fill="#c7a6ff">ROW 3 · INTEL</text>
+    <text x="210" y="100" font-size="16" fill="#e8f6ff">hnsuggest ready  ·  recovery-aware  ·  local-first guidance  ·  HN // CIT</text>
+  </g>
+
+  <!-- commands/output -->
+  <g transform="translate(42,244)" font-family="'DM Mono',Consolas,monospace" font-size="17">
+    <text x="0" y="0" fill="#8ff4ff">$</text><text x="22" y="0" fill="#f0f8ff">hnstyle set aurora</text>
+    <text x="0" y="32" fill="#5ff0b6">✔</text><text x="22" y="32" fill="#a9d4f3">Visual profile set to aurora (session-local). Palette, HUD accents, and prompt cues refreshed.</text>
+
+    <text x="0" y="74" fill="#8ff4ff">$</text><text x="22" y="74" fill="#f0f8ff">hnstatus</text>
+    <text x="0" y="106" fill="#ffd166">◆</text><text x="22" y="106" fill="#a9d4f3">Environment healthy · backups present · XFCE optional · no background daemons</text>
+
+    <text x="0" y="148" fill="#8ff4ff">$</text><text x="22" y="148" fill="#f0f8ff">hnsuggest "workspace has git changes and a python project"</text>
+    <text x="0" y="180" fill="#c7a6ff">→</text><text x="22" y="180" fill="#a9d4f3">Advisory: review <tspan fill="#7ff6ff">git status</tspan>, run targeted tests, and keep rollback point before risky actions.</text>
+
+    <rect x="0" y="204" width="14" height="20" fill="#4de7f7" opacity=".85"/>
+  </g>
+
+  <text x="600" y="486" text-anchor="middle" font-family="'Space Grotesk','Segoe UI',Arial,sans-serif" font-size="14" fill="#6f93b3">Illustrative SVG mockup — not a real Kali/ZSH screenshot · HN // CIT · ENGINEERED BY HN</text>
+</svg>

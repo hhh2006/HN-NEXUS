@@ -3,14 +3,17 @@
 **HN // CIT · CYBER CITADEL AGENCY · ENGINEERED BY HN**
 
 ## Branding and mockups (included)
-- `assets/branding/hn-nexus-hero.svg` — cinematic hero/banner artwork for the README and site identity (includes a harmonized HN // CIT seal motif and creator attribution)
+- `assets/branding/agency-seal.svg` — **designed Cyber Citadel Agency seal** (original SVG crest) for premium, harmonious HN // CIT identity presentation across README and website
+- `assets/branding/hn-nexus-hero.svg` — cinematic full-width hero/banner artwork for the README and site identity (includes designed seal motif and prominent creator attribution)
+- `assets/branding/terminal-theater.svg` / `terminal-mockup.svg` — **illustrative** cinematic SVG terminal HUD mockup (not a real screenshot)
+- `assets/branding/readme-divider.svg` — decorative neon divider used in README
 - `assets/branding/hn-nexus-mark.svg` — primary HN NEXUS mark
-- `assets/branding/cit-seal-emblem.png` — **CIT seal / identity mark** provided by the creator, processed for transparent background, trim, and balanced framing for clean visual integration (original source kept as `assets/branding/cit-seal.png`)
+- `assets/branding/cit-seal.png` — **creator-provided CIT seal** (original source, preserved as-is)
+- `assets/branding/cit-seal-emblem.png` — processed transparent/balanced presentation variant of the provided CIT seal for clean integration
 - `assets/branding/cit-seal-emblem.webp` / `assets/branding/cit-seal-trim.png` — optimized/trimmed variants for flexible use
 - `assets/branding/cyber-citadel-agency.svg` — secondary agency emblem
-- `assets/branding/terminal-mockup.svg` — **illustrative** SVG terminal HUD mockup (not a real screenshot)
 - `assets/branding/architecture-mockup.svg` — **illustrative** architecture diagram
-- `website/assets/hn-nexus-hero.svg`, `website/assets/hn-nexus-mark.svg`, `website/assets/cit-seal-emblem.png`, `website/assets/og-cover.svg` — website branding/cover assets
+- `website/assets/` mirrors key assets for the published site (`agency-seal.svg`, `hn-nexus-hero.svg`, `terminal-theater.svg`, `readme-divider.svg`, `hn-nexus-mark.svg`, `cit-seal*`, `og-cover.svg`, etc.)
 - `assets/branding/IDENTITY.txt` — identity, philosophy, and attribution notes
 
 ## Real captures (to be added)

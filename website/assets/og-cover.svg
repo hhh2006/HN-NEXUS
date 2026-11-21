@@ -1,30 +1,52 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">HN NEXUS — Cinematic Command Center</title>
+  <desc id="desc">HN NEXUS by Hani Khaled Nasser Al-Nasiri. HN // CIT · Cyber Citadel Agency · Engineered by HN.</desc>
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#050810"/><stop offset="50%" stop-color="#0b1220"/><stop offset="100%" stop-color="#120a24"/></linearGradient>
-    <linearGradient id="line" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#22d3ee" stop-opacity="0"/><stop offset="50%" stop-color="#22d3ee" stop-opacity="0.9"/><stop offset="100%" stop-color="#8b5cf6" stop-opacity="0"/></linearGradient>
-    <linearGradient id="txt" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#22d3ee"/><stop offset="100%" stop-color="#a78bfa"/></linearGradient>
-    <filter id="og"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
-    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#1b2a40" stroke-width="1"/></pattern>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#03060c"/><stop offset="45%" stop-color="#081423"/><stop offset="100%" stop-color="#100a22"/></linearGradient>
+    <linearGradient id="title" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#7ff6ff"/><stop offset="35%" stop-color="#2cb8ff"/><stop offset="70%" stop-color="#8b7cff"/><stop offset="100%" stop-color="#ff8fe6"/></linearGradient>
+    <linearGradient id="line" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#17f1d1" stop-opacity="0"/><stop offset="20%" stop-color="#17f1d1"/><stop offset="50%" stop-color="#4f8dff"/><stop offset="80%" stop-color="#ff5dd8"/><stop offset="100%" stop-color="#ff5dd8" stop-opacity="0"/></linearGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#22d3ee" stop-opacity=".45"/><stop offset="50%" stop-color="#7c5cff" stop-opacity=".18"/><stop offset="100%" stop-color="#000" stop-opacity="0"/></radialGradient>
+    <filter id="soft" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="6" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <filter id="blur" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="28"/></filter>
+    <pattern id="grid" width="44" height="44" patternUnits="userSpaceOnUse"><path d="M44 0H0V44" fill="none" stroke="#8fdfff" stroke-opacity=".06" stroke-width="1"/></pattern>
   </defs>
   <rect width="1200" height="630" fill="url(#bg)"/>
-  <rect width="1200" height="630" fill="url(#grid)" opacity="0.45"/>
-  <circle cx="180" cy="120" r="220" fill="#22d3ee" opacity="0.06"/><circle cx="1050" cy="520" r="260" fill="#8b5cf6" opacity="0.07"/>
-  <rect x="0" y="180" width="1200" height="2" fill="url(#line)" opacity="0.5"/><rect x="0" y="460" width="1200" height="2" fill="url(#line)" opacity="0.35"/>
-  <g filter="url(#og)">
-    <path d="M120 315 L170 285 L220 315 L220 375 L170 405 L120 375 Z" fill="none" stroke="url(#txt)" stroke-width="3"/>
-    <text x="170" y="358" text-anchor="middle" font-family="monospace" font-size="38" font-weight="700" fill="#eef4ff">HN</text>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+  <ellipse cx="980" cy="120" rx="360" ry="140" fill="url(#line)" opacity=".25" filter="url(#blur)"/>
+  <ellipse cx="250" cy="520" rx="320" ry="140" fill="url(#line)" opacity=".18" filter="url(#blur)"/>
+  <circle cx="200" cy="315" r="170" fill="url(#glow)" filter="url(#blur)"/>
+  <rect x="28" y="28" width="1144" height="574" rx="26" fill="none" stroke="url(#title)" stroke-opacity=".28"/>
+
+  <!-- Designed seal mark -->
+  <g transform="translate(110,225)" filter="url(#soft)">
+    <circle cx="90" cy="90" r="92" fill="#07111f" stroke="url(#title)" stroke-width="2.6"/>
+    <circle cx="90" cy="90" r="80" fill="none" stroke="#cfefff" stroke-opacity=".18"/>
+    <circle cx="90" cy="90" r="70" fill="none" stroke="url(#title)" stroke-opacity=".35" stroke-dasharray="6 10"/>
+    <path d="M90 40 L134 66 L134 114 L90 140 L46 114 L46 66 Z" fill="#081526" stroke="url(#title)" stroke-width="1.8"/>
+    <path d="M64 114 L116 114 L111 122 L69 122 Z" fill="url(#title)" fill-opacity=".22" stroke="url(#title)" stroke-width="1"/>
+    <rect x="72" y="94" width="36" height="20" rx="2.5" fill="#0b1a2c" stroke="#bfeeff" stroke-opacity=".45"/>
+    <path d="M84 114 L84 102 Q90 96 96 102 L96 114 Z" fill="#07111f" stroke="#8ff4ff" stroke-opacity=".65"/>
+    <rect x="70" y="80" width="11" height="34" rx="2" fill="#0a1829" stroke="url(#title)"/><path d="M70 80 L70 72 L73.5 76 L75.5 69 L77.5 76 L81 72 L81 80 Z" fill="url(#title)" fill-opacity=".3"/>
+    <rect x="99" y="80" width="11" height="34" rx="2" fill="#0a1829" stroke="url(#title)"/><path d="M99 80 L99 72 L102.5 76 L104.5 69 L106.5 76 L110 72 L110 80 Z" fill="url(#title)" fill-opacity=".3"/>
+    <rect x="82" y="74" width="16" height="40" rx="2.5" fill="#0b1a2c" stroke="#d7c2ff" stroke-opacity=".5"/>
+    <path d="M82 74 L82 64 L86 69 L90 60 L94 69 L98 64 L98 74 Z" fill="url(#title)" fill-opacity=".36"/>
+    <path d="M90 64 L90 52" stroke="#bfeeff" stroke-width="1.6" stroke-linecap="round"/><circle cx="90" cy="49" r="3" fill="#7ff6ff"/>
   </g>
-  <text x="260" y="305" font-family="'Segoe UI', Arial, sans-serif" font-size="86" font-weight="700" fill="#eef4ff" letter-spacing="-2">HN NEXUS</text>
-  <text x="262" y="360" font-family="monospace" font-size="28" fill="url(#txt)" letter-spacing="6">HN // CIT COMMAND CENTER</text>
-  <text x="262" y="410" font-family="'Segoe UI', Arial, sans-serif" font-size="26" fill="#93a4bd">A cinematic, context-aware ZSH environment for Kali Linux</text>
-  <text x="262" y="455" font-family="monospace" font-size="18" fill="#64748b">ENGINEERED BY HN  ·  CYBER CITADEL AGENCY</text>
-  <g font-family="monospace" font-size="16" fill="#22d3ee">
-    <rect x="262" y="490" width="170" height="34" rx="6" fill="#22d3ee" fill-opacity="0.12" stroke="#22d3ee" stroke-opacity="0.4"/>
-    <text x="347" y="513" text-anchor="middle">ZSH HUD</text>
-    <rect x="445" y="490" width="170" height="34" rx="6" fill="#8b5cf6" fill-opacity="0.12" stroke="#8b5cf6" stroke-opacity="0.4"/>
-    <text x="530" y="513" text-anchor="middle" fill="#a78bfa">PRISM TOOLS</text>
-    <rect x="628" y="490" width="170" height="34" rx="6" fill="#10b981" fill-opacity="0.12" stroke="#10b981" stroke-opacity="0.4"/>
-    <text x="713" y="513" text-anchor="middle" fill="#6ee7b7">RECOVERY</text>
+
+  <g>
+    <text x="330" y="250" font-family="'DM Mono','Cascadia Mono',Consolas,monospace" font-size="20" fill="#7ff6ff" letter-spacing="5">HN // CIT · CYBER CITADEL AGENCY</text>
+    <rect x="330" y="266" width="460" height="2" rx="1" fill="url(#line)" opacity=".8"/>
+    <text x="330" y="360" font-family="'Space Grotesk','Segoe UI',Arial,sans-serif" font-size="96" font-weight="700" fill="url(#title)" letter-spacing="0">HN NEXUS</text>
+    <text x="330" y="412" font-family="'Space Grotesk','Segoe UI',Arial,sans-serif" font-size="31" font-weight="500" fill="#dcecff">Cinematic, Context-Aware ZSH Command Environment</text>
+    <text x="330" y="452" font-family="'Segoe UI',Arial,sans-serif" font-size="22" fill="#97b6d1">For Kali Linux · 3-Row HUD · Prism Profiles · Recovery-Aware · Local-First</text>
+    <text x="330" y="496" font-family="'DM Mono','Cascadia Mono',Consolas,monospace" font-size="18" fill="#8fdfff" letter-spacing="2">ENGINEERED BY HN — Hani Khaled Nasser Al-Nasiri</text>
+    <text x="330" y="524" font-family="'Segoe UI',Arial,sans-serif" font-size="18" fill="#9ab8d3">Cybersecurity Student — Al-Razi University · @hhh2006</text>
   </g>
-  <text x="60" y="585" font-family="monospace" font-size="14" fill="#475569">github.com/hhh2006/HN-NEXUS  ·  Hani Khaled Nasser Al-Nasiri</text>
+
+  <g font-family="'DM Mono','Cascadia Mono',Consolas,monospace" font-size="14">
+    <rect x="330" y="548" width="150" height="32" rx="8" fill="#22d3ee" fill-opacity=".12" stroke="#22d3ee" stroke-opacity=".35"/><text x="405" y="569" text-anchor="middle" fill="#7ff6ff">v1.0.0</text>
+    <rect x="492" y="548" width="170" height="32" rx="8" fill="#8b5cf6" fill-opacity=".12" stroke="#8b5cf6" stroke-opacity=".35"/><text x="577" y="569" text-anchor="middle" fill="#c7a6ff">baseline 4.4.2</text>
+    <rect x="674" y="548" width="170" height="32" rx="8" fill="#10b981" fill-opacity=".12" stroke="#10b981" stroke-opacity=".35"/><text x="759" y="569" text-anchor="middle" fill="#7ff0c0">local-first</text>
+  </g>
+  <text x="64" y="592" font-family="'DM Mono','Cascadia Mono',Consolas,monospace" font-size="13" fill="#5f7f9f" letter-spacing="1.5">github.com/hhh2006/HN-NEXUS · https://hhh2006.github.io/HN-NEXUS/</text>
 </svg>

@@ -1,92 +1,173 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 420" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 620" role="img" aria-labelledby="title desc">
   <title id="title">HN NEXUS — Cinematic Command Center</title>
-  <desc id="desc">HN // CIT · Cyber Citadel Agency · Engineered by Hani Khaled Nasser Al-Nasiri</desc>
+  <desc id="desc">Premium hero banner for HN NEXUS by Hani Khaled Nasser Al-Nasiri, featuring HN // CIT Cyber Citadel Agency identity.</desc>
   <defs>
     <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#04070d"/>
-      <stop offset="45%" stop-color="#081428"/>
-      <stop offset="100%" stop-color="#120a22"/>
+      <stop offset="0%" stop-color="#02050b"/>
+      <stop offset="45%" stop-color="#081423"/>
+      <stop offset="100%" stop-color="#0b1022"/>
     </linearGradient>
-    <linearGradient id="stroke" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#17f1d1" stop-opacity="0.12"/>
-      <stop offset="35%" stop-color="#2cb8ff" stop-opacity="0.75"/>
-      <stop offset="70%" stop-color="#7c5cff" stop-opacity="0.75"/>
-      <stop offset="100%" stop-color="#ff5dd8" stop-opacity="0.22"/>
+    <linearGradient id="aurora" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#17f1d1" stop-opacity="0"/>
+      <stop offset="20%" stop-color="#17f1d1" stop-opacity=".22"/>
+      <stop offset="45%" stop-color="#2cb8ff" stop-opacity=".28"/>
+      <stop offset="65%" stop-color="#7c5cff" stop-opacity=".26"/>
+      <stop offset="85%" stop-color="#ff5dd8" stop-opacity=".18"/>
+      <stop offset="100%" stop-color="#ff5dd8" stop-opacity="0"/>
     </linearGradient>
     <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#f4faff"/>
-      <stop offset="45%" stop-color="#7ff6ff"/>
-      <stop offset="75%" stop-color="#c7a6ff"/>
-      <stop offset="100%" stop-color="#ffb0ec"/>
+      <stop offset="0%" stop-color="#bffaff"/>
+      <stop offset="28%" stop-color="#4de7f7"/>
+      <stop offset="55%" stop-color="#8b7cff"/>
+      <stop offset="100%" stop-color="#ff8fe6"/>
     </linearGradient>
-    <linearGradient id="nameGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="50%" stop-color="#8ff4ff"/>
-      <stop offset="100%" stop-color="#d6b6ff"/>
+    <linearGradient id="line" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#17f1d1" stop-opacity="0"/>
+      <stop offset="20%" stop-color="#17f1d1"/>
+      <stop offset="50%" stop-color="#4f8dff"/>
+      <stop offset="80%" stop-color="#ff5dd8"/>
+      <stop offset="100%" stop-color="#ff5dd8" stop-opacity="0"/>
     </linearGradient>
-    <linearGradient id="sealGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#17f1d1"/>
-      <stop offset="55%" stop-color="#4f8dff"/>
-      <stop offset="100%" stop-color="#9b6cff"/>
+    <linearGradient id="panel" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0d1c31" stop-opacity=".92"/>
+      <stop offset="100%" stop-color="#081222" stop-opacity=".88"/>
     </linearGradient>
-    <radialGradient id="glowC" cx="22%" cy="40%" r="35%">
-      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.22"/>
-      <stop offset="100%" stop-color="#22d3ee" stop-opacity="0"/>
+    <radialGradient id="glowC" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#22d3ee" stop-opacity=".45"/>
+      <stop offset="45%" stop-color="#7c5cff" stop-opacity=".2"/>
+      <stop offset="100%" stop-color="#000" stop-opacity="0"/>
     </radialGradient>
-    <radialGradient id="glowV" cx="78%" cy="35%" r="30%">
-      <stop offset="0%" stop-color="#a78bfa" stop-opacity="0.22"/>
-      <stop offset="100%" stop-color="#a78bfa" stop-opacity="0"/>
+    <radialGradient id="glowR" cx="85%" cy="30%" r="35%">
+      <stop offset="0%" stop-color="#ff5dd8" stop-opacity=".22"/>
+      <stop offset="100%" stop-color="#000" stop-opacity="0"/>
     </radialGradient>
-    <radialGradient id="sealBg" cx="50%" cy="45%" r="50%">
-      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.20"/>
-      <stop offset="45%" stop-color="#7c5cff" stop-opacity="0.12"/>
-      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    <radialGradient id="glowL" cx="10%" cy="70%" r="30%">
+      <stop offset="0%" stop-color="#17f1d1" stop-opacity=".18"/>
+      <stop offset="100%" stop-color="#000" stop-opacity="0"/>
     </radialGradient>
     <filter id="softGlow" x="-30%" y="-30%" width="160%" height="160%">
       <feGaussianBlur stdDeviation="8" result="b"/>
       <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
-    <filter id="sealGlow" x="-50%" y="-50%" width="200%" height="200%">
-      <feGaussianBlur stdDeviation="6" result="b"/>
-      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    <filter id="bigBlur" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="40"/>
     </filter>
     <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse">
-      <path d="M48 0H0V48" fill="none" stroke="#6ea8ff" stroke-opacity="0.08" stroke-width="1"/>
+      <path d="M 48 0 L 0 0 0 48" fill="none" stroke="#8fdfff" stroke-opacity=".07" stroke-width="1"/>
     </pattern>
+    <pattern id="dots" width="24" height="24" patternUnits="userSpaceOnUse">
+      <circle cx="1" cy="1" r="1" fill="#9fefff" fill-opacity=".12"/>
+    </pattern>
+    <clipPath id="clip">
+      <rect x="20" y="20" width="1560" height="580" rx="34"/>
+    </clipPath>
   </defs>
 
-  <rect width="1600" height="420" rx="28" fill="url(#bg)"/>
-  <rect width="1600" height="420" rx="28" fill="url(#glowC)"/>
-  <rect width="1600" height="420" rx="28" fill="url(#glowV)"/>
-  <rect x="24" y="24" width="1552" height="372" rx="22" fill="url(#grid)" opacity="0.55"/>
-  <rect x="24" y="24" width="1552" height="372" rx="22" fill="none" stroke="url(#stroke)" stroke-width="2"/>
+  <g clip-path="url(#clip)">
+    <rect x="20" y="20" width="1560" height="580" rx="34" fill="url(#bg)"/>
+    <rect x="20" y="20" width="1560" height="580" rx="34" fill="url(#grid)"/>
+    <rect x="20" y="20" width="1560" height="580" rx="34" fill="url(#dots)" opacity=".35"/>
+    <ellipse cx="1320" cy="120" rx="520" ry="180" fill="url(#aurora)" filter="url(#bigBlur)" opacity=".9"/>
+    <ellipse cx="420" cy="520" rx="460" ry="160" fill="url(#aurora)" filter="url(#bigBlur)" opacity=".55"/>
+    <rect x="20" y="20" width="1560" height="580" rx="34" fill="url(#glowR)"/>
+    <rect x="20" y="20" width="1560" height="580" rx="34" fill="url(#glowL)"/>
 
-  <!-- Stylized citadel/seal motif (harmonious, self-contained) -->
-  <g transform="translate(1315,210)">
-    <circle r="165" fill="url(#sealBg)"/>
-    <circle r="150" fill="none" stroke="#2cb8ff" stroke-opacity="0.30" stroke-width="1.5"/>
-    <circle r="122" fill="none" stroke="#7c5cff" stroke-opacity="0.28" stroke-width="1.5" stroke-dasharray="6 10"/>
-    <circle r="96" fill="#0b1423" fill-opacity="0.55" stroke="#17f1d1" stroke-opacity="0.22" stroke-width="1"/>
-    <g filter="url(#sealGlow)">
-      <path d="M0 -72 L58 -44 L58 18 L0 50 L-58 18 L-58 -44 Z" fill="none" stroke="url(#sealGrad)" stroke-width="3.2"/>
-      <path d="M0 -48 L38 -30 L38 8 L0 26 L-38 8 L-38 -30 Z" fill="none" stroke="#8ff4ff" stroke-opacity="0.55" stroke-width="2"/>
-      <path d="M-18 -28 L-18 -10 L-8 -10 L-8 -28 Z M8 -28 L8 -10 L18 -10 L18 -28 Z M-18 4 L18 4 L18 14 L-18 14 Z" fill="#e9f7ff" fill-opacity="0.9"/>
-      <path d="M-30 18 L30 18 L22 34 L-22 34 Z" fill="url(#sealGrad)" fill-opacity="0.35" stroke="#bfefff" stroke-opacity="0.35"/>
-      <circle r="5" fill="#7ff6ff"/>
+    <!-- border -->
+    <rect x="20.5" y="20.5" width="1559" height="579" rx="34" fill="none" stroke="url(#titleGrad)" stroke-opacity=".35" stroke-width="1.5"/>
+    <rect x="28" y="28" width="1544" height="564" rx="28" fill="none" stroke="#9fefff" stroke-opacity=".08" stroke-width="1"/>
+
+    <!-- left accent bar -->
+    <rect x="54" y="70" width="4" height="480" rx="2" fill="url(#titleGrad)" opacity=".7"/>
+    <circle cx="56" cy="70" r="5" fill="#17f1d1" filter="url(#softGlow)"/>
+    <circle cx="56" cy="550" r="5" fill="#ff5dd8" filter="url(#softGlow)"/>
+
+    <!-- right HUD panel -->
+    <g transform="translate(1045,92)">
+      <rect x="0" y="0" width="470" height="436" rx="22" fill="url(#panel)" stroke="url(#titleGrad)" stroke-opacity=".28" stroke-width="1.2"/>
+      <rect x="1" y="1" width="468" height="70" rx="21" fill="#0f2138" fill-opacity=".55"/>
+      <circle cx="34" cy="36" r="6" fill="#ff6b87" opacity=".9"/>
+      <circle cx="56" cy="36" r="6" fill="#ffd166" opacity=".9"/>
+      <circle cx="78" cy="36" r="6" fill="#5ff0b6" opacity=".9"/>
+      <text x="110" y="41" font-family="'DM Mono','Cascadia Mono',Consolas,monospace" font-size="14" fill="#8fbde0" letter-spacing="2">HN NEXUS · COMMAND HUD · v1.0.0 / 4.4.2</text>
+      <line x1="20" y1="72" x2="450" y2="72" stroke="url(#line)" stroke-opacity=".5"/>
+
+      <g font-family="'DM Mono','Cascadia Mono',Consolas,monospace" font-size="16">
+        <text x="28" y="112" fill="#5ff0b6">● CONTEXT</text><text x="150" y="112" fill="#dff4ff">Kali · zsh · ~/HN-NEXUS · main</text>
+        <text x="28" y="148" fill="#4de7f7">◉ IDENTITY</text><text x="150" y="148" fill="#dff4ff">HN // CIT · CYBER CITADEL AGENCY</text>
+        <text x="28" y="184" fill="#c7a6ff">◆ PROFILE</text><text x="150" y="184" fill="#dff4ff">hnstyle set aurora  ·  15 visual modes</text>
+        <text x="28" y="220" fill="#ffd166">▣ RECOVERY</text><text x="150" y="220" fill="#dff4ff">backup-aware · rollback-ready</text>
+        <text x="28" y="256" fill="#8ff4ff">➜ COMMAND</text><text x="150" y="256" fill="#dff4ff">hnstatus · hndoctor · hnsuggest</text>
+      </g>
+      <rect x="28" y="284" width="414" height="1.5" fill="url(#line)" opacity=".45"/>
+      <g font-family="'DM Mono','Cascadia Mono',Consolas,monospace" font-size="15" fill="#9fc9e8">
+        <text x="28" y="318">$ hnhelp</text>
+        <text x="28" y="344" fill="#7ff6ff">→ Guided install · Rich docs · Offline-ready</text>
+        <text x="28" y="370">$ hnsuggest "analyze this workspace"</text>
+        <text x="28" y="396" fill="#c7a6ff">→ Advisory intelligence · local-first</text>
+      </g>
+      <rect x="28" y="408" width="180" height="4" rx="2" fill="#12314a"/>
+      <rect x="28" y="408" width="132" height="4" rx="2" fill="url(#titleGrad)"/>
     </g>
-    <text y="128" text-anchor="middle" font-family="monospace,'Cascadia Mono','Consolas'" font-size="13" fill="#9fefff" letter-spacing="3">HN // CIT SEAL</text>
+
+    <!-- designed seal (geometric citadel crest) -->
+    <g transform="translate(86,132)" filter="url(#softGlow)">
+      <circle cx="120" cy="120" r="138" fill="url(#glowC)" opacity=".85"/>
+      <circle cx="120" cy="120" r="112" fill="#07111f" stroke="url(#titleGrad)" stroke-width="3"/>
+      <circle cx="120" cy="120" r="100" fill="none" stroke="#cfefff" stroke-opacity=".22" stroke-width="1.2"/>
+      <circle cx="120" cy="120" r="90" fill="none" stroke="url(#titleGrad)" stroke-opacity=".45" stroke-width="1.2" stroke-dasharray="6 10"/>
+      <path d="M120 52 L178 86 L178 154 L120 188 L62 154 L62 86 Z" fill="#081526" stroke="url(#titleGrad)" stroke-width="2.2"/>
+      <path d="M120 66 L165 92 L165 148 L120 174 L75 148 L75 92 Z" fill="none" stroke="#9fefff" stroke-opacity=".2"/>
+      <!-- citadel mark -->
+      <g>
+        <path d="M82 154 L158 154 L151 164 L89 164 Z" fill="url(#titleGrad)" fill-opacity=".22" stroke="url(#titleGrad)" stroke-width="1.1"/>
+        <rect x="92" y="128" width="56" height="26" rx="3" fill="#0b1a2c" stroke="#bfeeff" stroke-opacity=".5" stroke-width="1.2"/>
+        <path d="M112 154 L112 138 Q120 130 128 138 L128 154 Z" fill="#07111f" stroke="#8ff4ff" stroke-opacity=".7"/>
+        <rect x="118" y="141" width="4" height="6" rx="1.5" fill="#7ff6ff"/>
+        <rect x="88" y="110" width="15" height="44" rx="2.5" fill="#0a1829" stroke="url(#titleGrad)" stroke-width="1.2"/>
+        <path d="M88 110 L88 101 L93 105 L95.5 97 L98 105 L103 101 L103 110 Z" fill="url(#titleGrad)" fill-opacity=".32"/>
+        <rect x="137" y="110" width="15" height="44" rx="2.5" fill="#0a1829" stroke="url(#titleGrad)" stroke-width="1.2"/>
+        <path d="M137 110 L137 101 L142 105 L144.5 97 L147 105 L152 101 L152 110 Z" fill="url(#titleGrad)" fill-opacity=".32"/>
+        <rect x="106" y="100" width="28" height="54" rx="3" fill="#0b1a2c" stroke="#d7c2ff" stroke-opacity=".55" stroke-width="1.3"/>
+        <path d="M106 100 L106 88 L112 94 L116 84 L120 92 L124 84 L128 94 L134 88 L134 100 Z" fill="url(#titleGrad)" fill-opacity=".38"/>
+        <rect x="114" y="110" width="12" height="10" rx="2" fill="#7ff6ff" fill-opacity=".14" stroke="#9fefff" stroke-opacity=".6"/>
+        <circle cx="120" cy="115" r="2.2" fill="#fff"/>
+        <path d="M120 88 L120 74" stroke="#bfeeff" stroke-width="1.8" stroke-linecap="round"/>
+        <circle cx="120" cy="70" r="3.5" fill="#7ff6ff"/>
+      </g>
+      <defs>
+        <path id="sealArc" d="M 34,120 A 86,86 0 0 1 206,120"/>
+      </defs>
+      <text font-family="'Segoe UI',Arial,sans-serif" font-size="11.5" font-weight="700" fill="#dff7ff" letter-spacing="2.4">
+        <textPath href="#sealArc" startOffset="50%" text-anchor="middle">HN // CIT · CYBER CITADEL AGENCY</textPath>
+      </text>
+    </g>
+
+    <!-- main copy -->
+    <g transform="translate(360,0)">
+      <text x="0" y="138" font-family="'DM Mono','Cascadia Mono',Consolas,monospace" font-size="18" fill="#7ff6ff" letter-spacing="5">HN // CIT  ·  CYBER CITADEL AGENCY</text>
+      <rect x="0" y="154" width="420" height="1.5" fill="url(#line)" opacity=".7"/>
+      <text x="0" y="235" font-family="'Space Grotesk','Segoe UI',Arial,sans-serif" font-size="92" font-weight="700" fill="url(#titleGrad)" letter-spacing="1">HN NEXUS</text>
+      <text x="0" y="282" font-family="'Space Grotesk','Segoe UI',Arial,sans-serif" font-size="30" font-weight="500" fill="#d8ecff">A Cinematic, Context-Aware ZSH Command Environment</text>
+      <text x="0" y="322" font-family="'Space Grotesk','Segoe UI',Arial,sans-serif" font-size="22" fill="#95b4d0">For Kali Linux — engineered for control, designed for precision, recovery-aware by design.</text>
+
+      <g transform="translate(0,360)">
+        <rect x="0" y="0" width="620" height="132" rx="18" fill="#0b1829" fill-opacity=".72" stroke="#2b4666" stroke-width="1.2"/>
+        <rect x="0" y="0" width="620" height="132" rx="18" fill="url(#titleGrad)" fill-opacity=".05"/>
+        <text x="26" y="38" font-family="'DM Mono','Cascadia Mono',Consolas,monospace" font-size="14" fill="#8fbde0" letter-spacing="3">ENGINEERED &amp; CREATED BY</text>
+        <text x="26" y="78" font-family="'Space Grotesk','Segoe UI',Arial,sans-serif" font-size="34" font-weight="700" fill="#ecf7ff">Hani Khaled Nasser Al-Nasiri</text>
+        <text x="26" y="108" font-family="'Space Grotesk','Segoe UI',Arial,sans-serif" font-size="18" fill="#8ff4ff">Cybersecurity Student — Al-Razi University  ·  <tspan fill="#c7a6ff">@hhh2006</tspan></text>
+      </g>
+    </g>
+
+    <!-- bottom status strip -->
+    <g transform="translate(54,552)" font-family="'DM Mono','Cascadia Mono',Consolas,monospace" font-size="13" fill="#7ea4c5" letter-spacing="2">
+      <text x="0" y="14">PACK v1.0.0</text>
+      <text x="150" y="14" fill="#2b4666">|</text>
+      <text x="180" y="14">TERMINAL BASELINE 4.4.2</text>
+      <text x="430" y="14" fill="#2b4666">|</text>
+      <text x="460" y="14" fill="#5ff0b6">LOCAL-FIRST · PRIVACY-RESPECTING</text>
+      <text x="820" y="14" fill="#2b4666">|</text>
+      <text x="850" y="14" fill="#ffd166">RECOVERY-AWARE · MANUAL CONTROL</text>
+    </g>
   </g>
-
-  <g filter="url(#softGlow)">
-    <rect x="108" y="78" width="592" height="34" rx="17" fill="#0b1423" fill-opacity="0.74" stroke="#27415f" stroke-opacity="0.9"/>
-    <circle cx="132" cy="95" r="5" fill="#5ff0b6"/>
-    <text x="148" y="101" font-family="monospace,'Cascadia Mono','Consolas'" font-size="14" fill="#bfefff" letter-spacing="1">HN // CIT · CYBER CITADEL AGENCY · ENGINEERED BY HN</text>
-
-    <text x="110" y="170" font-family="'Segoe UI',system-ui,sans-serif" font-size="24" font-weight="700" fill="#8ff4ff" letter-spacing="7">CINEMATIC COMMAND CENTER</text>
-    <text x="108" y="252" font-family="'Segoe UI',system-ui,sans-serif" font-size="92" font-weight="700" fill="url(#titleGrad)" letter-spacing="-2">HN NEXUS</text>
-    <text x="112" y="304" font-family="'Segoe UI',system-ui,sans-serif" font-size="30" font-weight="500" fill="#d8e9fb">Engineered for control. Designed for precision.</text>
-  </g>
-
-  <text x="112" y="344" font-family="'Segoe UI',system-ui,sans-serif" font-size="23" fill="#9bb4d1">Created &amp; engineered by <tspan fill="url(#nameGrad)" font-weight="700">Hani Khaled Nasser Al-Nasiri</tspan></text>
-  <text x="112" y="372" font-family="monospace,'Cascadia Mono','Consolas'" font-size="15" fill="#7f97b5">Cybersecurity Student — Al-Razi University · Pack v1.0.0 · Baseline 4.4.2 · Kali/ZSH · Local-first · Recovery-aware</text>
 </svg>
