@@ -40,6 +40,21 @@
 
   const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+  // Scroll progress
+  const progress = qs('#scrollProgress');
+  const onScroll = () => {
+    if (!progress) return;
+    const doc = document.documentElement;
+    const max = doc.scrollHeight - doc.clientHeight;
+    const pct = max > 0 ? (doc.scrollTop / max) * 100 : 0;
+    progress.style.width = pct + '%';
+  };
+  if (progress) {
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onScroll, { passive: true });
+  }
+
   // Scroll reveal
   const revealEls = qsa('.reveal, [data-reveal]');
   if (revealEls.length) {
@@ -75,6 +90,23 @@
       card.addEventListener('mousemove', onMove);
       card.addEventListener('mouseleave', reset);
       card.addEventListener('blur', reset, true);
+    });
+
+    // Magnetic buttons (subtle)
+    qsa('.magnetic.button, .nav-cta.magnetic').forEach(btn => {
+      let raf = 0;
+      btn.addEventListener('mousemove', (e) => {
+        const r = btn.getBoundingClientRect();
+        const x = e.clientX - (r.left + r.width / 2);
+        const y = e.clientY - (r.top + r.height / 2);
+        cancelAnimationFrame(raf);
+        raf = requestAnimationFrame(() => {
+          btn.style.transform = `translate(${(x * 0.08).toFixed(2)}px, ${(y * 0.12).toFixed(2)}px)`;
+        });
+      });
+      const reset = () => { cancelAnimationFrame(raf); btn.style.transform = ''; };
+      btn.addEventListener('mouseleave', reset);
+      btn.addEventListener('blur', reset);
     });
   }
 
@@ -121,17 +153,16 @@
     canvas.width = Math.floor(w * dpr);
     canvas.height = Math.floor(h * dpr);
     ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-    const count = Math.max(28, Math.min(90, Math.floor((w * h) / 24000)));
+    const count = Math.max(28, Math.min(110, Math.floor((w * h) / 22000)));
     points = Array.from({ length: count }, () => ({
-      x: rand(0, w), y: rand(0, h), r: rand(0.4, 1.8),
+      x: rand(0, w), y: rand(0, h), r: rand(0.4, 1.9),
       vx: rand(-0.12, 0.12), vy: rand(-0.18, 0.18),
-      a: rand(0.15, 0.55), hue: Math.random() < 0.5 ? 186 : 266
+      a: rand(0.15, 0.6), hue: Math.random() < 0.4 ? 186 : (Math.random() < 0.7 ? 266 : 160)
     }));
   }
 
   function draw() {
     ctx.clearRect(0, 0, w, h);
-    // soft beams
     const g = ctx.createLinearGradient(0, 0, w, h);
     g.addColorStop(0, 'rgba(77,231,247,0.04)');
     g.addColorStop(0.5, 'rgba(155,108,255,0.03)');
@@ -153,8 +184,8 @@
         const q = points[j];
         const dx = p.x - q.x, dy = p.y - q.y;
         const d2 = dx * dx + dy * dy;
-        if (d2 < 110 * 110) {
-          const alpha = (1 - Math.sqrt(d2) / 110) * 0.12;
+        if (d2 < 120 * 120) {
+          const alpha = (1 - Math.sqrt(d2) / 120) * 0.13;
           ctx.strokeStyle = `rgba(120, 210, 255, ${alpha})`;
           ctx.lineWidth = 1;
           ctx.beginPath();

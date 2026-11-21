@@ -10,10 +10,11 @@ description: "Branding assets, mockups, and guidance for real captures."
 
 ## Branding and mockups (included)
 - `assets/branding/hn-nexus-mark.svg` — primary HN NEXUS mark
+- `assets/branding/cit-seal.png` — **CIT official seal / identity mark** provided by the creator (integrated in README and website as HN // CIT branding)
 - `assets/branding/cyber-citadel-agency.svg` — secondary agency emblem
 - `assets/branding/terminal-mockup.svg` — **illustrative** SVG terminal HUD mockup (not a real screenshot)
 - `assets/branding/architecture-mockup.svg` — **illustrative** architecture diagram
-- `website/assets/og-cover.svg` — social/website cover artwork
+- `website/assets/hn-nexus-mark.svg`, `website/assets/cit-seal.png`, `website/assets/og-cover.svg` — website branding/cover assets
 - `assets/branding/IDENTITY.txt` — identity, philosophy, and attribution notes
 
 ## Real captures (to be added)

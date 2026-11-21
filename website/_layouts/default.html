@@ -19,21 +19,23 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="{{ '/style.css' | relative_url }}">
 
-  <noscript><style>.reveal,[data-reveal],.hero-copy,.hero-visual,.section-head,.card,.glass,.feature,.metric,.timeline-item{opacity:1 !important;transform:none !important;animation:none !important}</style></noscript>
+  <noscript><style>.reveal,[data-reveal],.hero-copy,.hero-visual,.section-head,.card,.glass,.feature,.metric,.timeline-item,.scroll-progress span{opacity:1 !important;transform:none !important;animation:none !important}</style></noscript>
 </head>
 <body class="doc-body">
+  <div class="scroll-progress" aria-hidden="true"><span id="scrollProgress"></span></div>
   <canvas id="fx-canvas" class="fx-canvas" aria-hidden="true"></canvas>
   <div class="fx-grid" aria-hidden="true"></div>
   <a class="skip-link" href="#doc-main">Skip to content</a>
   <header class="site-header">
     <a class="brand" href="{{ '/' | relative_url }}" aria-label="HN NEXUS home">
-      <span class="brand-mark"><img src="{{ '/assets/hn-nexus-mark.svg' | relative_url }}" alt="" width="34" height="34"></span>
+      <span class="brand-mark brand-mark-seal"><img src="{{ '/assets/cit-seal.png' | relative_url }}" alt="" width="34" height="34"></span>
       <span class="brand-text"><strong>HN NEXUS</strong><small>HN // CIT · COMMAND CENTER</small></span>
     </a>
     <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
     <nav id="site-nav" class="site-nav">
       <a href="{{ '/' | relative_url }}#capabilities">Capabilities</a>
       <a href="{{ '/' | relative_url }}#architecture">Architecture</a>
+      <a href="{{ '/' | relative_url }}#creator">Creator</a>
       <a href="{{ '/' | relative_url }}#docs">Docs</a>
       <a href="{{ '/' | relative_url }}#install">Install</a>
       <a class="nav-cta" href="https://github.com/hhh2006/HN-NEXUS" target="_blank" rel="noopener">GitHub ↗</a>
@@ -41,9 +43,10 @@
   </header>
   <main id="doc-main" class="doc-shell">
     <div class="doc-hero">
-      <div class="eyebrow">HN // CIT · CYBER CITADEL AGENCY</div>
-      <h1>{{ page.title }}</h1>
+      <div class="eyebrow">HN // CIT · CYBER CITADEL AGENCY · ENGINEERED BY HN</div>
+      <h1 class="grad-text-soft">{{ page.title }}</h1>
       {% if page.description %}<p class="doc-lead">{{ page.description }}</p>{% endif %}
+      <div class="doc-hero-meta">Creator: <strong class="name-inline">Hani Khaled Nasser Al-Nasiri</strong> · Pack v1.0.0 / Baseline 4.4.2</div>
     </div>
     <article class="doc-content prose">
       {{ content }}
@@ -51,10 +54,11 @@
     <div class="doc-actions">
       <a class="button button-ghost" href="{{ '/' | relative_url }}">← Back to Command Center</a>
       <a class="button button-primary" href="{{ '/' | relative_url }}#docs"><span>Documentation Hub</span></a>
+      <a class="button button-glow" href="https://github.com/hhh2006/HN-NEXUS/releases/tag/v1.0.0" target="_blank" rel="noopener"><span>Release v1.0.0</span></a>
     </div>
   </main>
   <footer class="site-footer">
-    <div class="footer-brand">HN <b>NEXUS</b> <span>· HN // CIT</span></div>
+    <div class="footer-brand"><img src="{{ '/assets/cit-seal.png' | relative_url }}" alt="" class="footer-seal"> HN <b>NEXUS</b> <span>· HN // CIT</span></div>
     <div>CYBER CITADEL AGENCY · ENGINEERED BY HN</div>
     <div>© {{ site.time | date: '%Y' }} Hani Khaled Nasser Al-Nasiri</div>
   </footer>

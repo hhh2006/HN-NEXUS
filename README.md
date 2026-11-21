@@ -1,9 +1,13 @@
 <div align="center">
-  <img src="assets/branding/hn-nexus-mark.svg" width="168" alt="HN NEXUS mark" />
+  <img src="assets/branding/hn-nexus-mark.svg" width="156" alt="HN NEXUS mark" />
+  &nbsp;&nbsp;&nbsp;
+  <img src="assets/branding/cit-seal.png" width="156" alt="CIT seal — HN // CIT identity mark" />
   <h1>HN NEXUS</h1>
   <h3>HN // CIT Command Center · CYBER CITADEL AGENCY</h3>
   <p><strong>ENGINEERED FOR CONTROL. DESIGNED FOR PRECISION.</strong><br/>
   <em>ENGINEERED BY HN</em></p>
+  <p><strong>Created &amp; engineered by <a href="https://github.com/hhh2006">Hani Khaled Nasser Al-Nasiri</a></strong><br/>
+  <sub>Cybersecurity Student — Al-Razi University · HN // CIT · CYBER CITADEL AGENCY</sub></p>
 
   <p>
     <a href="https://github.com/hhh2006/HN-NEXUS/actions/workflows/ci.yml"><img alt="CI" src="https://img.shields.io/github/actions/workflow/status/hhh2006/HN-NEXUS/ci.yml?branch=main&label=CI&style=flat-square"></a>
@@ -61,11 +65,16 @@
 
 ## Identity & Attribution
 
-- **Creator:** Hani Khaled Nasser Al-Nasiri (HN)
-- **Academic profile:** Cybersecurity Student — Al-Razi University
+<p align="center">
+  <img src="assets/branding/cit-seal.png" width="180" alt="CIT official seal — HN NEXUS identity mark">
+</p>
+
+- **Creator:** **Hani Khaled Nasser Al-Nasiri (HN)** — *ENGINEERED BY HN*
+- **Academic profile:** Cybersecurity Student — **Al-Razi University**
 - **GitHub:** [@hhh2006](https://github.com/hhh2006)
 - **Project identity:** **HN // CIT** (primary) · **CYBER CITADEL AGENCY** (secondary)
 - **Signature:** **ENGINEERED BY HN**
+- **CIT seal:** included as an official identity mark for this project’s HN // CIT branding (`assets/branding/cit-seal.png`, `website/assets/cit-seal.png`).
 
 See [assets/branding/IDENTITY.txt](assets/branding/IDENTITY.txt) for design philosophy and attribution notes.
 
@@ -197,12 +206,12 @@ hnstyle auto
 
 The site is a cinematic, responsive experience built from `website/` and deployed via **GitHub Actions** (repository Pages source must be **GitHub Actions**). Current deployment status in GitHub shows Pages configured and a successful Pages deploy for the latest published commit.
 
-**If the website does not open:**
+**If the website does not open (including regional/network blocks):**
 1. **Check deployment status:** [Pages workflow](https://github.com/hhh2006/HN-NEXUS/actions/workflows/pages.yml) and [Pages settings](https://github.com/hhh2006/HN-NEXUS/settings/pages). A successful Pages deployment means GitHub published the site.
 2. **Use the exact URL:** `https://hhh2006.github.io/HN-NEXUS/` and wait a few minutes after a fresh deploy for DNS/edge propagation and caching.
 3. **Refresh/cache:** hard-refresh (`Ctrl+F5`) or try an incognito/private window.
-4. **Network/DNS/ISP:** some networks, ISPs, or regions may block or delay `github.io`. Try another browser, device, network, or DNS/VPN.
-5. **Fallback access:** while Pages is unavailable to you, browse the full documentation in this repository (`docs/`, `README.md`) or download assets from the [v1.0.0 release](https://github.com/hhh2006/HN-NEXUS/releases/tag/v1.0.0).
+4. **Network/DNS/ISP/region:** some networks, ISPs, or countries may block or delay `github.io` (this can be outside the repository’s control). Try another browser, device, network, or DNS/VPN if available to you.
+5. **Guaranteed fallback access:** browse the full documentation directly in this repository (`docs/`, `README.md`), download assets from the [v1.0.0 release](https://github.com/hhh2006/HN-NEXUS/releases/tag/v1.0.0), or clone/download the repo and open `website/index.html` locally for a static preview of the project page.
 
 ## Validation & quality notes
 
