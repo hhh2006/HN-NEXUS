@@ -9,12 +9,14 @@ description: "Branding assets, mockups, and guidance for real captures."
 **HN // CIT · CYBER CITADEL AGENCY · ENGINEERED BY HN**
 
 ## Branding and mockups (included)
+- `assets/branding/hn-nexus-hero.svg` — cinematic hero/banner artwork for the README and site identity (includes a harmonized HN // CIT seal motif and creator attribution)
 - `assets/branding/hn-nexus-mark.svg` — primary HN NEXUS mark
-- `assets/branding/cit-seal.png` — **CIT official seal / identity mark** provided by the creator (integrated in README and website as HN // CIT branding)
+- `assets/branding/cit-seal-emblem.png` — **CIT seal / identity mark** provided by the creator, processed for transparent background, trim, and balanced framing for clean visual integration (original source kept as `assets/branding/cit-seal.png`)
+- `assets/branding/cit-seal-emblem.webp` / `assets/branding/cit-seal-trim.png` — optimized/trimmed variants for flexible use
 - `assets/branding/cyber-citadel-agency.svg` — secondary agency emblem
 - `assets/branding/terminal-mockup.svg` — **illustrative** SVG terminal HUD mockup (not a real screenshot)
 - `assets/branding/architecture-mockup.svg` — **illustrative** architecture diagram
-- `website/assets/hn-nexus-mark.svg`, `website/assets/cit-seal.png`, `website/assets/og-cover.svg` — website branding/cover assets
+- `website/assets/hn-nexus-hero.svg`, `website/assets/hn-nexus-mark.svg`, `website/assets/cit-seal-emblem.png`, `website/assets/og-cover.svg` — website branding/cover assets
 - `assets/branding/IDENTITY.txt` — identity, philosophy, and attribution notes
 
 ## Real captures (to be added)

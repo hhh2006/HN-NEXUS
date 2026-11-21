@@ -1,13 +1,11 @@
 <div align="center">
-  <img src="assets/branding/hn-nexus-mark.svg" width="156" alt="HN NEXUS mark" />
-  &nbsp;&nbsp;&nbsp;
-  <img src="assets/branding/cit-seal.png" width="156" alt="CIT seal — HN // CIT identity mark" />
-  <h1>HN NEXUS</h1>
-  <h3>HN // CIT Command Center · CYBER CITADEL AGENCY</h3>
-  <p><strong>ENGINEERED FOR CONTROL. DESIGNED FOR PRECISION.</strong><br/>
-  <em>ENGINEERED BY HN</em></p>
-  <p><strong>Created &amp; engineered by <a href="https://github.com/hhh2006">Hani Khaled Nasser Al-Nasiri</a></strong><br/>
-  <sub>Cybersecurity Student — Al-Razi University · HN // CIT · CYBER CITADEL AGENCY</sub></p>
+  <img src="assets/branding/hn-nexus-hero.svg" width="100%" alt="HN NEXUS — Cinematic Command Center by Hani Khaled Nasser Al-Nasiri" />
+
+  <p>
+    <img src="assets/branding/cit-seal-emblem.png" width="132" alt="CIT official seal — HN // CIT identity mark" />
+  </p>
+
+  <p><strong>HN // CIT</strong> · <strong>CYBER CITADEL AGENCY</strong> · <strong>ENGINEERED BY HN</strong></p>
 
   <p>
     <a href="https://github.com/hhh2006/HN-NEXUS/actions/workflows/ci.yml"><img alt="CI" src="https://img.shields.io/github/actions/workflow/status/hhh2006/HN-NEXUS/ci.yml?branch=main&label=CI&style=flat-square"></a>
@@ -22,13 +20,18 @@
   </p>
 
   <p>
-    <a href="https://hhh2006.github.io/HN-NEXUS/">Website</a> ·
-    <a href="docs/COMMAND-REFERENCE.md">Command Reference</a> ·
-    <a href="docs/TUTORIAL.md">Tutorial</a> ·
-    <a href="docs/INSTALLATION-AND-RECOVERY.md">Install &amp; Recovery</a> ·
-    <a href="docs/ARCHITECTURE.md">Architecture</a> ·
-    <a href="docs/FAQ.md">FAQ</a> ·
-    <a href="docs/TROUBLESHOOTING.md">Troubleshooting</a>
+    <a href="https://hhh2006.github.io/HN-NEXUS/"><strong>🌐 Website</strong></a> ·
+    <a href="docs/COMMAND-REFERENCE.md"><strong>⌘ Commands</strong></a> ·
+    <a href="docs/TUTORIAL.md"><strong>📘 Tutorial</strong></a> ·
+    <a href="docs/INSTALLATION-AND-RECOVERY.md"><strong>⛨ Install &amp; Recovery</strong></a> ·
+    <a href="docs/ARCHITECTURE.md"><strong>▤ Architecture</strong></a> ·
+    <a href="docs/FAQ.md"><strong>FAQ</strong></a> ·
+    <a href="docs/TROUBLESHOOTING.md"><strong>Troubleshooting</strong></a>
+  </p>
+
+  <p>
+    <sub>Created &amp; engineered by <strong><a href="https://github.com/hhh2006">Hani Khaled Nasser Al-Nasiri</a></strong> — Cybersecurity Student, Al-Razi University<br/>
+    <em>Engineered for control. Designed for precision.</em></sub>
   </p>
 </div>
 
@@ -50,23 +53,23 @@
 - **Terminal source baseline:** `4.4.2` (`VERSION` remains `4.4.2` to preserve runtime baseline integrity)
 - **Primary identity:** `HN // CIT` · **Secondary:** `CYBER CITADEL AGENCY`
 
-## Highlights
+## At a Glance
 
-| Area | What it provides | Notes |
-|---|---|---|
-| **Terminal HUD** | Responsive three-row prompt (identity, context/path/status, ready/input) | Event-driven ZSH hooks; width-aware layout |
-| **Visual system** | 15 visual profiles (`hnstyle`), gradient rails, glyphs with fallbacks | Nerd Font improves appearance; fallbacks supported |
-| **Context & assistance** | `hnsuggest`, `hnhistory-search`, `hnexplain`, `hnwhy` | Local heuristics, advisory only, never auto-executed |
-| **Operator utilities** | File/log/data viewers, process/service/container/port views, reports | Explicitly invoked, read-only where stated |
-| **Output intelligence** | `hnoutput`, `hnnet`, `hnanalyze` for supplied text | Heuristic classification; no scanning/capture/execution |
-| **Native presentation** | Interactive wrappers for familiar commands (e.g. `cat`, `ip a/route/neigh`, `ps/df/free/ss/du`, `ls/tree`) | Preserves native behavior for pipes/redirections/unsupported cases; bypass with `command <name>` |
-| **Recovery** | Guided install, backups, rollback artifacts, diagnostics | Not a full system snapshot; keep independent backups |
-| **Website & docs** | Cinematic GitHub Pages site, comprehensive docs, guides, reports | SVG mockups + real-capture guidance |
+| ✦ | Area | What it provides | Notes |
+|---|---|---|---|
+| ⌘ | **Terminal HUD** | Responsive three-row prompt (identity, context/path/status, ready/input) | Event-driven ZSH hooks; width-aware layout |
+| ◈ | **Visual system** | 15 visual profiles (`hnstyle`), gradient rails, glyphs with fallbacks | Nerd Font improves appearance; fallbacks supported |
+| ⌕ | **Context & assistance** | `hnsuggest`, `hnhistory-search`, `hnexplain`, `hnwhy` | Local heuristics, advisory only, never auto-executed |
+| ▤ | **Operator utilities** | File/log/data viewers, process/service/container/port views, reports | Explicitly invoked, read-only where stated |
+| ≋ | **Output intelligence** | `hnoutput`, `hnnet`, `hnanalyze` for supplied text | Heuristic classification; no scanning/capture/execution |
+| ⟲ | **Native presentation** | Interactive wrappers for familiar commands (e.g. `cat`, `ip a/route/neigh`, `ps/df/free/ss/du`, `ls/tree`) | Preserves native behavior for pipes/redirections/unsupported cases; bypass with `command <name>` |
+| ⛨ | **Recovery** | Guided install, backups, rollback artifacts, diagnostics | Not a full system snapshot; keep independent backups |
+| 🌐 | **Website & docs** | Cinematic GitHub Pages site, comprehensive docs, guides, reports | SVG mockups + real-capture guidance |
 
 ## Identity & Attribution
 
 <p align="center">
-  <img src="assets/branding/cit-seal.png" width="180" alt="CIT official seal — HN NEXUS identity mark">
+  <img src="assets/branding/cit-seal-emblem.png" width="180" alt="CIT official seal — HN NEXUS identity mark">
 </p>
 
 - **Creator:** **Hani Khaled Nasser Al-Nasiri (HN)** — *ENGINEERED BY HN*
@@ -74,7 +77,7 @@
 - **GitHub:** [@hhh2006](https://github.com/hhh2006)
 - **Project identity:** **HN // CIT** (primary) · **CYBER CITADEL AGENCY** (secondary)
 - **Signature:** **ENGINEERED BY HN**
-- **CIT seal:** included as an official identity mark for this project’s HN // CIT branding (`assets/branding/cit-seal.png`, `website/assets/cit-seal.png`).
+- **CIT seal:** included as an official identity mark for this project’s HN // CIT branding (`assets/branding/cit-seal-emblem.png`, `website/assets/cit-seal-emblem.png`).
 
 See [assets/branding/IDENTITY.txt](assets/branding/IDENTITY.txt) for design philosophy and attribution notes.
 
