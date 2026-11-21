@@ -9,17 +9,17 @@ description: "Branding assets, mockups, and guidance for real captures."
 **HN // CIT · CYBER CITADEL AGENCY · ENGINEERED BY HN**
 
 ## Branding and mockups (included)
-- `assets/branding/cit-seal-emblem.png` / `assets/branding/cit-seal-emblem.webp` — **HN // CIT agency seal emblem** used in README and website identity placements.
+- `assets/branding/agency-seal.svg` — **designed Cyber Citadel Agency seal** (original SVG crest) for premium, harmonious HN // CIT identity presentation across README and website
 - `assets/branding/hn-nexus-hero.svg` — cinematic full-width hero/banner artwork for the README and site identity (includes HN // CIT identity motif and prominent creator attribution)
 - `assets/branding/terminal-theater.svg` / `terminal-mockup.svg` — **illustrative** cinematic SVG terminal HUD mockup (not a real screenshot)
 - `assets/branding/readme-divider.svg` — decorative neon divider used in README
 - `assets/branding/hn-nexus-mark.svg` — primary HN NEXUS mark
-- `assets/branding/cit-seal.png` — original provided CIT seal source image (preserved as-is)
+- `assets/branding/cit-seal.png` — **creator-provided CIT seal** (original source, preserved as-is)
 - `assets/branding/cit-seal-emblem.png` — processed transparent/balanced presentation variant of the provided CIT seal for clean integration
 - `assets/branding/cit-seal-emblem.webp` / `assets/branding/cit-seal-trim.png` — optimized/trimmed variants for flexible use
 - `assets/branding/cyber-citadel-agency.svg` — secondary agency emblem
 - `assets/branding/architecture-mockup.svg` — **illustrative** architecture diagram
-- `website/assets/` mirrors key assets for the published site (`cit-seal-emblem.png/.webp`, hn-nexus-hero.svg`, `terminal-theater.svg`, `readme-divider.svg`, `hn-nexus-mark.svg`, `cit-seal*`, `og-cover.svg`, real captures in `screenshots/`, etc.)
+- `website/assets/` mirrors key assets for the published site (`agency-seal.svg`, `hn-nexus-hero.svg`, `terminal-theater.svg`, `readme-divider.svg`, `hn-nexus-mark.svg`, `cit-seal*`, `og-cover.svg`, etc.)
 - `assets/branding/IDENTITY.txt` — identity, philosophy, and attribution notes
 
 ## Real captures (to be added)
@@ -37,6 +37,7 @@ The prompt uses Nerd Font glyphs when available and falls back to readable text 
 - Prefer SVG for branding/diagrams and PNG/GIF/MP4 for real environment captures.
 - Always label mockups as illustrative and redact sensitive information from real captures.
 - Maintain consistent identity: **HN // CIT**, **CYBER CITADEL AGENCY**, **ENGINEERED BY HN**.
+
 
 ## Real screenshots (author-provided)
 
