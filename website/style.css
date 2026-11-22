@@ -607,3 +607,164 @@ a:focus-visible,button:focus-visible{outline:2px solid rgba(77,231,247,.7);outli
   .cit-seal-hero,.seal-hero-designed,.seal-img-designed,.seal-ring,.seal-orbit,.seal-core-glow{animation:none !important}
 }
 
+/* ============================================================
+   RADICAL CINEMATIC UPGRADE — interactive components
+   ============================================================ */
+
+/* --- Alternating section surfaces (previously undefined) --- */
+.section-alt{position:relative;background:
+  radial-gradient(900px 420px at 15% 0%,rgba(79,141,255,.07),transparent 60%),
+  radial-gradient(760px 380px at 90% 100%,rgba(155,108,255,.07),transparent 60%),
+  linear-gradient(180deg,rgba(8,14,25,.55),rgba(5,9,17,.35) 40%,rgba(8,14,25,.55))}
+.section-alt::after{content:"";position:absolute;inset:0;pointer-events:none;
+  background-image:linear-gradient(rgba(58,92,132,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(58,92,132,.05) 1px,transparent 1px);
+  background-size:72px 72px;mask-image:radial-gradient(ellipse at center,black 30%,transparent 82%)}
+.section-alt>*{position:relative;z-index:1}
+
+/* --- Hero live typing line --- */
+.t-cmd.t-live{background:linear-gradient(90deg,rgba(77,231,247,.07),transparent 70%);border-radius:8px;padding:4px 8px;margin-left:-8px}
+.type-target{color:#9ff0ff;white-space:pre}
+
+/* --- Copy buttons --- */
+.copy-btn{font:600 10px var(--mono);letter-spacing:.14em;text-transform:uppercase;color:#06121c;
+  background:linear-gradient(120deg,#17f1d1,#4de7f7);border:0;border-radius:9px;padding:8px 14px;cursor:pointer;
+  box-shadow:0 6px 18px rgba(23,241,209,.25);transition:transform .18s ease,box-shadow .18s ease,filter .18s ease}
+.copy-btn:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(23,241,209,.35);filter:brightness(1.06)}
+.copy-btn:active{transform:translateY(0)}
+.copy-btn.is-copied{background:linear-gradient(120deg,#5ff0b6,#4de7f7);animation:copyPop .4s ease}
+@keyframes copyPop{0%{transform:scale(1)}40%{transform:scale(1.08)}100%{transform:scale(1)}}
+.copy-btn:focus-visible{outline:2px solid #fff;outline-offset:2px}
+
+/* ============================================================
+   02 · PRISM PROFILE GALLERY
+   ============================================================ */
+.prism-preview{position:relative;display:grid;gap:0;border:1px solid rgba(77,231,247,.2);border-radius:22px;overflow:hidden;
+  background:linear-gradient(180deg,rgba(11,20,35,.9),rgba(6,12,22,.95));box-shadow:var(--shadow);margin-bottom:26px}
+.prism-preview-rail{height:10px;background:linear-gradient(90deg,rgb(20,205,170),rgb(40,160,235),rgb(155,105,245));
+  background-size:200% 100%;animation:railFlow 6s linear infinite;transition:background .45s ease}
+@keyframes railFlow{0%{background-position:0% 0}100%{background-position:200% 0}}
+.prism-preview-body{display:flex;flex-wrap:wrap;gap:18px;align-items:center;justify-content:space-between;padding:20px 24px}
+.prism-preview-info{display:grid;gap:4px}
+.prism-preview-name{font:700 clamp(1.2rem,2.4vw,1.7rem)/1.1 var(--display);letter-spacing:.06em;color:var(--text)}
+.prism-preview-rgb{font:500 12px var(--mono);letter-spacing:.08em;color:var(--muted)}
+.prism-preview-cmd{display:flex;align-items:center;gap:10px;background:rgba(3,8,16,.75);border:1px solid rgba(109,152,201,.25);
+  border-radius:12px;padding:9px 9px 9px 16px}
+.prism-preview-cmd code{font:500 14px var(--mono);color:#7df3c8;letter-spacing:.03em}
+.prism-preview-hud{display:grid;gap:2px;padding:14px 24px 18px;border-top:1px solid rgba(109,152,201,.14);
+  background:rgba(3,7,14,.6);font:500 12px/1.7 var(--mono);color:#9db4cf;overflow-x:auto}
+.prism-preview-hud b{color:#7df3c8;font-weight:600}
+.ph-row{white-space:pre}
+
+.prism-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:14px}
+.prism-card{display:grid;gap:12px;text-align:left;padding:16px;border-radius:16px;cursor:pointer;
+  border:1px solid rgba(109,152,201,.2);background:linear-gradient(180deg,rgba(12,20,34,.8),rgba(7,13,23,.85));
+  color:inherit;font:inherit;transition:transform .22s ease,border-color .22s ease,box-shadow .22s ease;position:relative;overflow:hidden}
+.prism-card::after{content:"";position:absolute;inset:0;background:linear-gradient(120deg,transparent 30%,rgba(255,255,255,.06) 50%,transparent 70%);
+  transform:translateX(-120%);transition:transform .55s ease;pointer-events:none}
+.prism-card:hover::after,.prism-card:focus-visible::after,.prism-card.is-active::after{transform:translateX(120%)}
+.prism-card:hover,.prism-card:focus-visible{transform:translateY(-4px);border-color:rgba(77,231,247,.45);box-shadow:0 14px 34px rgba(0,0,0,.35),0 0 24px rgba(77,231,247,.12)}
+.prism-card.is-active{border-color:rgba(77,231,247,.65);box-shadow:0 0 0 1px rgba(77,231,247,.35),0 14px 34px rgba(0,0,0,.4),0 0 30px rgba(77,231,247,.18)}
+.prism-rail{display:block;height:34px;border-radius:999px;border:1px solid rgba(255,255,255,.22);
+  box-shadow:0 0 16px rgba(0,0,0,.35),inset 0 1px 0 rgba(255,255,255,.25);position:relative;overflow:hidden}
+.prism-rail::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(255,255,255,.22),transparent 45%,rgba(0,0,0,.18))}
+.prism-meta{display:grid;gap:3px}
+.prism-meta b{font:600 .95rem/1.2 var(--display);letter-spacing:.04em;text-transform:capitalize;color:var(--text)}
+.prism-meta code{font:500 12px var(--mono);color:var(--cyan);letter-spacing:.08em}
+.prism-card.is-active .prism-meta code::before{content:"✓ ";color:var(--green)}
+.prism-note{margin:20px 0 0;color:var(--muted);font-size:.95rem;line-height:1.7}
+.prism-note code{color:#7df3c8}
+.prism-note strong{color:var(--text)}
+
+/* ============================================================
+   03 · COMMAND EXPLORER
+   ============================================================ */
+.explorer{border:1px solid rgba(109,152,201,.2);border-radius:22px;background:linear-gradient(180deg,rgba(11,20,35,.85),rgba(6,12,22,.9));
+  box-shadow:var(--shadow);overflow:hidden}
+.explorer-controls{display:grid;gap:14px;padding:20px 22px;border-bottom:1px solid rgba(109,152,201,.16);
+  background:linear-gradient(180deg,rgba(15,26,44,.7),rgba(9,16,28,.5))}
+.explorer-search{display:flex;align-items:center;gap:10px;background:rgba(3,8,16,.8);border:1px solid rgba(109,152,201,.28);
+  border-radius:14px;padding:12px 16px;color:var(--muted);transition:border-color .2s ease,box-shadow .2s ease}
+.explorer-search:focus-within{border-color:rgba(77,231,247,.55);box-shadow:0 0 0 3px rgba(77,231,247,.12)}
+.explorer-search input{flex:1;background:transparent;border:0;outline:0;color:var(--text);font:500 14px var(--mono);letter-spacing:.02em;min-width:0}
+.explorer-search input::placeholder{color:#5f7592}
+.chip-row{display:flex;flex-wrap:wrap;gap:8px}
+.chip{font:600 11px var(--mono);letter-spacing:.1em;text-transform:uppercase;color:#9db4cf;cursor:pointer;
+  background:rgba(255,255,255,.03);border:1px solid rgba(109,152,201,.25);border-radius:999px;padding:8px 14px;
+  transition:color .2s ease,border-color .2s ease,background .2s ease,transform .2s ease}
+.chip:hover{color:var(--text);border-color:rgba(77,231,247,.4);transform:translateY(-2px)}
+.chip.is-active{color:#06121c;background:linear-gradient(120deg,#17f1d1,#4de7f7);border-color:transparent;
+  box-shadow:0 6px 18px rgba(23,241,209,.3)}
+.chip:focus-visible{outline:2px solid var(--cyan);outline-offset:2px}
+.explorer-count{font:600 11px var(--mono);letter-spacing:.16em;text-transform:uppercase;color:var(--cyan)}
+.cmd-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(255px,1fr));gap:14px;padding:22px}
+.cmd-card{display:grid;gap:8px;align-content:start;padding:16px 18px;border-radius:16px;position:relative;
+  border:1px solid rgba(109,152,201,.18);background:linear-gradient(180deg,rgba(12,20,34,.75),rgba(7,13,23,.8));
+  transition:transform .2s ease,border-color .2s ease,box-shadow .2s ease,opacity .25s ease}
+.cmd-card:hover{transform:translateY(-3px);border-color:rgba(77,231,247,.4);box-shadow:0 12px 28px rgba(0,0,0,.32)}
+.cmd-card>code{font:600 14px var(--mono);color:#7df3c8;letter-spacing:.02em;word-break:break-word}
+.cmd-card p{margin:0;color:var(--muted);font-size:.86rem;line-height:1.6}
+.cmd-tag{justify-self:start;font:600 9px var(--mono);letter-spacing:.16em;text-transform:uppercase;color:#8fb0d4;
+  border:1px solid rgba(109,152,201,.3);border-radius:999px;padding:4px 9px;background:rgba(255,255,255,.02)}
+.cmd-card.is-hidden{display:none}
+.cmd-card.is-match{animation:matchIn .35s ease both}
+@keyframes matchIn{from{opacity:0;transform:translateY(8px) scale(.98)}to{opacity:1;transform:none}}
+.explorer-empty{padding:34px 22px 40px;text-align:center;color:var(--muted);font:500 14px var(--mono)}
+.explorer-foot{margin-top:18px;color:var(--muted);font-size:.95rem}
+.explorer-foot a{color:var(--cyan);text-decoration:none;border-bottom:1px dashed rgba(77,231,247,.45)}
+.explorer-foot a:hover{color:#9ff0ff}
+.explorer-foot code{color:#7df3c8}
+
+/* ============================================================
+   09 · INSTALL MODE TABS
+   ============================================================ */
+.mode-explorer{margin-top:30px;border:1px solid rgba(109,152,201,.2);border-radius:22px;overflow:hidden;
+  background:linear-gradient(180deg,rgba(11,20,35,.88),rgba(6,12,22,.94));box-shadow:var(--shadow)}
+.tab-list{display:flex;flex-wrap:wrap;gap:6px;padding:14px 16px;border-bottom:1px solid rgba(109,152,201,.16);
+  background:linear-gradient(180deg,rgba(15,26,44,.7),rgba(9,16,28,.5))}
+.mode-tab{font:600 12px var(--mono);letter-spacing:.08em;color:#9db4cf;cursor:pointer;background:transparent;
+  border:1px solid rgba(109,152,201,.25);border-radius:10px;padding:10px 16px;transition:.2s}
+.mode-tab:hover{color:var(--text);border-color:rgba(77,231,247,.4);transform:translateY(-2px)}
+.mode-tab.is-active{color:#06121c;background:linear-gradient(120deg,#17f1d1,#4de7f7);border-color:transparent;
+  box-shadow:0 6px 18px rgba(23,241,209,.3)}
+.mode-tab:focus-visible{outline:2px solid var(--cyan);outline-offset:2px}
+.mode-panel{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:20px;align-items:center;padding:24px}
+.mode-panel[hidden]{display:none}
+.mode-copy h3{margin:0 0 6px;font:700 1.05rem/1.3 var(--display);color:var(--text)}
+.mode-copy p{margin:0;color:var(--muted);font-size:.93rem;line-height:1.65;max-width:62ch}
+.mode-cmd{display:flex;align-items:center;gap:10px;background:rgba(3,8,16,.8);border:1px solid rgba(109,152,201,.28);
+  border-radius:12px;padding:10px 10px 10px 16px;white-space:nowrap}
+.mode-cmd code{font:500 14px var(--mono);color:#7df3c8}
+.mode-explorer.is-switching .mode-panel{animation:modeIn .35s ease both}
+@keyframes modeIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+
+/* --- Real capture pair inside showcase card --- */
+.capture-pair{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;padding:12px;
+  background:linear-gradient(180deg,rgba(10,18,30,.94),rgba(6,12,22,.99))}
+.capture-pair img{width:100%;height:auto;border-radius:10px;border:1px solid rgba(120,180,255,.18);display:block}
+
+/* ============================================================
+   RESPONSIVE — new components
+   ============================================================ */
+@media (max-width: 980px){
+  .mode-panel{grid-template-columns:1fr}
+  .mode-cmd{justify-self:stretch;white-space:normal;overflow-x:auto}
+  .prism-preview-body{flex-direction:column;align-items:flex-start}
+  .prism-preview-cmd{width:100%;justify-content:space-between}
+}
+@media (max-width: 640px){
+  .cmd-grid{grid-template-columns:1fr;padding:16px}
+  .prism-grid{grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:10px}
+  .prism-card{padding:13px}
+  .explorer-controls{padding:16px}
+  .tab-list{padding:12px}
+  .mode-panel{padding:18px}
+  .mode-cmd{flex-wrap:wrap;white-space:normal}
+  .prism-preview-hud{font-size:10.5px}
+}
+@media (prefers-reduced-motion: reduce){
+  .prism-preview-rail{animation:none !important}
+  .prism-card,.chip,.mode-tab,.copy-btn,.cmd-card{transition:none !important;transform:none !important}
+  .prism-card::after{display:none}
+  .cmd-card.is-match,.mode-explorer.is-switching .mode-panel,.copy-btn.is-copied{animation:none !important}
+}
+

@@ -1,0 +1,132 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 984" width="1280" role="img" aria-labelledby="t d">
+<title id="t">HN NEXUS Prism Visual Profiles</title>
+<desc id="d">All 15 Prism profile rail gradients with their exact runtime RGB values from config/hn-terminal.zsh</desc>
+<defs>
+<linearGradient id="g0" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="rgb(20;205;170)"/><stop offset="50%" stop-color="rgb(40;160;235)"/><stop offset="100%" stop-color="rgb(155;105;245)"/></linearGradient>
+<linearGradient id="g1" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="rgb(45;105;235)"/><stop offset="50%" stop-color="rgb(115;85;235)"/><stop offset="100%" stop-color="rgb(190;90;220)"/></linearGradient>
+<linearGradient id="g2" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="rgb(145;75;225)"/><stop offset="50%" stop-color="rgb(205;90;190)"/><stop offset="100%" stop-color="rgb(245;105;165)"/></linearGradient>
+<linearGradient id="g3" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="rgb(75;205;245)"/><stop offset="50%" stop-color="rgb(70;145;245)"/><stop offset="100%" stop-color="rgb(145;115;245)"/></linearGradient>
+<linearGradient id="g4" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="rgb(235;105;165)"/><stop offset="50%" stop-color="rgb(180;100;225)"/><stop offset="100%" stop-color="rgb(105;125;245)"/></linearGradient>
+<linearGradient id="g5" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="rgb(20;190;190)"/><stop offset="50%" stop-color="rgb(40;135;230)"/><stop offset="100%" stop-color="rgb(105;105;225)"/></linearGradient>
+<linearGradient id="g6" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="rgb(80;90;220)"/><stop offset="50%" stop-color="rgb(145;85;235)"/><stop offset="100%" stop-color="rgb(205;100;200)"/></linearGradient>
+<linearGradient id="g7" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="rgb(175;115;235)"/><stop offset="50%" stop-color="rgb(115;125;245)"/><stop offset="100%" stop-color="rgb(85;190;220)"/></linearGradient>
+<linearGradient id="g8" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="rgb(35;185;125)"/><stop offset="50%" stop-color="rgb(35;145;210)"/><stop offset="100%" stop-color="rgb(105;115;220)"/></linearGradient>
+<linearGradient id="g9" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="rgb(115;175;235)"/><stop offset="50%" stop-color="rgb(100;115;210)"/><stop offset="100%" stop-color="rgb(165;115;225)"/></linearGradient>
+<linearGradient id="g10" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="rgb(185;135;65)"/><stop offset="50%" stop-color="rgb(225;165;90)"/><stop offset="100%" stop-color="rgb(235;190;95)"/></linearGradient>
+<linearGradient id="g11" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="rgb(20;150;75)"/><stop offset="50%" stop-color="rgb(45;205;95)"/><stop offset="100%" stop-color="rgb(80;220;110)"/></linearGradient>
+<linearGradient id="g12" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="rgb(220;35;65)"/><stop offset="50%" stop-color="rgb(245;75;90)"/><stop offset="100%" stop-color="rgb(245;65;75)"/></linearGradient>
+<linearGradient id="g13" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="rgb(45;170;225)"/><stop offset="50%" stop-color="rgb(80;195;245)"/><stop offset="100%" stop-color="rgb(125;220;255)"/></linearGradient>
+<linearGradient id="g14" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="rgb(95;85;135)"/><stop offset="50%" stop-color="rgb(145;110;190)"/><stop offset="100%" stop-color="rgb(185;145;225)"/></linearGradient>
+<linearGradient id="hdr" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#22d3ee"/><stop offset="50%" stop-color="#8b5cf6"/><stop offset="100%" stop-color="#10b981"/></linearGradient>
+</defs>
+<rect width="1280" height="984" fill="#070c16"/>
+<rect x="0" y="0" width="1280" height="4" fill="url(#hdr)"/>
+<text x="40" y="52" fill="#ecf4ff" font-family="Segoe UI,Ubuntu,sans-serif" font-size="26" font-weight="700" letter-spacing="2">HN NEXUS · PRISM VISUAL PROFILES</text>
+<text x="40" y="82" fill="#7f96b3" font-family="Consolas,monospace" font-size="15">15 profiles · exact rail colors from config/hn-terminal.zsh · apply with <tspan fill="#4de7f7">hnstyle &lt;key&gt;</tspan></text>
+<g>
+<rect x="40" y="108" width="520" height="34" rx="17" fill="url(#g0)"/>
+<rect x="40" y="108" width="520" height="34" rx="17" fill="none" stroke="rgba(255,255,255,0.28)"/>
+<text x="584" y="131" fill="#ecf4ff" font-family="Segoe UI,Ubuntu,sans-serif" font-size="16" font-weight="600" letter-spacing="1">EMERALD PULSE</text>
+<text x="784" y="131" fill="#4de7f7" font-family="Consolas,monospace" font-size="15">emerald</text>
+<text x="874" y="131" fill="#8fa6c2" font-family="Consolas,monospace" font-size="13">20;205;170  →  40;160;235  →  155;105;245</text>
+</g>
+<g>
+<rect x="40" y="164" width="520" height="34" rx="17" fill="url(#g1)"/>
+<rect x="40" y="164" width="520" height="34" rx="17" fill="none" stroke="rgba(255,255,255,0.28)"/>
+<text x="584" y="187" fill="#ecf4ff" font-family="Segoe UI,Ubuntu,sans-serif" font-size="16" font-weight="600" letter-spacing="1">SAPPHIRE DRIVE</text>
+<text x="784" y="187" fill="#4de7f7" font-family="Consolas,monospace" font-size="15">sapphire</text>
+<text x="874" y="187" fill="#8fa6c2" font-family="Consolas,monospace" font-size="13">45;105;235  →  115;85;235  →  190;90;220</text>
+</g>
+<g>
+<rect x="40" y="220" width="520" height="34" rx="17" fill="url(#g2)"/>
+<rect x="40" y="220" width="520" height="34" rx="17" fill="none" stroke="rgba(255,255,255,0.28)"/>
+<text x="584" y="243" fill="#ecf4ff" font-family="Segoe UI,Ubuntu,sans-serif" font-size="16" font-weight="600" letter-spacing="1">AMETHYST CORE</text>
+<text x="784" y="243" fill="#4de7f7" font-family="Consolas,monospace" font-size="15">amethyst</text>
+<text x="874" y="243" fill="#8fa6c2" font-family="Consolas,monospace" font-size="13">145;75;225  →  205;90;190  →  245;105;165</text>
+</g>
+<g>
+<rect x="40" y="276" width="520" height="34" rx="17" fill="url(#g3)"/>
+<rect x="40" y="276" width="520" height="34" rx="17" fill="none" stroke="rgba(255,255,255,0.28)"/>
+<text x="584" y="299" fill="#ecf4ff" font-family="Segoe UI,Ubuntu,sans-serif" font-size="16" font-weight="600" letter-spacing="1">ARCTIC PRISM</text>
+<text x="784" y="299" fill="#4de7f7" font-family="Consolas,monospace" font-size="15">arctic</text>
+<text x="874" y="299" fill="#8fa6c2" font-family="Consolas,monospace" font-size="13">75;205;245  →  70;145;245  →  145;115;245</text>
+</g>
+<g>
+<rect x="40" y="332" width="520" height="34" rx="17" fill="url(#g4)"/>
+<rect x="40" y="332" width="520" height="34" rx="17" fill="none" stroke="rgba(255,255,255,0.28)"/>
+<text x="584" y="355" fill="#ecf4ff" font-family="Segoe UI,Ubuntu,sans-serif" font-size="16" font-weight="600" letter-spacing="1">ROSE QUARTZ</text>
+<text x="784" y="355" fill="#4de7f7" font-family="Consolas,monospace" font-size="15">rose</text>
+<text x="874" y="355" fill="#8fa6c2" font-family="Consolas,monospace" font-size="13">235;105;165  →  180;100;225  →  105;125;245</text>
+</g>
+<g>
+<rect x="40" y="388" width="520" height="34" rx="17" fill="url(#g5)"/>
+<rect x="40" y="388" width="520" height="34" rx="17" fill="none" stroke="rgba(255,255,255,0.28)"/>
+<text x="584" y="411" fill="#ecf4ff" font-family="Segoe UI,Ubuntu,sans-serif" font-size="16" font-weight="600" letter-spacing="1">TURQUOISE FLOW</text>
+<text x="784" y="411" fill="#4de7f7" font-family="Consolas,monospace" font-size="15">turquoise</text>
+<text x="874" y="411" fill="#8fa6c2" font-family="Consolas,monospace" font-size="13">20;190;190  →  40;135;230  →  105;105;225</text>
+</g>
+<g>
+<rect x="40" y="444" width="520" height="34" rx="17" fill="url(#g6)"/>
+<rect x="40" y="444" width="520" height="34" rx="17" fill="none" stroke="rgba(255,255,255,0.28)"/>
+<text x="584" y="467" fill="#ecf4ff" font-family="Segoe UI,Ubuntu,sans-serif" font-size="16" font-weight="600" letter-spacing="1">INDIGO VECTOR</text>
+<text x="784" y="467" fill="#4de7f7" font-family="Consolas,monospace" font-size="15">indigo</text>
+<text x="874" y="467" fill="#8fa6c2" font-family="Consolas,monospace" font-size="13">80;90;220  →  145;85;235  →  205;100;200</text>
+</g>
+<g>
+<rect x="40" y="500" width="520" height="34" rx="17" fill="url(#g7)"/>
+<rect x="40" y="500" width="520" height="34" rx="17" fill="none" stroke="rgba(255,255,255,0.28)"/>
+<text x="584" y="523" fill="#ecf4ff" font-family="Segoe UI,Ubuntu,sans-serif" font-size="16" font-weight="600" letter-spacing="1">CYBER LILAC</text>
+<text x="784" y="523" fill="#4de7f7" font-family="Consolas,monospace" font-size="15">lilac</text>
+<text x="874" y="523" fill="#8fa6c2" font-family="Consolas,monospace" font-size="13">175;115;235  →  115;125;245  →  85;190;220</text>
+</g>
+<g>
+<rect x="40" y="556" width="520" height="34" rx="17" fill="url(#g8)"/>
+<rect x="40" y="556" width="520" height="34" rx="17" fill="none" stroke="rgba(255,255,255,0.28)"/>
+<text x="584" y="579" fill="#ecf4ff" font-family="Segoe UI,Ubuntu,sans-serif" font-size="16" font-weight="600" letter-spacing="1">JADE CIRCUIT</text>
+<text x="784" y="579" fill="#4de7f7" font-family="Consolas,monospace" font-size="15">jade</text>
+<text x="874" y="579" fill="#8fa6c2" font-family="Consolas,monospace" font-size="13">35;185;125  →  35;145;210  →  105;115;220</text>
+</g>
+<g>
+<rect x="40" y="612" width="520" height="34" rx="17" fill="url(#g9)"/>
+<rect x="40" y="612" width="520" height="34" rx="17" fill="none" stroke="rgba(255,255,255,0.28)"/>
+<text x="584" y="635" fill="#ecf4ff" font-family="Segoe UI,Ubuntu,sans-serif" font-size="16" font-weight="600" letter-spacing="1">POLAR NIGHT</text>
+<text x="784" y="635" fill="#4de7f7" font-family="Consolas,monospace" font-size="15">polar</text>
+<text x="874" y="635" fill="#8fa6c2" font-family="Consolas,monospace" font-size="13">115;175;235  →  100;115;210  →  165;115;225</text>
+</g>
+<g>
+<rect x="40" y="668" width="520" height="34" rx="17" fill="url(#g10)"/>
+<rect x="40" y="668" width="520" height="34" rx="17" fill="none" stroke="rgba(255,255,255,0.28)"/>
+<text x="584" y="691" fill="#ecf4ff" font-family="Segoe UI,Ubuntu,sans-serif" font-size="16" font-weight="600" letter-spacing="1">ROYAL GOLD</text>
+<text x="784" y="691" fill="#4de7f7" font-family="Consolas,monospace" font-size="15">royal</text>
+<text x="874" y="691" fill="#8fa6c2" font-family="Consolas,monospace" font-size="13">185;135;65  →  225;165;90  →  235;190;95</text>
+</g>
+<g>
+<rect x="40" y="724" width="520" height="34" rx="17" fill="url(#g11)"/>
+<rect x="40" y="724" width="520" height="34" rx="17" fill="none" stroke="rgba(255,255,255,0.28)"/>
+<text x="584" y="747" fill="#ecf4ff" font-family="Segoe UI,Ubuntu,sans-serif" font-size="16" font-weight="600" letter-spacing="1">MATRIX GLOW</text>
+<text x="784" y="747" fill="#4de7f7" font-family="Consolas,monospace" font-size="15">matrix</text>
+<text x="874" y="747" fill="#8fa6c2" font-family="Consolas,monospace" font-size="13">20;150;75  →  45;205;95  →  80;220;110</text>
+</g>
+<g>
+<rect x="40" y="780" width="520" height="34" rx="17" fill="url(#g12)"/>
+<rect x="40" y="780" width="520" height="34" rx="17" fill="none" stroke="rgba(255,255,255,0.28)"/>
+<text x="584" y="803" fill="#ecf4ff" font-family="Segoe UI,Ubuntu,sans-serif" font-size="16" font-weight="600" letter-spacing="1">BLOOD MOON</text>
+<text x="784" y="803" fill="#4de7f7" font-family="Consolas,monospace" font-size="15">blood</text>
+<text x="874" y="803" fill="#8fa6c2" font-family="Consolas,monospace" font-size="13">220;35;65  →  245;75;90  →  245;65;75</text>
+</g>
+<g>
+<rect x="40" y="836" width="520" height="34" rx="17" fill="url(#g13)"/>
+<rect x="40" y="836" width="520" height="34" rx="17" fill="none" stroke="rgba(255,255,255,0.28)"/>
+<text x="584" y="859" fill="#ecf4ff" font-family="Segoe UI,Ubuntu,sans-serif" font-size="16" font-weight="600" letter-spacing="1">QUANTUM ICE</text>
+<text x="784" y="859" fill="#4de7f7" font-family="Consolas,monospace" font-size="15">quantum</text>
+<text x="874" y="859" fill="#8fa6c2" font-family="Consolas,monospace" font-size="13">45;170;225  →  80;195;245  →  125;220;255</text>
+</g>
+<g>
+<rect x="40" y="892" width="520" height="34" rx="17" fill="url(#g14)"/>
+<rect x="40" y="892" width="520" height="34" rx="17" fill="none" stroke="rgba(255,255,255,0.28)"/>
+<text x="584" y="915" fill="#ecf4ff" font-family="Segoe UI,Ubuntu,sans-serif" font-size="16" font-weight="600" letter-spacing="1">OBSIDIAN</text>
+<text x="784" y="915" fill="#4de7f7" font-family="Consolas,monospace" font-size="15">obsidian</text>
+<text x="874" y="915" fill="#8fa6c2" font-family="Consolas,monospace" font-size="13">95;85;135  →  145;110;190  →  185;145;225</text>
+</g>
+<text x="40" y="972" fill="#5f7592" font-family="Consolas,monospace" font-size="12">HN // CIT · CYBER CITADEL AGENCY · ENGINEERED BY HN — colors are the session rail (start / mid / end), session-local via hnstyle.</text>
+</svg>

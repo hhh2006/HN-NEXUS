@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="assets/branding/hn-nexus-hero.svg" width="100%" alt="HN NEXUS — Cinematic Command Center · HN // CIT · Cyber Citadel Agency · Engineered by Hani Khaled Nasser Al-Nasiri" />
+  <img src="assets/branding/hn-nexus-hero.svg" width="100%" alt="HN NEXUS — Cinematic Command Center for Kali Linux / ZSH by Hani Khaled Nasser Al-Nasiri" />
 
   <br/>
 
@@ -11,25 +11,26 @@
     <img alt="Terminal Baseline 4.4.2" src="https://img.shields.io/badge/Terminal_Baseline-4.4.2-4f8dff?style=flat-square&labelColor=0b1220">
     <img alt="Platform Kali Linux ZSH" src="https://img.shields.io/badge/Platform-Kali_Linux_%7C_ZSH-557c94?style=flat-square&logo=kalilinux&logoColor=white&labelColor=0b1220">
     <img alt="Privacy Local-first" src="https://img.shields.io/badge/Privacy-Local--first-5ff0b6?style=flat-square&labelColor=0b1220">
-    <img alt="License AGPL v3" src="https://img.shields.io/badge/License-AGPL--3.0-ffd166?style=flat-square&labelColor=0b1220">
+    <a href="LICENSE"><img alt="License AGPL v3" src="https://img.shields.io/badge/License-AGPL--3.0-ffd166?style=flat-square&labelColor=0b1220"></a>
   </p>
 
   <h3>
-    <img src="assets/branding/agency-seal.svg" width="22" alt="" valign="middle"/>
+    <img src="assets/branding/agency-seal.svg" width="30" alt="" valign="middle"/>
     &nbsp; HN // CIT &nbsp;·&nbsp; CYBER CITADEL AGENCY &nbsp;·&nbsp; ENGINEERED BY HN &nbsp;
-    <img src="assets/branding/agency-seal.svg" width="22" alt="" valign="middle"/>
+    <img src="assets/branding/agency-seal.svg" width="30" alt="" valign="middle"/>
   </h3>
 
-  <p><strong>Engineered for control. Designed for precision. Recovery-aware by design.</strong></p>
+  <p><strong>HN NEXUS</strong> — a cinematic, context-aware, recovery-aware ZSH command environment for Kali Linux.</p>
+  <p><i>Engineered for control. Designed for precision. Local-first by intent.</i></p>
 
   <p>
-    <a href="https://hhh2006.github.io/HN-NEXUS/"><b>🌐 Cinematic Website</b></a> ·
-    <a href="https://github.com/hhh2006/HN-NEXUS/releases/tag/v1.0.0"><b>⬇️ Release v1.0.0</b></a> ·
-    <a href="docs/COMMAND-REFERENCE.md"><b>⌨️ Commands</b></a> ·
-    <a href="docs/TUTORIAL.md"><b>🎓 Tutorial</b></a> ·
-    <a href="docs/INSTALLATION-AND-RECOVERY.md"><b>🛠️ Install &amp; Recovery</b></a> ·
-    <a href="docs/ARCHITECTURE.md"><b>🏗️ Architecture</b></a> ·
-    <a href="docs/FAQ.md"><b>❓ FAQ</b></a>
+    <a href="https://hhh2006.github.io/HN-NEXUS/"><b>Website</b></a> ·
+    <a href="https://github.com/hhh2006/HN-NEXUS/releases/tag/v1.0.0"><b>Release v1.0.0</b></a> ·
+    <a href="docs/COMMAND-REFERENCE.md"><b>Command Reference</b></a> ·
+    <a href="docs/TUTORIAL.md"><b>Tutorial</b></a> ·
+    <a href="docs/INSTALLATION-AND-RECOVERY.md"><b>Install &amp; Recovery</b></a> ·
+    <a href="docs/ARCHITECTURE.md"><b>Architecture</b></a> ·
+    <a href="docs/FAQ.md"><b>FAQ</b></a>
   </p>
 </div>
 
@@ -39,137 +40,321 @@
 > **Publishing pack:** `v1.0.0` · **Terminal source baseline:** `4.4.2` (kept in [`VERSION`](VERSION) for runtime accuracy).  
 > **If GitHub Pages does not open in your network/region** (some ISPs/networks may block `github.io`): browse this repository and [docs](docs/) directly, download [Release v1.0.0](https://github.com/hhh2006/HN-NEXUS/releases/tag/v1.0.0), or open [`website/index.html`](website/index.html) locally after cloning/downloading. A successful Pages deployment means the site is published; external access can still vary by network.
 
-## ⚡ Cinematic Command Center for Kali Linux / ZSH
+## Table of Contents
 
-**HN NEXUS** is a context-aware, recovery-aware ZSH command environment by **Hani Khaled Nasser Al-Nasiri** (Cybersecurity Student — Al-Razi University, [`@hhh2006`](https://github.com/hhh2006)). It pairs a **high-fidelity 3-row HUD prompt**, **15 Prism visual profiles** (`hnstyle`), guided installation/rollback, advisory intelligence (`hnsuggest`), diagnostics, and rich documentation — with a **local-first, privacy-respecting, manual-control** philosophy.
+- [Overview](#overview)
+- [What’s Included](#whats-included)
+- [Key Features](#key-features)
+- [Prism Visual Profiles](#prism-visual-profiles)
+- [Screenshots & Visuals](#screenshots--visuals)
+- [Requirements](#requirements)
+- [Installation](#installation)
+- [Quick Start & Usage Examples](#quick-start--usage-examples)
+- [Complete Command Reference](#complete-command-reference)
+- [Repository Structure](#repository-structure)
+- [Documentation](#documentation)
+- [Validation & Quality](#validation--quality)
+- [Security, Privacy & Limitations](#security-privacy--limitations)
+- [Roadmap & Contributing](#roadmap--contributing)
+- [Creator & Contact](#creator--contact)
+- [Release & License](#release--license)
+
+<p align="center"><img src="assets/branding/readme-divider.svg" width="100%" alt="" /></p>
+
+## Overview
+
+**HN NEXUS** is an interactive ZSH command-center experience for **Kali Linux** and compatible Linux environments. It enhances the terminal with a responsive **three-row HUD prompt**, **15 Prism visual profiles** (`hnstyle`), on-demand operator utilities, local advisory helpers, and **backup/recovery-aware** installation flows — while keeping behavior explicit, inspectable, and under user control.
+
+**Who it’s for:** cybersecurity learners and practitioners, developers, and power users who want a clearer, more informative, and visually refined terminal workflow without hidden background agents or automatic command execution.
+
+**Design principles:** local-first · user-invoked · native-command friendly · transparent limitations · recovery-aware.
+
+## What’s Included
+
+- **Terminal/HUD core:** adaptive 3-row prompt, context/runtime/status rendering, Prism palettes, Nerd Font detection with readable fallbacks (`config/hn-terminal.zsh`, `config/hn-sovereign.zsh`).
+- **Operator utilities & wrappers:** `hn*` commands for help/discovery, diagnostics, file/log/data viewing, analysis/triage, system/network snapshots, and safe interactive presentation wrappers (`config/hn-tools.zsh`).
+- **Installation & recovery:** guided installer, checks/dry-run modes, backups, rollback/recovery helpers, optional XFCE/X11 visual theme application (`setup.sh`, `install.sh`, `uninstall.sh`, `apply-prism-theme.sh`, etc.).
+- **Documentation:** architecture, commands, tutorial, installation/recovery, troubleshooting, FAQ, configuration, network/output/operator guides, changelog, and test/verification reports (`docs/`).
+- **Website & assets:** cinematic project site and published docs (`website/`), branding/mockups and real screenshots (`assets/`).
+- **Quality checks:** local/CI-friendly test scripts and website integrity checks (`tests/`, `.github/workflows/`).
+
+## Key Features
+
+| Area | Highlights |
+|---|---|
+| **Cinematic HUD** | 3-row responsive prompt (identity, context/path/git/runtime, status/input) updated via ZSH hooks (event-driven), width-aware rendering, safe fallbacks |
+| **Visual Profiles** | 15 Prism profiles with `hnstyle` (session-local), Nerd Font/icon-aware presentation with text fallbacks |
+| **Discovery & Help** | `hnhelp`, `hnmenu` launcher, `hnsearch`, `hnhistory` (read-only), `hnhistory-search` (inserts selection for review, never auto-runs) |
+| **Diagnostics & Status** | `hnstatus`, `hnprism`, `hndoctor`, `hnvisual`, `hncolors`, `hnicons`, `hnhealth`, `hnops` |
+| **Files, Logs & Data** | `hnfiles`, `hnicon`, `hncat`, `hnlog`, `hnjson` (jq), `hnyaml` (yq), `hnfind`, `hninspect`, `hndiff`, `extract`, `mkcd` |
+| **System & Network Views** | `hnproc`, `hnports` (local listeners), `hnservices`, `hncontainers`, `hnreport`, `hnipa`, interactive presentation for `ps/df/free/ss/du/ip/ls/tree/cat` where applicable |
+| **Advisory Intelligence** | `hnsuggest` (context-aware ideas), `hnexplain` (error text hints), `hnwhy` (last exit status) — heuristic, read-only, never auto-executed |
+| **Output Triage/Analysis** | `hnoutput`, `hnnet`, `hnanalyze` for supplied/saved output (no scanning/capture performed) |
+| **Safety & Recovery** | Timestamped backups, guided install modes, rollback/uninstall helpers, explicit checks/dry-run, no sudo required by project installer |
+| **Privacy & Control** | Local-first behavior, no telemetry pipeline for core operation, no automatic package installation, manual control preserved |
+
+> **Note:** Optional features depend on optional tools being installed (e.g. `fzf`, `jq`, `yq`, `bat/batcat`, `eza`, `rg`, `tree`, `docker/podman`). HN NEXUS does not install packages automatically.
+
+## Prism Visual Profiles
+
+Fifteen cinematic rail profiles, selectable per session with `hnstyle <profile>` — automatic cycling by default, pinned when you choose one. The sheet below shows every profile with its **exact runtime rail colors** (start → mid → end), generated from `config/hn-terminal.zsh`:
+
+```zsh
+hnstyle list        # show available profiles
+hnstyle emerald     # pin a profile for this session
+hnstyle auto        # return to automatic cycling
+```
+
+<div align="center">
+  <img src="assets/branding/prism-profiles.svg" width="100%" alt="All 15 HN NEXUS Prism visual profiles with exact start/mid/end RGB rail values (generated from config/hn-terminal.zsh)" />
+  <br/>
+  <sub><i>Profiles: <code>emerald</code> · <code>sapphire</code> · <code>amethyst</code> · <code>arctic</code> · <code>rose</code> · <code>turquoise</code> · <code>indigo</code> · <code>lilac</code> · <code>jade</code> · <code>polar</code> · <code>royal</code> · <code>matrix</code> · <code>blood</code> · <code>quantum</code> · <code>obsidian</code> (plus <code>auto</code> cycling). Session-local — nothing persists unless pinned.</i></sub>
+</div>
+
+<p align="center"><img src="assets/branding/readme-divider.svg" width="100%" alt="" /></p>
+
+## Screenshots & Visuals
+
+### Real captures (author-provided)
+
+<table>
+  <tr>
+    <td width="50%"><img src="assets/screenshots/hn-nexus-kali-capture-01.png" alt="HN NEXUS real capture 1 (author-provided)" width="100%"></td>
+    <td width="50%"><img src="assets/screenshots/hn-nexus-kali-capture-02.png" alt="HN NEXUS real capture 2 (author-provided)" width="100%"></td>
+  </tr>
+</table>
+
+<p align="center"><sub>Real screenshots provided by the project author. Appearance may vary by terminal, font, theme, and environment. Review/redact sensitive information before sharing additional captures.</sub></p>
+
+### Illustrative mockups (labeled, not real runtime screenshots)
 
 <div align="center">
   <img src="assets/branding/terminal-theater.svg" width="100%" alt="HN NEXUS Terminal Theater — illustrative cinematic HUD mockup (not a real runtime screenshot)" />
   <br/>
-  <sub><i>Illustrative cinematic mockup (SVG) — not a fabricated real Kali/ZSH runtime screenshot. Real captures belong in <a href="assets/screenshots/">assets/screenshots/</a>.</i></sub>
+  <sub><i>Illustrative cinematic mockup (SVG). Real captures belong in <a href="assets/screenshots/">assets/screenshots/</a>.</i></sub>
 </div>
 
-<p align="center"><img src="assets/branding/readme-divider.svg" width="100%" alt="" /></p>
+## Requirements
 
-## ✨ Why HN NEXUS
+| Item | Required / Optional | Notes |
+|---|---|---|
+| **OS** | Required | Kali Linux (primary target) or a compatible Linux distribution |
+| **Shell** | Required | **ZSH** (interactive use) |
+| **Python** | Required | **Python 3** (used by setup/check tooling) |
+| **Git / basic CLI** | Recommended | To clone the repository and use common workflows |
+| **Terminal emulator** | Required | ANSI-capable terminal; truecolor support recommended for best visuals |
+| **Nerd Font** | Recommended (optional) | Improves icons/glyphs; readable text fallbacks are used when unavailable |
+| **XFCE + X11** | Optional | Only for optional desktop visual theme (`--visual` / guided prompt on supported sessions); requires `xfconf-query`, `xfce4-terminal` |
+| **Optional tools** | Optional | `fzf`, `bat`/`batcat`, `jq`, `yq`, `eza`, `rg`, `tree`, `zoxide`, `btop`, `docker`, `podman`, `systemctl` etc. enable/enhance specific features when present |
 
-<table>
-<tr>
-<td width="50%" valign="top">
+> **Important:** run the project installer as a **normal user** (no `sudo`). Keep independent backups of important dotfiles/home data. Full runtime behavior and desktop visuals depend on the target environment.
 
-### 🎛️ Cinematic, Context-Aware HUD
-A responsive **three-row** event-driven prompt that surfaces workspace, git, runtime/tool, status, and navigation context with width-aware rendering and safe fallbacks.
+## Installation
 
-### 🎨 15 Prism Visual Profiles
-Switch the entire command-center feel instantly with `hnstyle` (session-local): `aurora`, `citadel`, `matrix`, `tokyo`, `ember`, and more — precise, readable, and intentional.
+> Read [docs/INSTALLATION-AND-RECOVERY.md](docs/INSTALLATION-AND-RECOVERY.md) before applying changes. Review scripts (`setup.sh`, `install.sh`, `uninstall.sh`) and keep backups.
 
-### 🛡️ Recovery-Aware by Design
-Timestamped backups, guided install/rollback paths, and explicit recovery documentation. Control stays in your hands.
-
-</td>
-<td width="50%" valign="top">
-
-### 🧠 Advisory Intelligence
-`hnsuggest` provides **local-first, optional** command guidance based on detected context — helpful without background daemons or hidden automation.
-
-### 🔒 Local-first & Privacy-Respecting
-No telemetry pipeline required for core operation, no automatic package installation, and no compositor dependency for core terminal behavior.
-
-### 📚 Rich, Honest Documentation
-Architecture, commands, tutorial, troubleshooting, FAQ, recovery, and visual-asset guidance — documented clearly with illustrative mockups labeled as such.
-
-</td>
-</tr>
-</table>
-
-<p align="center"><img src="assets/branding/readme-divider.svg" width="100%" alt="" /></p>
-
-## 🧭 At a Glance
-
-| | |
-|---|---|
-| **Identity** | **HN // CIT** · **CYBER CITADEL AGENCY** · **ENGINEERED BY HN** |
-| **Creator** | **Hani Khaled Nasser Al-Nasiri** — Cybersecurity Student, Al-Razi University · [`@hhh2006`](https://github.com/hhh2006) |
-| **Runtime** | Kali Linux · ZSH · `~/.zshrc`-based loader · event-driven HUD hooks |
-| **Experience** | 3-row adaptive HUD · 15 visual profiles (`hnstyle`) · guided help/menu/status/doctor flows |
-| **Intelligence** | `hnsuggest` advisory command guidance (local-first, optional) |
-| **Safety** | Backups, rollback/recovery paths, no destructive hidden automation, manual control |
-| **Docs & Site** | [Website](https://hhh2006.github.io/HN-NEXUS/), [Docs](docs/), [Release v1.0.0](https://github.com/hhh2006/HN-NEXUS/releases/tag/v1.0.0) |
-
-## 🚀 Quick Start
+### 1) Get the project
 
 ```bash
 git clone https://github.com/hhh2006/HN-NEXUS.git
 cd HN-NEXUS
-chmod +x setup.sh install.sh uninstall.sh
-./setup.sh --check     # inspect environment/readiness (no changes)
-./setup.sh --dry-run   # preview actions
-./setup.sh             # guided install / apply
+# or download and extract: https://github.com/hhh2006/HN-NEXUS/releases/tag/v1.0.0
 ```
 
-After install (open a new ZSH session): `hnhelp`, `hnmenu`, `hnstatus`, `hndoctor`, `hnvisual`, `hnstyle list`
+### 2) Check and preview (no changes)
 
-> Read [Installation & Recovery](docs/INSTALLATION-AND-RECOVERY.md) before applying changes. If GitHub Pages is unavailable in your region, use [docs](docs/), [Release v1.0.0](https://github.com/hhh2006/HN-NEXUS/releases/tag/v1.0.0), or open [`website/index.html`](website/index.html) locally.
+```bash
+chmod +x setup.sh install.sh uninstall.sh
+./setup.sh --check     # verify prerequisites without changing files
+./setup.sh --dry-run   # preview guided installation actions
+```
 
-<details>
-<summary><b>📖 Command highlights</b></summary>
+### 3) Install
 
-- **Discovery:** `hnhelp`, `hnmenu`, `hnsearch <text>`
-- **Status & diagnostics:** `hnstatus`, `hnprism`, `hndoctor`, `hnvisual`, `hnops`, `hnhealth`
-- **Visual profiles:** `hnstyle list`, `hnstyle <profile>` (session-local)
-- **Files/logs/data:** `hnfiles`, `hncat`, `hnlog`, `hnjson`, `hnyaml`, `hnfind`, `hninspect`, `hndiff`
-- **Advisory (heuristic, local):** `hnsuggest`, `hnwhy`, `hnexplain`
-- **Reference:** full catalog in [Command Reference](docs/COMMAND-REFERENCE.md)
+```bash
+./setup.sh             # guided install (core + optional XFCE visual prompt when supported)
+```
 
-</details>
+**Advanced modes:**
 
-After install (in ZSH): `hnhelp`, `hnmenu`, `hnstatus`, `hndoctor`, `hnstyle list`, `hnsuggest "what can I do here?"`
+```bash
+./setup.sh --core      # terminal core only
+./setup.sh --visual    # apply optional XFCE/X11 visual layer (supported sessions)
+./setup.sh --full      # guided full installation
+```
 
-> Read [Installation & Recovery](docs/INSTALLATION-AND-RECOVERY.md) before applying system-level changes. Keep backups and review rollback options.
+- Core install creates timestamped backups and recovery/rollback artifacts.
+- On supported **XFCE/X11**, you may be prompted once to apply optional desktop styling; on unsupported/non-interactive sessions it is skipped safely.
+- No sudo required. The installer does not automatically install system packages or fonts.
 
-<details>
-<summary><b>📖 More command highlights</b></summary>
+### 4) Verify (open a new ZSH session)
 
-- **Help & discovery:** `hnhelp`, `hnmenu`, `hncmds`
-- **Diagnostics & status:** `hnstatus`, `hndoctor`, `hncheck`
-- **Visual profiles:** `hnstyle list`, `hnstyle set <profile>` (session-local)
-- **Advisory guidance:** `hnsuggest "<context or goal>"`
-- **Reference:** full inventory in [docs/COMMAND-REFERENCE.md](docs/COMMAND-REFERENCE.md)
+```zsh
+hnhelp
+hnstatus
+hnvisual
+hndoctor
+```
 
-</details>
+If commands are missing, confirm you launched ZSH and that `~/.zshrc` contains the HN NEXUS managed block. See [Troubleshooting](docs/TROUBLESHOOTING.md).
+
+### 5) Uninstall / Recovery
+
+```bash
+./uninstall.sh
+```
+
+Follow prompts carefully. Recovery uses available backups/rollback data where safe, but it is **not** a full system snapshot. Keep backup/recovery artifacts until you verify your environment.
+
+## Quick Start & Usage Examples
+
+```zsh
+# Discover what’s available
+hnhelp
+hnmenu
+hnsearch network
+
+# Session, status, and diagnostics
+hnstatus
+hnprism
+hndoctor
+hnvisual
+
+# Change visual profile (session-local)
+hnstyle list
+hnstyle royal
+hnstyle emerald
+
+# Files and inspection
+hnfiles
+hnicon ./setup.sh
+hninspect ./setup.sh
+hncat README.md
+hnlog /path/to/app.log
+
+# Search and diffs
+hnfind "TODO" .
+hndiff old.conf new.conf
+
+# System/process/container/network views (read-only)
+hnops
+hnproc
+hnports
+hnhealth
+hnservices      # if systemctl available
+hncontainers    # if docker/podman available
+hnreport
+
+# Advisory helpers (heuristic, never auto-executed)
+hnsuggest
+hnsuggest "git project"
+false; hnwhy
+hnexplain "Permission denied"
+some_command 2>&1 | hnexplain
+
+# History (read-only; search inserts selection for review only)
+hnhistory 30
+hnhistory-search "ssh"
+
+# Output/analysis helpers for supplied text or files (no scanning/capture)
+hnoutput saved-output.txt
+hnnet saved-network-output.txt
+hnanalyze saved-nmap-output.txt
+
+# Native commands keep their names; wrappers enhance interactive presentation when applicable
+# Use `command <name> ...` to bypass explicitly
+command cat README.md
+command ip a
+```
+
+> **Pipelines/redirections:** presentation wrappers are designed to preserve native behavior for supported scripting cases. Use `command <name>` when you need guaranteed native output.
 
 <p align="center"><img src="assets/branding/readme-divider.svg" width="100%" alt="" /></p>
 
-## 🏛️ Agency Identity & Creator
+## Complete Command Reference
 
-<div align="center">
-  <img src="assets/branding/agency-seal.svg" width="220" alt="HN // CIT Cyber Citadel Agency — designed seal" />
-</div>
+All listed commands are provided by HN NEXUS configuration/runtime as implemented in this repository (primarily `config/hn-tools.zsh` and `config/hn-terminal.zsh`). Behavior may depend on installed optional tools and environment; wrappers preserve native behavior for pipes/redirections and unsupported forms where applicable. Use `command <name>` to bypass wrappers.
 
-<br/>
+### HN commands & helpers
 
-| | |
-|---|---|
-| **Seal / Identity** | **Designed Cyber Citadel Agency seal** (SVG) created for HN NEXUS to present the **HN // CIT** identity in a premium, harmonious form. The creator-provided CIT seal is preserved as source/identity material in [`assets/branding/cit-seal.png`](assets/branding/cit-seal.png) with processed presentation variants (`cit-seal-emblem.png/.webp`). |
-| **Project** | **HN NEXUS** — cinematic, recovery-aware ZSH command environment |
-| **Agency** | **HN // CIT · CYBER CITADEL AGENCY** |
-| **Signature** | **ENGINEERED BY HN** |
-| **Creator** | **Hani Khaled Nasser Al-Nasiri** |
-| **Role** | Cybersecurity Student — **Al-Razi University** |
-| **GitHub** | [`@hhh2006`](https://github.com/hhh2006) · [hhh2006/HN-NEXUS](https://github.com/hhh2006/HN-NEXUS) |
+| Command | What it does | Usage / notes |
+|---|---|---|
+| `hnhelp` | Show the operator quick reference of available HN commands/features | `hnhelp` |
+| `hnmenu` | Interactive command-center launcher for common actions | `hnmenu` (select an option) |
+| `hnsearch [TEXT]` | Search the HN/native-command and PRISM tool catalogue | `hnsearch docker` |
+| `hnstatus` | Compact system/session snapshot | `hnstatus` |
+| `hnprism` | Live session / Git / runtime overview | `hnprism` |
+| `hnops` | Operations center and tool availability overview | `hnops` |
+| `hnvisual` | Check Nerd Font, glyphs, and terminal capabilities | `hnvisual` |
+| `hncolors` | Preview PRISM color spectrum | `hncolors` |
+| `hnicons` | Preview supported symbol/icon set | `hnicons` |
+| `hndoctor` | Diagnose core files, completion, correction, plugins, and optional tools/capabilities | `hndoctor` (read-only) |
+| `hnstyle [PROFILE]` | Switch visual palette/profile (automatic or pinned; session-local) | `hnstyle list` · `hnstyle <profile>` (profiles include e.g. `auto`, `emerald`, `sapphire`, `amethyst`, `arctic`, `rose`, `turquoise`, `indigo`, `lilac`, `jade`, `polar`, `royal`, `matrix`, `blood`, `quantum`, `obsidian` as available) |
+| `hnfiles [DIR]` | Semantic, icon-aware directory browser (read-only) | `hnfiles` · `hnfiles /var/log` |
+| `hnicon PATH` | Identify a file or directory by type | `hnicon ./setup.sh` |
+| `hncat FILE` | Numbered, framed text viewer with syntax-aware presentation | `hncat file.txt` |
+| `hnlog FILE` | Read logs with severity-aware colors, line numbers, and summary | `hnlog /var/log/syslog` |
+| `hnjson FILE` | Pretty-print JSON with syntax colors | `hnjson data.json` (requires `jq`) |
+| `hnyaml FILE` | Format YAML | `hnyaml config.yml` (requires `yq` if available) |
+| `hnfind TEXT [PATH]` | Search text with colored matches | `hnfind "pattern" .` (prefers `rg`, falls back when available) |
+| `hninspect FILE` | File metadata and SHA-256 report | `hninspect <file>` |
+| `hndiff OLD NEW` | Semantic diff view | `hndiff a.conf b.conf` |
+| `hnproc` | Top processes by CPU usage (snapshot) | `hnproc` |
+| `hnports` | Read-only local listening socket overview | `hnports` (not a scanner) |
+| `hnhealth` | System health snapshot | `hnhealth` |
+| `hnservices` | Read-only systemd service inventory/status | `hnservices` (if `systemctl` available) |
+| `hncontainers` | Read-only Docker/Podman container inventory | `hncontainers` (if installed) |
+| `hnreport [FILE]` | Create a local, read-only system/network snapshot report | `hnreport` or `hnreport ~/hn-report.txt` (review before sharing) |
+| `hnipa` | Explicit IP address matrix/view helper | `hnipa` (native `ip` remains available) |
+| `hnhistory [COUNT]` | Read-only, numbered view of recent ZSH history | `hnhistory 30` |
+| `hnhistory-search [TEXT]` | Search history (uses `fzf` when installed) and insert selection into prompt for review | `hnhistory-search ssh` (never executed automatically) |
+| `hnsuggest [TEXT]` | Context-aware, advisory command suggestions based on local workspace/tools | `hnsuggest` · `hnsuggest git` |
+| `hnexplain [ERROR]` | Heuristic explanation/hints for common error text (args or piped input) | `hnexplain "Permission denied"` · `cmd 2>&1 \| hnexplain` |
+| `hnwhy` | Explain the last command exit status | `false; hnwhy` |
+| `hnoutput [FILE\|-]` | Smart triage of supplied/saved command output | `hnoutput output.txt` (read-only/advisory) |
+| `hnnet [FILE\|-]` | Highlight network-related details in supplied output (IPs, ports, protocols, firewall events) | `hnnet net.txt` (no capture/scanning) |
+| `hnanalyze [FILE\|-]` | Heuristic analysis of supplied text (e.g. nmap/SSH/DNS/HTTP/firewall-style output) | `hnanalyze nmap.txt` (no scanning performed) |
+| `mkcd DIR` | Create a directory and enter it | `mkcd mydir` |
+| `extract FILE` | Extract supported archive formats | `extract archive.tar.gz` |
 
-<p align="center"><img src="assets/branding/readme-divider.svg" width="100%" alt="" /></p>
+### Interactive presentation wrappers & shortcuts
 
-## 🗺️ Architecture & Design Philosophy
+| Name | What it does | Notes |
+|---|---|---|
+| `cat`, `hncat` | Interactive, numbered/syntax-aware viewing in supported terminals; `hncat` is the explicit viewer | Pipes/redirections and unsupported forms fall back to native behavior; use `command cat` to bypass |
+| `ip` (and `hnipa`) | Semantic/read-only presentation for specific views (e.g. `ip a`, `ip route`, `ip neigh`) in interactive use | Other/mutating `ip` arguments remain native; use `command ip` to bypass |
+| `ps`, `df`, `free`, `ss`, `du` | Numbered/semantic color emphasis in interactive terminals | Native behavior preserved for scripting cases where applicable; use `command <name>` to bypass |
+| `ls`, `tree` | Interactive color presentation for directory listing/tree where supported | Native tools remain available (`command ls`, `command tree`) |
+| `l`, `ll`, `la`, `lt` | Convenience listing shortcuts | Available when `eza` is installed |
 
-- **Event-driven HUD:** prompt/HUD updates on ZSH hooks — no always-on polling daemon for core display.
-- **Modular config:** terminal behavior and tools/help surfaces organized for clarity and maintainability.
-- **Safe fallbacks:** width-aware rendering, Nerd Font detection with readable fallbacks.
-- **Manual, inspectable control:** guided setup, explicit status/doctor checks, and documented recovery.
+> For exhaustive, implementation-aligned details, see [docs/COMMAND-REFERENCE.md](docs/COMMAND-REFERENCE.md).
 
-See [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) and the illustrative [architecture mockup](assets/branding/architecture-mockup.svg).
+## Repository Structure
 
-## 📚 Documentation Hub
+```text
+.
+├─ .github/                 # CI, Pages deploy, issue/PR templates
+├─ assets/
+│  ├─ branding/             # Project branding, hero, agency seal, prism sheet, mockups, SVG assets
+│  └─ screenshots/          # Real captures (author-provided / future)
+├─ config/                  # ZSH runtime: sovereign entry, HUD/terminal engine, tools/utilities
+├─ docs/                    # Full documentation, guides, reports, changelog, verification
+├─ recovery/                # Recovery/verification helpers
+├─ tests/                   # Static/runtime/theme/installer/website checks
+├─ theme/                   # Optional XFCE/GTK/xfwm theme assets
+├─ website/                 # GitHub Pages site, published docs mirror, site assets
+├─ setup.sh                 # Guided installer entry point
+├─ install.sh               # Core install logic
+├─ uninstall.sh             # Recovery/uninstall entry point
+├─ diagnostics.sh           # Diagnostics helper
+├─ apply-prism-theme.sh     # Optional XFCE visual theme apply
+├─ enable-prism-blur.sh     # Optional blur helper (environment-dependent)
+├─ VERSION                  # Terminal source baseline (4.4.2)
+├─ README.md                # Project overview (this file)
+└─ LICENSE                  # GNU AGPL v3.0
+```
+
+## Documentation
 
 | Start here | Deep dive |
 |---|---|
@@ -180,39 +365,67 @@ See [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) and the illustrative [architect
 | [Network Intelligence](docs/NETWORK-INTELLIGENCE.md) · [Output Intelligence](docs/OUTPUT-INTELLIGENCE.md) · [Operator Utilities](docs/OPERATOR-UTILITIES.md) | [Changelog](docs/CHANGELOG.md) |
 | [Visual Assets](docs/VISUAL-ASSETS.md) | Website docs mirror: [`website/docs/`](website/docs/) |
 
-Website pages mirror core docs under [`website/docs/`](website/docs/) for published browsing.
+## Validation & Quality
 
-## ✅ Validation & Quality
+- **Local website/docs integrity check:** `python tests/website-check.py`
+- **Project test suite (environment-dependent):** `bash tests/run-all.sh` (some checks require ZSH, ShellCheck, XFCE/X11, or a Kali runtime environment)
+- **CI/Pages:** GitHub Actions workflows for checks and Pages deployment — see [Actions](https://github.com/hhh2006/HN-NEXUS/actions)
+- **Reports:** [docs/TEST-REPORT-v1.0.0.md](docs/TEST-REPORT-v1.0.0.md) and verification reports in `docs/`
 
-- **Feasible local checks:** `python tests/website-check.py` used to validate website links/assets/routes in this packaging environment.
-- **CI/Pages:** GitHub Actions workflows build/check and deploy Pages (see badges and [Actions](https://github.com/hhh2006/HN-NEXUS/actions)).
-- **User-reported:** the project owner reported full feature/test pass in their environment (recorded in [Test Report](docs/TEST-REPORT-v1.0.0.md)).
-- **Environment-dependent:** full ZSH/runtime, ShellCheck parity, installer/rollback, XFCE, and live network reachability may require target/Kali or external verification.
+> Test results can be environment-dependent. A skipped test is not a pass. Full ZSH runtime, installer/rollback, XFCE visuals, and live behavior should be validated on the target environment.
 
-See [docs/TEST-REPORT-v1.0.0.md](docs/TEST-REPORT-v1.0.0.md) for details and limitations.
+## Security, Privacy & Limitations
 
-## 🔒 Security, Privacy & Support
+- **Local-first & user-controlled:** core experience is explicitly invoked; no telemetry pipeline required for core operation; no autonomous command execution.
+- **Advisory helpers are heuristic:** suggestions/analysis features are local, read-only aids based on context or supplied text — not AI and not guaranteed correct.
+- **No scanning/capture claims:** network/output analysis helpers work on supplied/saved output or local views as documented; they do not perform unauthorized scanning or packet capture.
+- **Backups are not full snapshots:** installer recovery aids reduce risk but do not replace independent backups.
+- **Environment-dependent behavior:** visuals, fonts, optional tools, desktop theming, and some wrappers depend on terminal/system capabilities.
+- **Responsible use:** review scripts before running, protect sensitive data in screenshots/logs/reports, and follow applicable laws and policies.
 
-- [SECURITY.md](SECURITY.md) — reporting and security posture notes
-- [SUPPORT.md](SUPPORT.md) — help and project support
-- [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) · [CONTRIBUTING.md](CONTRIBUTING.md)
+See [SECURITY.md](SECURITY.md), [SUPPORT.md](SUPPORT.md), and [docs/TROUBLESHOOTING.md](docs/TROUBLESHOOTING.md).
 
-Core design: **local-first**, **privacy-respecting**, **no hidden telemetry for core operation**, and **user-controlled** changes.
+## Roadmap & Contributing
 
-## 📦 Release & Versioning
+Contributions, issue reports, and improvement ideas are welcome.
 
-- **Pack release:** [`v1.0.0`](https://github.com/hhh2006/HN-NEXUS/releases/tag/v1.0.0) (source archive/assets)
-- **Terminal baseline:** `4.4.2` (see [`VERSION`](VERSION), preserved for runtime accuracy)
-- **Pages:** [hhh2006.github.io/HN-NEXUS](https://hhh2006.github.io/HN-NEXUS/) (deployed via Actions; access may vary by network)
+- Read [CONTRIBUTING.md](CONTRIBUTING.md) and [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md)
+- Open issues/discussions with clear reproduction details and environment info
+- Potential future directions (examples): broader terminal/tmux compatibility testing, performance tuning, richer configuration/customization, expanded safe diagnostics, improved capture/gallery docs, and deeper validation across Kali environments — while preserving local-first, recovery-aware, user-controlled principles
+
+## Creator & Contact
+
+<div align="center">
+  <img src="assets/branding/agency-seal.svg" width="200" alt="HN // CIT Agency Seal — designed cinematic seal for HN NEXUS" />
+  <br/>
+  <sub><i>Designed HN // CIT agency seal (SVG) created for this project's identity presentation.</i></sub>
+</div>
+
+| | |
+|---|---|
+| **Project** | **HN NEXUS** — Cinematic, context-aware ZSH command environment |
+| **Identity** | **HN // CIT · CYBER CITADEL AGENCY** |
+| **Signature** | **ENGINEERED BY HN** |
+| **Creator** | **Hani Khaled Nasser Al-Nasiri** |
+| **Role** | Cybersecurity Student — **Al-Razi University** |
+| **GitHub** | [@hhh2006](https://github.com/hhh2006) · [hhh2006/HN-NEXUS](https://github.com/hhh2006/HN-NEXUS) |
+| **Contact** | [alnasryhany185@gmail.com](mailto:alnasryhany185@gmail.com) |
+
+## Release & License
+
+- **Pack release:** [v1.0.0](https://github.com/hhh2006/HN-NEXUS/releases/tag/v1.0.0)
+- **Terminal baseline:** `4.4.2` (see [`VERSION`](VERSION))
+- **Website:** [https://hhh2006.github.io/HN-NEXUS/](https://hhh2006.github.io/HN-NEXUS/) (if inaccessible in your region, use repo/docs/release or open `website/index.html` locally)
+- **License:** [GNU AGPL v3.0](LICENSE)
 
 ---
 
 <div align="center">
-  <img src="assets/branding/agency-seal.svg" width="96" alt="HN // CIT seal" />
+  <img src="assets/branding/agency-seal.svg" width="110" alt="HN // CIT Agency Seal" />
   <br/><br/>
   <b>HN // CIT · CYBER CITADEL AGENCY</b><br/>
   <sub><b>ENGINEERED BY HN</b> — Hani Khaled Nasser Al-Nasiri</sub><br/>
   <sub>Cybersecurity Student — Al-Razi University · <a href="https://github.com/hhh2006">@hhh2006</a> · <a href="mailto:alnasryhany185@gmail.com">alnasryhany185@gmail.com</a></sub>
   <br/><br/>
-  <i>Engineered for control. Designed for precision.</i>
+  <i>Control. Precision. Recovery. Clarity.</i>
 </div>

@@ -70,6 +70,13 @@
         });
       }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
       revealEls.forEach(el => io.observe(el));
+      // Safety net: if the observer never fired at all (offscreen/unpainted
+      // document, restricted environments), never leave content invisible.
+      setTimeout(() => {
+        if (!qsa('.reveal.is-visible, [data-reveal].is-visible').length) {
+          revealEls.forEach(el => el.classList.add('is-visible'));
+        }
+      }, 4000);
     }
   }
 
@@ -119,13 +126,17 @@
       if (reduce) { el.textContent = target + suffix; return; }
       const start = performance.now();
       const dur = 1200;
+      const finish = () => { el.textContent = target + suffix; };
       const step = (now) => {
         const p = Math.min(1, (now - start) / dur);
         const eased = 1 - Math.pow(1 - p, 3);
         el.textContent = Math.round(target * eased) + suffix;
         if (p < 1) requestAnimationFrame(step);
+        else finish();
       };
       requestAnimationFrame(step);
+      // Guarantee: never leave a counter mid-animation or at zero.
+      setTimeout(finish, dur + 250);
     };
     if (!('IntersectionObserver' in window)) counters.forEach(animate);
     else {
@@ -133,7 +144,212 @@
         entries.forEach(entry => { if (entry.isIntersecting) { animate(entry.target); cio.unobserve(entry.target); } });
       }, { threshold: 0.5 });
       counters.forEach(el => cio.observe(el));
+      // Safety net: never leave counters at zero if the observer never fires.
+      setTimeout(() => {
+        counters.forEach(el => {
+          if (el.textContent.trim() === '' || el.textContent.trim() === '0') animate(el);
+        });
+      }, 4000);
     }
+  }
+
+  // ============================================================
+  // Live typing terminal (hero) — cycles through demo commands
+  // ============================================================
+  const typeTarget = qs('#typeTarget');
+  if (typeTarget) {
+    const lines = [
+      'hnstyle royal',
+      'hnsuggest "git project"',
+      'hnports',
+      'hndoctor',
+      'hnhistory-search ssh'
+    ];
+    if (reduce) {
+      typeTarget.textContent = lines[0];
+    } else {
+      let li = 0, ci = 0, deleting = false;
+      const tick = () => {
+        const line = lines[li];
+        if (!deleting) {
+          ci++;
+          typeTarget.textContent = line.slice(0, ci);
+          if (ci >= line.length) { deleting = true; setTimeout(tick, 1600); return; }
+          setTimeout(tick, 55 + Math.random() * 45);
+        } else {
+          ci--;
+          typeTarget.textContent = line.slice(0, ci);
+          if (ci <= 0) { deleting = false; li = (li + 1) % lines.length; setTimeout(tick, 350); return; }
+          setTimeout(tick, 26);
+        }
+      };
+      setTimeout(tick, 900);
+    }
+  }
+
+  // ============================================================
+  // Prism profile gallery — select a profile, preview its rail
+  // ============================================================
+  const prismGrid = qs('#prismGrid');
+  if (prismGrid) {
+    const rail = qs('#prismRail');
+    const nameEl = qs('#prismName');
+    const rgbEl = qs('#prismRgb');
+    const cmdEl = qs('#prismCmd');
+    const cards = qsa('.prism-card', prismGrid);
+    const select = (card) => {
+      cards.forEach(c => { c.classList.remove('is-active'); c.setAttribute('aria-pressed', 'false'); });
+      card.classList.add('is-active');
+      card.setAttribute('aria-pressed', 'true');
+      if (rail) rail.style.background = card.getAttribute('data-rail') || '';
+      if (nameEl) nameEl.textContent = card.getAttribute('data-name') || '';
+      if (rgbEl) rgbEl.textContent = card.getAttribute('data-rgb') || '';
+      if (cmdEl) cmdEl.textContent = 'hnstyle ' + (card.getAttribute('data-key') || '');
+    };
+    cards.forEach(card => {
+      card.setAttribute('aria-pressed', 'false');
+      card.addEventListener('click', () => select(card));
+    });
+    const initial = qs('.prism-card.is-active', prismGrid) || cards[0];
+    if (initial) {
+      // default selection without animation classes
+      cards.forEach(c => c.classList.remove('is-active'));
+      initial.classList.add('is-active');
+      initial.setAttribute('aria-pressed', 'true');
+      if (rail) rail.style.background = initial.getAttribute('data-rail') || '';
+      if (nameEl) nameEl.textContent = initial.getAttribute('data-name') || '';
+      if (rgbEl) rgbEl.textContent = initial.getAttribute('data-rgb') || '';
+      if (cmdEl) cmdEl.textContent = 'hnstyle ' + (initial.getAttribute('data-key') || '');
+    }
+  }
+
+  // ============================================================
+  // Command explorer — live search + category chips
+  // ============================================================
+  const cmdGrid = qs('#cmdGrid');
+  if (cmdGrid) {
+    const input = qs('#cmdSearch');
+    const countEl = qs('#cmdCount');
+    const emptyEl = qs('#cmdEmpty');
+    const chips = qsa('.chip');
+    const cards = qsa('.cmd-card', cmdGrid);
+    let cat = 'all';
+
+    const apply = () => {
+      const q = (input && input.value ? input.value : '').trim().toLowerCase();
+      let shown = 0;
+      cards.forEach(card => {
+        const catOk = cat === 'all' || card.getAttribute('data-cat') === cat;
+        const hay = ((card.getAttribute('data-text') || '') + ' ' + card.textContent).toLowerCase();
+        const qOk = !q || hay.indexOf(q) !== -1;
+        const ok = catOk && qOk;
+        card.classList.toggle('is-hidden', !ok);
+        if (ok) {
+          shown++;
+          card.classList.remove('is-match');
+          // restart entrance animation
+          void card.offsetWidth;
+          card.classList.add('is-match');
+        }
+      });
+      if (countEl) countEl.textContent = shown + (shown === 1 ? ' entry' : ' entries');
+      if (emptyEl) emptyEl.hidden = shown !== 0;
+    };
+
+    if (input) {
+      input.addEventListener('input', apply);
+      input.addEventListener('search', apply);
+    }
+    chips.forEach(chip => {
+      chip.addEventListener('click', () => {
+        chips.forEach(c => c.classList.remove('is-active'));
+        chip.classList.add('is-active');
+        cat = chip.getAttribute('data-cat') || 'all';
+        apply();
+      });
+    });
+    apply();
+  }
+
+  // ============================================================
+  // Copy-to-clipboard buttons ([data-copy-text] / [data-copy-target])
+  // ============================================================
+  const copyButtons = qsa('.copy-btn');
+  if (copyButtons.length) {
+    const fallbackCopy = (text) => {
+      const ta = document.createElement('textarea');
+      ta.value = text;
+      ta.setAttribute('readonly', '');
+      ta.style.position = 'fixed';
+      ta.style.opacity = '0';
+      document.body.appendChild(ta);
+      ta.select();
+      try { document.execCommand('copy'); } catch (e) { /* noop */ }
+      document.body.removeChild(ta);
+    };
+    copyButtons.forEach(btn => {
+      const original = btn.textContent;
+      btn.addEventListener('click', () => {
+        let text = btn.getAttribute('data-copy-text') || '';
+        const targetSel = btn.getAttribute('data-copy-target');
+        if (targetSel) {
+          const target = qs(targetSel);
+          if (target) text = target.textContent.trim();
+        }
+        if (!text) return;
+        const done = () => {
+          btn.textContent = 'Copied ✓';
+          btn.classList.add('is-copied');
+          setTimeout(() => { btn.textContent = original; btn.classList.remove('is-copied'); }, 1600);
+        };
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(text).then(done, () => { fallbackCopy(text); done(); });
+        } else {
+          fallbackCopy(text);
+          done();
+        }
+      });
+    });
+  }
+
+  // ============================================================
+  // Install mode tabs
+  // ============================================================
+  const modeExplorer = qs('.mode-explorer');
+  if (modeExplorer) {
+    const tabs = qsa('.mode-tab', modeExplorer);
+    const panels = qsa('.mode-panel', modeExplorer);
+    const activate = (mode) => {
+      tabs.forEach(t => {
+        const on = t.getAttribute('data-mode') === mode;
+        t.classList.toggle('is-active', on);
+        t.setAttribute('aria-selected', String(on));
+        t.tabIndex = on ? 0 : -1;
+      });
+      panels.forEach(p => {
+        const on = p.getAttribute('data-mode') === mode;
+        p.hidden = !on;
+        p.classList.toggle('is-active', on);
+      });
+      modeExplorer.classList.remove('is-switching');
+      void modeExplorer.offsetWidth;
+      modeExplorer.classList.add('is-switching');
+    };
+    tabs.forEach((tab, i) => {
+      tab.addEventListener('click', () => activate(tab.getAttribute('data-mode')));
+      tab.addEventListener('keydown', (e) => {
+        let next = -1;
+        if (e.key === 'ArrowRight') next = (i + 1) % tabs.length;
+        else if (e.key === 'ArrowLeft') next = (i - 1 + tabs.length) % tabs.length;
+        else if (e.key === 'Home') next = 0;
+        else if (e.key === 'End') next = tabs.length - 1;
+        if (next >= 0) {
+          e.preventDefault();
+          tabs[next].focus();
+          activate(tabs[next].getAttribute('data-mode'));
+        }
+      });
+    });
   }
 
   // Canvas particle field (supports #fx-canvas or #starfield)

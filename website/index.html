@@ -20,7 +20,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <noscript><style>.reveal,[data-reveal],.hero-copy,.hero-visual,.section-head,.card,.glass,.feature,.metric,.timeline-item,.founder-spotlight,.seal-ring,.stat-card{opacity:1 !important;transform:none !important;animation:none !important}</style></noscript>
+  <noscript><style>.reveal,[data-reveal],.hero-copy,.hero-visual,.section-head,.card,.glass,.feature,.metric,.timeline-item,.founder-spotlight,.seal-ring,.stat-card,.prism-card,.cmd-card{opacity:1 !important;transform:none !important;animation:none !important}.explorer-search,.chip-row,.tab-list,.explorer-count{display:none !important}.mode-panel[hidden]{display:block !important}.mode-panel{border-top:1px solid rgba(109,152,201,.16)}</style></noscript>
 </head>
 <body>
   <div class="scroll-progress" aria-hidden="true"><span id="scrollProgress"></span></div>
@@ -34,13 +34,14 @@
   <header class="site-header">
     <a class="brand" href="#top" aria-label="HN NEXUS home">
       <span class="brand-mark brand-mark-seal seal-designed"><img src="assets/agency-seal.svg" alt="HN // CIT Agency Seal" width="36" height="36"></span>
-      <span class="brand-text"><strong>HN NEXUS</strong><small>HN // CIT ? CYBER CITADEL AGENCY</small></span>
+      <span class="brand-text"><strong>HN NEXUS</strong><small>HN // CIT · CYBER CITADEL AGENCY</small></span>
     </a>
     <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
     <nav id="site-nav" class="site-nav" aria-label="Primary">
       <a href="#capabilities">Capabilities</a>
+      <a href="#prism">Prism</a>
+      <a href="#commands">Commands</a>
       <a href="#showcase">Showcase</a>
-      <a href="#architecture">Architecture</a>
       <a href="#creator">Creator</a>
       <a href="#docs">Docs</a>
       <a href="#install">Install</a>
@@ -49,6 +50,7 @@
   </header>
 
   <main id="main">
+    <!-- ======================= HERO ======================= -->
     <section id="top" class="hero">
       <div class="container hero-grid">
         <div class="hero-copy">
@@ -66,7 +68,7 @@
 
           <div class="hero-actions reveal delay-3">
             <a class="button button-primary magnetic" href="#install"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 3l1.8 4.8L18.8 9l-4 3.2 1.2 5-4-2.6-4 2.6 1.2-5-4-3.2 5-.2L12 3z"/></svg><span>Deploy the System</span></a>
-            <a class="button button-ghost magnetic" href="docs/COMMAND-REFERENCE.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M5 4h11a3 3 0 0 1 3 3v13H8a3 3 0 0 0-3 3V4zm3 2v12h9V7a1 1 0 0 0-1-1H8z"/></svg><span>Explore Commands</span></a>
+            <a class="button button-ghost magnetic" href="#commands"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M5 4h11a3 3 0 0 1 3 3v13H8a3 3 0 0 0-3 3V4zm3 2v12h9V7a1 1 0 0 0-1-1H8z"/></svg><span>Explore Commands</span></a>
             <a class="button button-glow magnetic" href="https://github.com/hhh2006/HN-NEXUS" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 .5a12 12 0 0 0-3.79 23.39c.6.11.82-.26.82-.58v-2.02c-3.34.73-4.04-1.42-4.04-1.42-.55-1.39-1.33-1.76-1.33-1.76-1.09-.74.08-.73.08-.73 1.2.08 1.84 1.23 1.84 1.23 1.08 1.83 2.82 1.3 3.5 1 .1-.78.42-1.3.76-1.6-2.66-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.12-3.17 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.3-1.55 3.3-1.23 3.3-1.23.66 1.65.25 2.87.12 3.17.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.62-5.49 5.92.43.37.82 1.1.82 2.22v3.29c0 .32.22.7.83.58A12 12 0 0 0 12 .5Z"/></svg><span>View Source</span></a>
           </div>
           <div class="hero-proof reveal delay-3" aria-label="Key principles">
@@ -89,7 +91,7 @@
             <div class="seal-ring ring-2"></div>
             <div class="seal-core-glow"></div>
             <img src="assets/agency-seal.svg" alt="HN // CIT Agency Seal" class="cit-seal-hero seal-hero-designed" loading="eager">
-            <div class="seal-caption grad-text-soft">HN // CIT ? CYBER CITADEL AGENCY</div>
+            <div class="seal-caption grad-text-soft">HN // CIT · CYBER CITADEL AGENCY</div>
           </div>
           <div class="float-chip chip-a"><i></i>SESSION READY</div>
           <div class="float-chip chip-b">ZSH · PRISM · KALI</div>
@@ -112,8 +114,7 @@
               <div class="t-out">↳ git status · git log --oneline · hnanalyze &lt;file&gt;</div>
               <div class="t-cmd"><span>$</span>hnexplain "Permission denied"</div>
               <div class="t-out t-amber">Heuristic guidance ready · no command executed</div>
-              <div class="t-cmd"><span>$</span>hnstyle royal</div>
-              <div class="t-out t-green">Visual profile pinned for this session</div>
+              <div class="t-cmd t-live"><span>$</span><span id="typeTarget" class="type-target"></span><span class="cursor"></span></div>
             </div>
             <div class="t-foot"><span>USER CONTROLLED</span><span>RECOVERY-AWARE</span><span>CYBER CITADEL</span></div>
           </div>
@@ -121,12 +122,13 @@
       </div>
     </section>
 
+    <!-- ======================= STATS ======================= -->
     <section class="stats-strip" aria-label="Project highlights">
       <div class="container stats-grid reveal">
-        <div class="stat-card"><div class="stat-icon">◈</div><div><strong class="grad-text">15</strong><span>Visual Profiles</span></div></div>
-        <div class="stat-card"><div class="stat-icon">⌘</div><div><strong class="grad-text-cool">3-Row</strong><span>Responsive HUD</span></div></div>
-        <div class="stat-card"><div class="stat-icon">⛨</div><div><strong class="grad-text-warm">Safe</strong><span>Recovery-Aware Setup</span></div></div>
-        <div class="stat-card"><div class="stat-icon">⌕</div><div><strong class="grad-text">Local</strong><span>Advisory Intelligence</span></div></div>
+        <div class="stat-card"><div class="stat-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 7h16M4 12h16M4 17h16" stroke-linecap="round"/><circle cx="8" cy="7" r="2" fill="currentColor" stroke="none"/><circle cx="15" cy="12" r="2" fill="currentColor" stroke="none"/><circle cx="10" cy="17" r="2" fill="currentColor" stroke="none"/></svg></div><div><strong class="grad-text" data-count="15">0</strong><span>Prism Profiles</span></div></div>
+        <div class="stat-card"><div class="stat-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 6l4 4-4 4M11 16h8" stroke-linecap="round" stroke-linejoin="round"/><rect x="2.5" y="3" width="19" height="18" rx="3"/></svg></div><div><strong class="grad-text-cool" data-count="42">0</strong><span>Command Entries</span></div></div>
+        <div class="stat-card"><div class="stat-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3l7 3v5c0 4.4-3 8.2-7 10-4-1.8-7-5.6-7-10V6l7-3z" stroke-linejoin="round"/><path d="M9 12l2 2 4-4" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div><strong class="grad-text-warm" data-count="5">0</strong><span>Install Modes</span></div></div>
+        <div class="stat-card"><div class="stat-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="6" rx="2"/><rect x="3" y="14" width="18" height="6" rx="2"/><path d="M7 7h2M7 17h2" stroke-linecap="round"/></svg></div><div><strong class="grad-text" data-count="3" data-suffix="-Row">0</strong><span>Responsive HUD</span></div></div>
       </div>
     </section>
 
@@ -137,6 +139,7 @@
       </div>
     </div>
 
+    <!-- ======================= 01 CAPABILITIES ======================= -->
     <section id="capabilities" class="section">
       <div class="container">
         <div class="section-head">
@@ -157,44 +160,44 @@
 
         <div class="grid cards-3">
           <article class="card glow-card reveal" data-tilt>
-            <div class="icon">⌘</div>
+            <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2.5" y="4" width="19" height="14" rx="2.5"/><path d="M6 9l3 2.5L6 14M11 15h6" stroke-linecap="round" stroke-linejoin="round"/><path d="M8 21h8" stroke-linecap="round"/></svg></div>
             <div class="kicker">HUD / PROMPT</div>
             <h3 class="grad-text-soft">Three-row responsive HUD</h3>
             <p>An event-driven ZSH prompt with identity, context, and status rows that adapts to terminal width and session state.</p>
             <div class="meta"><span class="pill">precmd/preexec</span><span class="pill">vcs_info</span><span class="pill">width-aware</span></div>
           </article>
           <article class="card glow-card reveal delay-1" data-tilt>
-            <div class="icon icon-violet">◈</div>
+            <div class="icon icon-violet" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3l9 16H3L12 3z" stroke-linejoin="round"/><path d="M12 9l4.5 8h-9L12 9z"/></svg></div>
             <div class="kicker">VISUAL PROFILES</div>
-            <h3 class="grad-text-cool">Prism palettes & glyphs</h3>
+            <h3 class="grad-text-cool">Prism palettes &amp; glyphs</h3>
             <p>Automatic rotation and pinnable profiles via <code>hnstyle</code>, with Nerd Font detection and readable fallbacks.</p>
             <div class="meta"><span class="pill">15 profiles</span><span class="pill">hnstyle</span><span class="pill">fallback-safe</span></div>
           </article>
           <article class="card glow-card reveal delay-2" data-tilt>
-            <div class="icon icon-green">⌕</div>
+            <div class="icon icon-green" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="7"/><path d="M16.5 16.5L21 21" stroke-linecap="round"/><path d="M8.5 11h5M11 8.5v5" stroke-linecap="round"/></svg></div>
             <div class="kicker">CONTEXT ASSIST</div>
             <h3 class="grad-text">Advisory local intelligence</h3>
             <p><code>hnsuggest</code>, <code>hnhistory-search</code>, <code>hnexplain</code>, and <code>hnwhy</code> provide heuristic guidance — never auto-executed.</p>
             <div class="meta"><span class="pill">no AI claims</span><span class="pill">read-only</span><span class="pill">local</span></div>
           </article>
           <article class="card glow-card reveal" data-tilt>
-            <div class="icon icon-amber">▤</div>
+            <div class="icon icon-amber" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 7h10M4 12h16M4 17h7" stroke-linecap="round"/><circle cx="18" cy="7" r="2.4"/><circle cx="15" cy="17" r="2.4"/></svg></div>
             <div class="kicker">OPERATIONS</div>
             <h3 class="grad-text-warm">On-demand operator utilities</h3>
             <p>Inspect files, logs, processes, services, containers, and listening sockets with explicit commands and clear scope.</p>
             <div class="meta"><span class="pill">hnops</span><span class="pill">hnports</span><span class="pill">hnreport</span></div>
           </article>
           <article class="card glow-card reveal delay-1" data-tilt>
-            <div class="icon icon-cyan">≋</div>
+            <div class="icon icon-cyan" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 6h18l-7 8v5l-4 2v-7L3 6z" stroke-linejoin="round"/></svg></div>
             <div class="kicker">OUTPUT TRIAGE</div>
             <h3 class="grad-text-soft">Analyze supplied text safely</h3>
             <p><code>hnoutput</code>, <code>hnnet</code>, and <code>hnanalyze</code> classify text you provide — no scanning, capture, or connections.</p>
             <div class="meta"><span class="pill">heuristic</span><span class="pill">passive</span><span class="pill">file/stdin</span></div>
           </article>
           <article class="card glow-card reveal delay-2" data-tilt>
-            <div class="icon icon-green">⛨</div>
+            <div class="icon icon-green" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3l7 3v5c0 4.4-3 8.2-7 10-4-1.8-7-5.6-7-10V6l7-3z" stroke-linejoin="round"/><path d="M12 8v5M12 16h.01" stroke-linecap="round"/></svg></div>
             <div class="kicker">RECOVERY</div>
-            <h3 class="grad-text">Backup & rollback discipline</h3>
+            <h3 class="grad-text">Backup &amp; rollback discipline</h3>
             <p>Guided setup, timestamped backups, verification helpers, and rollback paths designed to reduce installation risk.</p>
             <div class="meta"><span class="pill">setup.sh</span><span class="pill">rollback</span><span class="pill">verify</span></div>
           </article>
@@ -202,11 +205,162 @@
       </div>
     </section>
 
-    <section id="experience" class="section">
+    <!-- ======================= 02 PRISM PROFILES ======================= -->
+    <section id="prism" class="section section-alt">
       <div class="container">
         <div class="section-head">
           <div>
-            <div class="eyebrow">02 / Experience</div>
+            <div class="eyebrow">02 / Prism Profiles</div>
+            <h2>Fifteen spectra.<br><em class="grad-text-soft">One command.</em></h2>
+          </div>
+          <p>Every profile below carries the <strong>exact rail colors</strong> defined in <code>config/hn-terminal.zsh</code> — start, mid, and end RGB values rendered live. Select one to preview it, then apply it in your session with <code>hnstyle</code>.</p>
+        </div>
+
+        <div class="prism-preview reveal" aria-live="polite">
+          <div class="prism-preview-rail" id="prismRail" aria-hidden="true"></div>
+          <div class="prism-preview-body">
+            <div class="prism-preview-info">
+              <span class="kicker">SELECTED PROFILE</span>
+              <strong class="prism-preview-name" id="prismName">EMERALD PULSE</strong>
+              <span class="prism-preview-rgb" id="prismRgb">20;205;170 → 40;160;235 → 155;105;245</span>
+            </div>
+            <div class="prism-preview-cmd">
+              <code id="prismCmd">hnstyle emerald</code>
+              <button class="copy-btn" type="button" data-copy-target="#prismCmd" aria-label="Copy command">Copy</button>
+            </div>
+          </div>
+          <div class="prism-preview-hud" aria-hidden="true">
+            <span class="ph-row">╭─( <b>◈ HN</b> ⬡ CIT )──────────────╮</span>
+            <span class="ph-row">│ <b>● kali@operator</b> ⌂ ~/security-lab</span>
+            <span class="ph-row">╰─ <b>◈ READY</b> ❯</span>
+          </div>
+        </div>
+
+        <div class="prism-grid" id="prismGrid" role="group" aria-label="Prism profile selector">
+          <button class="prism-card reveal" type="button" data-key="emerald" data-name="EMERALD PULSE" data-rgb="20;205;170 → 40;160;235 → 155;105;245" data-rail="linear-gradient(90deg,rgb(20,205,170),rgb(40,160,235),rgb(155,105,245))"><span class="prism-rail" style="background:linear-gradient(90deg,rgb(20,205,170),rgb(40,160,235),rgb(155,105,245))"></span><span class="prism-meta"><b>Emerald Pulse</b><code>emerald</code></span></button>
+          <button class="prism-card reveal" type="button" data-key="sapphire" data-name="SAPPHIRE DRIVE" data-rgb="45;105;235 → 115;85;235 → 190;90;220" data-rail="linear-gradient(90deg,rgb(45,105,235),rgb(115,85,235),rgb(190,90,220))"><span class="prism-rail" style="background:linear-gradient(90deg,rgb(45,105,235),rgb(115,85,235),rgb(190,90,220))"></span><span class="prism-meta"><b>Sapphire Drive</b><code>sapphire</code></span></button>
+          <button class="prism-card reveal" type="button" data-key="amethyst" data-name="AMETHYST CORE" data-rgb="145;75;225 → 205;90;190 → 245;105;165" data-rail="linear-gradient(90deg,rgb(145,75,225),rgb(205,90,190),rgb(245,105,165))"><span class="prism-rail" style="background:linear-gradient(90deg,rgb(145,75,225),rgb(205,90,190),rgb(245,105,165))"></span><span class="prism-meta"><b>Amethyst Core</b><code>amethyst</code></span></button>
+          <button class="prism-card reveal" type="button" data-key="arctic" data-name="ARCTIC PRISM" data-rgb="75;205;245 → 70;145;245 → 145;115;245" data-rail="linear-gradient(90deg,rgb(75,205,245),rgb(70,145,245),rgb(145,115,245))"><span class="prism-rail" style="background:linear-gradient(90deg,rgb(75,205,245),rgb(70,145,245),rgb(145,115,245))"></span><span class="prism-meta"><b>Arctic Prism</b><code>arctic</code></span></button>
+          <button class="prism-card reveal" type="button" data-key="rose" data-name="ROSE QUARTZ" data-rgb="235;105;165 → 180;100;225 → 105;125;245" data-rail="linear-gradient(90deg,rgb(235,105,165),rgb(180,100,225),rgb(105,125,245))"><span class="prism-rail" style="background:linear-gradient(90deg,rgb(235,105,165),rgb(180,100,225),rgb(105,125,245))"></span><span class="prism-meta"><b>Rose Quartz</b><code>rose</code></span></button>
+          <button class="prism-card reveal" type="button" data-key="turquoise" data-name="TURQUOISE FLOW" data-rgb="20;190;190 → 40;135;230 → 105;105;225" data-rail="linear-gradient(90deg,rgb(20,190,190),rgb(40,135,230),rgb(105,105,225))"><span class="prism-rail" style="background:linear-gradient(90deg,rgb(20,190,190),rgb(40,135,230),rgb(105,105,225))"></span><span class="prism-meta"><b>Turquoise Flow</b><code>turquoise</code></span></button>
+          <button class="prism-card reveal" type="button" data-key="indigo" data-name="INDIGO VECTOR" data-rgb="80;90;220 → 145;85;235 → 205;100;200" data-rail="linear-gradient(90deg,rgb(80,90,220),rgb(145,85,235),rgb(205,100,200))"><span class="prism-rail" style="background:linear-gradient(90deg,rgb(80,90,220),rgb(145,85,235),rgb(205,100,200))"></span><span class="prism-meta"><b>Indigo Vector</b><code>indigo</code></span></button>
+          <button class="prism-card reveal" type="button" data-key="lilac" data-name="CYBER LILAC" data-rgb="175;115;235 → 115;125;245 → 85;190;220" data-rail="linear-gradient(90deg,rgb(175,115,235),rgb(115,125,245),rgb(85,190,220))"><span class="prism-rail" style="background:linear-gradient(90deg,rgb(175,115,235),rgb(115,125,245),rgb(85,190,220))"></span><span class="prism-meta"><b>Cyber Lilac</b><code>lilac</code></span></button>
+          <button class="prism-card reveal" type="button" data-key="jade" data-name="JADE CIRCUIT" data-rgb="35;185;125 → 35;145;210 → 105;115;220" data-rail="linear-gradient(90deg,rgb(35,185,125),rgb(35,145,210),rgb(105,115,220))"><span class="prism-rail" style="background:linear-gradient(90deg,rgb(35,185,125),rgb(35,145,210),rgb(105,115,220))"></span><span class="prism-meta"><b>Jade Circuit</b><code>jade</code></span></button>
+          <button class="prism-card reveal" type="button" data-key="polar" data-name="POLAR NIGHT" data-rgb="115;175;235 → 100;115;210 → 165;115;225" data-rail="linear-gradient(90deg,rgb(115,175,235),rgb(100,115,210),rgb(165,115,225))"><span class="prism-rail" style="background:linear-gradient(90deg,rgb(115,175,235),rgb(100,115,210),rgb(165,115,225))"></span><span class="prism-meta"><b>Polar Night</b><code>polar</code></span></button>
+          <button class="prism-card reveal" type="button" data-key="royal" data-name="ROYAL GOLD" data-rgb="185;135;65 → 225;165;90 → 235;190;95" data-rail="linear-gradient(90deg,rgb(185,135,65),rgb(225,165,90),rgb(235,190,95))"><span class="prism-rail" style="background:linear-gradient(90deg,rgb(185,135,65),rgb(225,165,90),rgb(235,190,95))"></span><span class="prism-meta"><b>Royal Gold</b><code>royal</code></span></button>
+          <button class="prism-card reveal" type="button" data-key="matrix" data-name="MATRIX GLOW" data-rgb="20;150;75 → 45;205;95 → 80;220;110" data-rail="linear-gradient(90deg,rgb(20,150,75),rgb(45,205,95),rgb(80,220,110))"><span class="prism-rail" style="background:linear-gradient(90deg,rgb(20,150,75),rgb(45,205,95),rgb(80,220,110))"></span><span class="prism-meta"><b>Matrix Glow</b><code>matrix</code></span></button>
+          <button class="prism-card reveal" type="button" data-key="blood" data-name="BLOOD MOON" data-rgb="220;35;65 → 245;75;90 → 245;65;75" data-rail="linear-gradient(90deg,rgb(220,35,65),rgb(245,75,90),rgb(245,65,75))"><span class="prism-rail" style="background:linear-gradient(90deg,rgb(220,35,65),rgb(245,75,90),rgb(245,65,75))"></span><span class="prism-meta"><b>Blood Moon</b><code>blood</code></span></button>
+          <button class="prism-card reveal" type="button" data-key="quantum" data-name="QUANTUM ICE" data-rgb="45;170;225 → 80;195;245 → 125;220;255" data-rail="linear-gradient(90deg,rgb(45,170,225),rgb(80,195,245),rgb(125,220,255))"><span class="prism-rail" style="background:linear-gradient(90deg,rgb(45,170,225),rgb(80,195,245),rgb(125,220,255))"></span><span class="prism-meta"><b>Quantum Ice</b><code>quantum</code></span></button>
+          <button class="prism-card reveal" type="button" data-key="obsidian" data-name="OBSIDIAN" data-rgb="95;85;135 → 145;110;190 → 185;145;225" data-rail="linear-gradient(90deg,rgb(95,85,135),rgb(145,110,190),rgb(185,145,225))"><span class="prism-rail" style="background:linear-gradient(90deg,rgb(95,85,135),rgb(145,110,190),rgb(185,145,225))"></span><span class="prism-meta"><b>Obsidian</b><code>obsidian</code></span></button>
+        </div>
+
+        <p class="prism-note reveal"><code>hnstyle</code> also accepts <code>auto</code> (automatic session cycling). Profiles are <strong>session-local</strong> — nothing persists unless you pin it. Colors above are generated directly from the runtime definitions.</p>
+
+        <div class="showcase-banner glow-card reveal" data-tilt>
+          <img src="assets/prism-profiles.svg" alt="Reference sheet: all 15 HN NEXUS Prism profiles with their exact start, mid and end RGB rail values" loading="lazy">
+          <div class="banner-caption"><span class="grad-text">PRISM SPECTRUM SHEET</span> — generated from runtime values · reference (static)</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= 03 COMMAND EXPLORER ======================= -->
+    <section id="commands" class="section">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">03 / Command Explorer</div>
+            <h2>Every command,<br><em>one search away.</em></h2>
+          </div>
+          <p>The complete HN NEXUS catalogue — discovery, diagnostics, advisory helpers, file viewers, operations, and network/output intelligence. Filter by category or search by name and purpose.</p>
+        </div>
+
+        <div class="explorer reveal">
+          <div class="explorer-controls">
+            <label class="explorer-search" for="cmdSearch">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M16.5 16.5L21 21" stroke-linecap="round"/></svg>
+              <input type="search" id="cmdSearch" placeholder="Search commands… e.g. log, ports, suggest" autocomplete="off" aria-label="Search commands">
+            </label>
+            <div class="chip-row" role="group" aria-label="Filter by category">
+              <button class="chip is-active" type="button" data-cat="all">All</button>
+              <button class="chip" type="button" data-cat="discover">Discovery</button>
+              <button class="chip" type="button" data-cat="status">Diagnostics</button>
+              <button class="chip" type="button" data-cat="visual">Visual</button>
+              <button class="chip" type="button" data-cat="advisory">Advisory</button>
+              <button class="chip" type="button" data-cat="files">Files</button>
+              <button class="chip" type="button" data-cat="ops">Operations</button>
+              <button class="chip" type="button" data-cat="net">Network &amp; Output</button>
+              <button class="chip" type="button" data-cat="util">Utilities</button>
+            </div>
+            <div class="explorer-count" id="cmdCount" aria-live="polite">42 entries</div>
+          </div>
+
+          <div class="cmd-grid" id="cmdGrid">
+            <article class="cmd-card" data-cat="discover" data-text="hnhelp quick reference available commands"><code>hnhelp</code><p>Show the operator quick reference of available commands and features.</p><span class="cmd-tag">Discovery</span></article>
+            <article class="cmd-card" data-cat="discover" data-text="hnmenu interactive keyboard command center launcher"><code>hnmenu</code><p>Interactive, keyboard-driven command-center launcher for existing utilities.</p><span class="cmd-tag">Discovery</span></article>
+            <article class="cmd-card" data-cat="discover" data-text="hnsearch text catalogue native linux commands prism utilities"><code>hnsearch [TEXT]</code><p>Search the built-in local catalogue of native Linux commands and HN/PRISM utilities.</p><span class="cmd-tag">Discovery</span></article>
+
+            <article class="cmd-card" data-cat="status" data-text="hnstatus compact system session snapshot"><code>hnstatus</code><p>Compact system/session snapshot (read-only).</p><span class="cmd-tag">Diagnostics</span></article>
+            <article class="cmd-card" data-cat="status" data-text="hnprism live session git runtime overview"><code>hnprism</code><p>Live session, Git, and runtime overview.</p><span class="cmd-tag">Diagnostics</span></article>
+            <article class="cmd-card" data-cat="status" data-text="hndoctor diagnose core files completion correction plugins optional tools nerd font"><code>hndoctor</code><p>Read-only diagnostics for core files, completion, correction, plugins, optional tools and capabilities.</p><span class="cmd-tag">Diagnostics</span></article>
+            <article class="cmd-card" data-cat="status" data-text="hnvisual nerd font glyphs terminal color capability width"><code>hnvisual</code><p>Diagnose Nerd Font detection, glyph readiness, color capability and width.</p><span class="cmd-tag">Diagnostics</span></article>
+            <article class="cmd-card" data-cat="status" data-text="hncolors preview prism color spectrum truecolor"><code>hncolors</code><p>Preview the PRISM/HN color spectrum and truecolor output.</p><span class="cmd-tag">Diagnostics</span></article>
+            <article class="cmd-card" data-cat="status" data-text="hnicons preview symbol icon set fallbacks"><code>hnicons</code><p>Preview the supported symbol/icon set and fallbacks.</p><span class="cmd-tag">Diagnostics</span></article>
+            <article class="cmd-card" data-cat="status" data-text="hnhealth system health snapshot read-only"><code>hnhealth</code><p>One-shot system health snapshot (read-only).</p><span class="cmd-tag">Diagnostics</span></article>
+
+            <article class="cmd-card" data-cat="visual" data-text="hnstyle profile palette visual profile automatic cycling"><code>hnstyle [PROFILE]</code><p>Show or set the HUD/prompt visual profile. Default mode is automatic cycling; session-local.</p><span class="cmd-tag">Visual</span></article>
+
+            <article class="cmd-card" data-cat="advisory" data-text="hnsuggest context aware command suggestions workspace git python node docker"><code>hnsuggest [TEXT]</code><p>Suggest relevant commands from local workspace markers and installed tools. Advisory only.</p><span class="cmd-tag">Advisory</span></article>
+            <article class="cmd-card" data-cat="advisory" data-text="hnhistory-search search recent zsh history insert selected command review"><code>hnhistory-search [TEXT]</code><p>Search recent ZSH history and insert a selection into the prompt for review — never auto-runs.</p><span class="cmd-tag">Advisory</span></article>
+            <article class="cmd-card" data-cat="advisory" data-text="hnhistory read-only numbered view recent zsh history"><code>hnhistory [COUNT]</code><p>Read-only, numbered view of recent ZSH history.</p><span class="cmd-tag">Advisory</span></article>
+            <article class="cmd-card" data-cat="advisory" data-text="hnexplain heuristic advisory explanations error text permission denied traceback"><code>hnexplain [ERROR]</code><p>Heuristic, advisory explanations for common error text (args or piped input).</p><span class="cmd-tag">Advisory</span></article>
+            <article class="cmd-card" data-cat="advisory" data-text="hnwhy explain last command exit status"><code>hnwhy</code><p>Explain the last command exit status (<code>$?</code>) in plain terms.</p><span class="cmd-tag">Advisory</span></article>
+
+            <article class="cmd-card" data-cat="files" data-text="hnfiles semantic file browser directory hidden files glyphs"><code>hnfiles [DIR]</code><p>Semantic file browser for immediate entries with glyphs and colors.</p><span class="cmd-tag">Files</span></article>
+            <article class="cmd-card" data-cat="files" data-text="hnicon identify path type file dir symlink executable"><code>hnicon PATH</code><p>Identify a path by type: file, directory, symlink, executable or category hints.</p><span class="cmd-tag">Files</span></article>
+            <article class="cmd-card" data-cat="files" data-text="hncat numbered framed text viewer syntax colors bat"><code>hncat FILE</code><p>Numbered, framed text viewer with syntax colors via <code>bat</code>/<code>batcat</code> when available.</p><span class="cmd-tag">Files</span></article>
+            <article class="cmd-card" data-cat="files" data-text="hnlog read logs line numbers severity highlighting summary"><code>hnlog FILE</code><p>Read logs with line numbers, severity-aware highlighting and a compact summary.</p><span class="cmd-tag">Files</span></article>
+            <article class="cmd-card" data-cat="files" data-text="hnjson pretty-print json syntax colors jq"><code>hnjson FILE</code><p>Pretty-print JSON with syntax colors (uses <code>jq</code>).</p><span class="cmd-tag">Files</span></article>
+            <article class="cmd-card" data-cat="files" data-text="hnyaml format view yaml yq"><code>hnyaml FILE</code><p>Format/view YAML when <code>yq</code> is available.</p><span class="cmd-tag">Files</span></article>
+            <article class="cmd-card" data-cat="files" data-text="hnfind search text colored matches rg grep"><code>hnfind TEXT [PATH]</code><p>Search text with colored matches — <code>rg</code> when available, else <code>grep</code>.</p><span class="cmd-tag">Files</span></article>
+            <article class="cmd-card" data-cat="files" data-text="hninspect file metadata sha-256 report"><code>hninspect FILE</code><p>File metadata and SHA-256 report for regular files.</p><span class="cmd-tag">Files</span></article>
+            <article class="cmd-card" data-cat="files" data-text="hndiff colored unified diff view old new"><code>hndiff OLD NEW</code><p>Colored unified diff view between two files.</p><span class="cmd-tag">Files</span></article>
+            <article class="cmd-card" data-cat="files" data-text="cat interactive presentation wrapper syntax aware numbered bat"><code>cat FILE</code><p>Interactive presentation wrapper: syntax-aware, numbered view when <code>bat</code>/<code>batcat</code> is installed.</p><span class="cmd-tag">Files</span></article>
+
+            <article class="cmd-card" data-cat="ops" data-text="hnops operations center local capability session overview"><code>hnops</code><p>Operations center: local capability and session overview (read-only).</p><span class="cmd-tag">Operations</span></article>
+            <article class="cmd-card" data-cat="ops" data-text="hnports listening tcp udp sockets local not a scanner"><code>hnports</code><p>Read-only overview of listening TCP/UDP sockets (local; not a scanner).</p><span class="cmd-tag">Operations</span></article>
+            <article class="cmd-card" data-cat="ops" data-text="hnproc top processes cpu snapshot"><code>hnproc</code><p>Top processes by CPU usage (snapshot).</p><span class="cmd-tag">Operations</span></article>
+            <article class="cmd-card" data-cat="ops" data-text="hnservices systemd service inventory status"><code>hnservices</code><p>Read-only systemd service inventory/status view (when <code>systemctl</code> is available).</p><span class="cmd-tag">Operations</span></article>
+            <article class="cmd-card" data-cat="ops" data-text="hncontainers docker podman container inventory"><code>hncontainers</code><p>Read-only Docker/Podman container inventory (when installed).</p><span class="cmd-tag">Operations</span></article>
+            <article class="cmd-card" data-cat="ops" data-text="hnreport local read-only system network snapshot report"><code>hnreport [FILE]</code><p>Create a local, read-only system/network snapshot report (review before sharing).</p><span class="cmd-tag">Operations</span></article>
+            <article class="cmd-card" data-cat="ops" data-text="ps df free ss du interactive native system wrappers"><code>ps · df · free · ss · du</code><p>Interactive native system wrappers: semantic, numbered/color-emphasized presentation in interactive terminals.</p><span class="cmd-tag">Operations</span></article>
+
+            <article class="cmd-card" data-cat="net" data-text="hnipa compact color-coded interface address matrix ipv4 ipv6"><code>hnipa [-4|-6]</code><p>Compact, color-coded interface/address matrix.</p><span class="cmd-tag">Network</span></article>
+            <article class="cmd-card" data-cat="net" data-text="ip a route neigh read-only presentation forms"><code>ip a · route · neigh</code><p>Familiar <code>ip</code> command with compact matrices for supported read-only display forms.</p><span class="cmd-tag">Network</span></article>
+            <article class="cmd-card" data-cat="net" data-text="hnnet passive highlighter classifier network text ips ports protocols firewall"><code>hnnet [FILE|-]</code><p>Passive highlighter/classifier for network-related text you provide (IPs, ports, protocols, firewall terms).</p><span class="cmd-tag">Network</span></article>
+            <article class="cmd-card" data-cat="net" data-text="hnanalyze heuristic text intelligence nmap ssh dns http firewall output"><code>hnanalyze [FILE|-]</code><p>Heuristic analysis over supplied output — e.g. Nmap text, SSH auth logs, DNS/HTTP traces.</p><span class="cmd-tag">Output</span></article>
+            <article class="cmd-card" data-cat="net" data-text="hnoutput smart output triage classification saved piped command output"><code>hnoutput [FILE|-]</code><p>Smart output triage/classification for saved or piped command output (read-only).</p><span class="cmd-tag">Output</span></article>
+
+            <article class="cmd-card" data-cat="util" data-text="mkcd create directory and enter it"><code>mkcd DIR</code><p>Create a directory and enter it.</p><span class="cmd-tag">Utility</span></article>
+            <article class="cmd-card" data-cat="util" data-text="extract archive formats tar gz zip"><code>extract FILE</code><p>Extract supported archive formats using available system tools.</p><span class="cmd-tag">Utility</span></article>
+            <article class="cmd-card" data-cat="util" data-text="ls tree interactive presentation directory listing colors grouping"><code>ls · tree</code><p>Enhanced interactive directory views (colors/grouping; <code>tree</code> when installed).</p><span class="cmd-tag">Utility</span></article>
+            <article class="cmd-card" data-cat="util" data-text="l ll la lt eza convenience listing shortcuts"><code>l · ll · la · lt</code><p>Convenience <code>eza</code> shortcuts — only when <code>eza</code> is installed.</p><span class="cmd-tag">Utility</span></article>
+          </div>
+
+          <div class="explorer-empty" id="cmdEmpty" hidden>No commands match your search. Try a broader term or another category.</div>
+        </div>
+
+        <div class="explorer-foot reveal">
+          <p>Full usage notes, arguments, and examples: <a href="docs/COMMAND-REFERENCE.html">Command Reference</a> · bypass any presentation wrapper with <code>command &lt;name&gt;</code>.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= 04 EXPERIENCE ======================= -->
+    <section id="experience" class="section section-alt">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">04 / Experience</div>
             <h2>Familiar commands,<br><em>refined presentation.</em></h2>
           </div>
           <p>Interactive wrappers enhance readability in the terminal while preserving native behavior for pipes, redirections, and scripting contexts. Bypass anytime with <code>command &lt;name&gt;</code>.</p>
@@ -238,16 +392,15 @@
       </div>
     </section>
 
-
-
-    <section id="showcase" class="section section-alt showcase-section">
+    <!-- ======================= 05 SHOWCASE ======================= -->
+    <section id="showcase" class="section showcase-section">
       <div class="container">
         <div class="section-head">
           <div>
-            <div class="eyebrow">01B / Showcase</div>
+            <div class="eyebrow">05 / Showcase</div>
             <h2>Terminal theater,<br><em class="grad-text-soft">cinematic by intent.</em></h2>
           </div>
-          <p>A visual glimpse of the HN NEXUS command-center experience — premium illustrative SVG mockups and identity art designed for this project (not fabricated real runtime screenshots). Real author-provided captures are included below.</p>
+          <p>A visual glimpse of the HN NEXUS command-center experience — premium illustrative SVG mockups and identity art designed for this project (not fabricated real runtime screenshots). Real captures are included from the author's environment.</p>
         </div>
 
         <div class="showcase-grid">
@@ -261,12 +414,12 @@
           </figure>
           <figure class="showcase-card glow-card reveal delay-2" data-tilt>
             <div class="showcase-media">
-              <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;padding:12px;background:linear-gradient(180deg,rgba(10,18,30,.94),rgba(6,12,22,.99));border-radius:12px">
-                <img src="assets/screenshots/hn-nexus-kali-capture-01.png" alt="HN NEXUS real capture 1 (author-provided)" loading="lazy" style="width:100%;height:auto;border-radius:10px;border:1px solid rgba(120,180,255,.18);display:block">
-                <img src="assets/screenshots/hn-nexus-kali-capture-02.png" alt="HN NEXUS real capture 2 (author-provided)" loading="lazy" style="width:100%;height:auto;border-radius:10px;border:1px solid rgba(120,180,255,.18);display:block">
+              <div class="capture-pair">
+                <img src="assets/screenshots/hn-nexus-kali-capture-01.png" alt="HN NEXUS real capture 1 (author-provided)" loading="lazy">
+                <img src="assets/screenshots/hn-nexus-kali-capture-02.png" alt="HN NEXUS real capture 2 (author-provided)" loading="lazy">
               </div>
             </div>
-            <figcaption><span class="grad-text-soft">Real Captures</span> — author-provided screenshots from a Kali/ZSH environment (appearance may vary)</figcaption>
+            <figcaption><span class="grad-text-soft">Real Captures</span> — author-provided screenshots from a Kali/ZSH environment (appearance may vary by terminal, font, and theme)</figcaption>
           </figure>
         </div>
 
@@ -277,11 +430,12 @@
       </div>
     </section>
 
-    <section id="architecture" class="section">
+    <!-- ======================= 06 ARCHITECTURE ======================= -->
+    <section id="architecture" class="section section-alt">
       <div class="container">
         <div class="section-head">
           <div>
-            <div class="eyebrow">03 / Architecture</div>
+            <div class="eyebrow">06 / Architecture</div>
             <h2>Layered by design.<br><em>Predictable by intent.</em></h2>
           </div>
           <p>HN NEXUS is structured to keep the interactive core, HUD, utilities, and recovery concerns understandable, modular, and maintainable.</p>
@@ -306,14 +460,15 @@
       </div>
     </section>
 
+    <!-- ======================= 07 CREATOR ======================= -->
     <section id="creator" class="section creator-section">
       <div class="container">
         <div class="section-head">
           <div>
-            <div class="eyebrow">04 / Creator</div>
+            <div class="eyebrow">07 / Creator</div>
             <h2>Identity with intent.<br><em class="grad-text-soft">Engineered to stand out.</em></h2>
           </div>
-          <p>HN NEXUS carries a deliberate engineering identity — control, precision, and recovery-aware thinking — expressed through the HN // CIT / Cyber Citadel Agency vision and the HN // CIT seal mark presented in harmony with the project’s cinematic character.</p>
+          <p>HN NEXUS carries a deliberate engineering identity — control, precision, and recovery-aware thinking — expressed through the HN // CIT / Cyber Citadel Agency vision.</p>
         </div>
 
         <div class="creator-card creator-card-luxe glow-card reveal" data-tilt>
@@ -349,11 +504,12 @@
       </div>
     </section>
 
-    <section id="docs" class="section">
+    <!-- ======================= 08 DOCUMENTATION ======================= -->
+    <section id="docs" class="section section-alt">
       <div class="container">
         <div class="section-head">
           <div>
-            <div class="eyebrow">05 / Documentation</div>
+            <div class="eyebrow">08 / Documentation</div>
             <h2>Learn it deeply.<br><em>Operate it clearly.</em></h2>
           </div>
           <p>From first install to advanced workflows — detailed, behavior-accurate documentation and publishing guidance, browsable on the site and directly in the repository.</p>
@@ -366,18 +522,22 @@
           <a class="doc-link glow-card reveal" href="docs/ARCHITECTURE.html"><small>DESIGN</small><strong>Architecture</strong><span>Layers, runtime components, boundaries, and data/control flow.</span></a>
           <a class="doc-link glow-card reveal delay-1" href="docs/FAQ.html"><small>ANSWERS</small><strong>FAQ</strong><span>Common questions, scope, compatibility, and practical guidance.</span></a>
           <a class="doc-link glow-card reveal delay-2" href="docs/TROUBLESHOOTING.html"><small>SUPPORT</small><strong>Troubleshooting</strong><span>Diagnostics, common issues, fixes, and safe recovery steps.</span></a>
-          <a class="doc-link glow-card reveal" href="docs/CHANGELOG.html"><small>HISTORY</small><strong>Changelog</strong><span>Version history and release milestones (pack vs baseline noted).</span></a>
-          <a class="doc-link glow-card reveal delay-1" href="docs/TEST-REPORT-v1.0.0.html"><small>VALIDATION</small><strong>Test Report v1.0.0</strong><span>Feasible checks, results, and documented environment limitations.</span></a>
-          <a class="doc-link glow-card reveal delay-2" href="SECURITY.html"><small>POLICY</small><strong>Security &amp; Responsible Use</strong><span>Disclosure guidance, privacy considerations, and safe handling.</span></a>
+          <a class="doc-link glow-card reveal" href="docs/CONFIGURATION.html"><small>TUNE</small><strong>Configuration</strong><span>Settings, environment variables, profiles, and customization.</span></a>
+          <a class="doc-link glow-card reveal delay-1" href="docs/CHANGELOG.html"><small>HISTORY</small><strong>Changelog</strong><span>Version history and release milestones (pack vs baseline noted).</span></a>
+          <a class="doc-link glow-card reveal delay-2" href="docs/TEST-REPORT-v1.0.0.html"><small>VALIDATION</small><strong>Test Report v1.0.0</strong><span>Feasible checks, results, and documented environment limitations.</span></a>
+          <a class="doc-link glow-card reveal" href="SECURITY.html"><small>POLICY</small><strong>Security &amp; Responsible Use</strong><span>Disclosure guidance, privacy considerations, and safe handling.</span></a>
+          <a class="doc-link glow-card reveal delay-1" href="guides/installation.html"><small>GUIDE</small><strong>Installation Guide</strong><span>Step-by-step setup with checks, dry-run, and recovery paths.</span></a>
+          <a class="doc-link glow-card reveal delay-2" href="guides/troubleshooting.html"><small>GUIDE</small><strong>Troubleshooting Guide</strong><span>Practical fixes for common environment and runtime issues.</span></a>
         </div>
       </div>
     </section>
 
+    <!-- ======================= 09 DEPLOYMENT ======================= -->
     <section id="install" class="section">
       <div class="container">
         <div class="section-head">
           <div>
-            <div class="eyebrow">06 / Deployment</div>
+            <div class="eyebrow">09 / Deployment</div>
             <h2>Install with intent.<br><em>Recover with confidence.</em></h2>
           </div>
           <p>Run from the extracted project directory as a normal user (no sudo). Review scripts first and keep independent backups.</p>
@@ -406,8 +566,44 @@
           </div>
         </div>
 
+        <div class="mode-explorer reveal">
+          <div class="tab-list" role="tablist" aria-label="Install modes">
+            <button class="mode-tab is-active" type="button" role="tab" aria-selected="true" aria-controls="mode-guided" id="tab-guided" data-mode="guided">Guided</button>
+            <button class="mode-tab" type="button" role="tab" aria-selected="false" aria-controls="mode-check" id="tab-check" data-mode="check">--check</button>
+            <button class="mode-tab" type="button" role="tab" aria-selected="false" aria-controls="mode-dry" id="tab-dry" data-mode="dry">--dry-run</button>
+            <button class="mode-tab" type="button" role="tab" aria-selected="false" aria-controls="mode-core" id="tab-core" data-mode="core">--core</button>
+            <button class="mode-tab" type="button" role="tab" aria-selected="false" aria-controls="mode-visual" id="tab-visual" data-mode="visual">--visual</button>
+            <button class="mode-tab" type="button" role="tab" aria-selected="false" aria-controls="mode-full" id="tab-full" data-mode="full">--full</button>
+          </div>
+
+          <div class="mode-panel is-active" role="tabpanel" id="mode-guided" aria-labelledby="tab-guided" data-mode="guided">
+            <div class="mode-copy"><h3>Guided installation</h3><p>Interactive prompts walk you through core setup and offer the optional XFCE visual layer on supported X11 sessions. Skipped safely elsewhere.</p></div>
+            <div class="mode-cmd"><code>./setup.sh</code><button class="copy-btn" type="button" data-copy-text="./setup.sh">Copy</button></div>
+          </div>
+          <div class="mode-panel" role="tabpanel" id="mode-check" aria-labelledby="tab-check" data-mode="check" hidden>
+            <div class="mode-copy"><h3>Environment check</h3><p>Verifies prerequisites and reports what would be needed — changes nothing on disk.</p></div>
+            <div class="mode-cmd"><code>./setup.sh --check</code><button class="copy-btn" type="button" data-copy-text="./setup.sh --check">Copy</button></div>
+          </div>
+          <div class="mode-panel" role="tabpanel" id="mode-dry" aria-labelledby="tab-dry" data-mode="dry" hidden>
+            <div class="mode-copy"><h3>Dry run</h3><p>Previews every guided action the installer would take, so you can review the plan before applying it.</p></div>
+            <div class="mode-cmd"><code>./setup.sh --dry-run</code><button class="copy-btn" type="button" data-copy-text="./setup.sh --dry-run">Copy</button></div>
+          </div>
+          <div class="mode-panel" role="tabpanel" id="mode-core" aria-labelledby="tab-core" data-mode="core" hidden>
+            <div class="mode-copy"><h3>Terminal core only</h3><p>Installs the ZSH/HUD core with timestamped backups and recovery artifacts. No desktop styling.</p></div>
+            <div class="mode-cmd"><code>./setup.sh --core</code><button class="copy-btn" type="button" data-copy-text="./setup.sh --core">Copy</button></div>
+          </div>
+          <div class="mode-panel" role="tabpanel" id="mode-visual" aria-labelledby="tab-visual" data-mode="visual" hidden>
+            <div class="mode-copy"><h3>Optional visual layer</h3><p>Applies the optional XFCE/X11 desktop visual layer on supported sessions; skipped safely when unsupported or non-interactive.</p></div>
+            <div class="mode-cmd"><code>./setup.sh --visual</code><button class="copy-btn" type="button" data-copy-text="./setup.sh --visual">Copy</button></div>
+          </div>
+          <div class="mode-panel" role="tabpanel" id="mode-full" aria-labelledby="tab-full" data-mode="full" hidden>
+            <div class="mode-copy"><h3>Full installation</h3><p>Guided full pass: core terminal experience plus the optional visual layer where supported, with backups throughout.</p></div>
+            <div class="mode-cmd"><code>./setup.sh --full</code><button class="copy-btn" type="button" data-copy-text="./setup.sh --full">Copy</button></div>
+          </div>
+        </div>
+
         <div class="access-note reveal">
-          <div class="access-icon">◈</div>
+          <div class="access-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 8h.01M11 12h1v4h1" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
           <div>
             <h3>If the live site does not open</h3>
             <p>GitHub Pages is configured to deploy from Actions and the latest deployments are successful. If <code>https://hhh2006.github.io/HN-NEXUS/</code> is unavailable on your network/region (some providers may block or delay <code>github.io</code>), try waiting a few minutes, hard-refreshing, another browser/device, or a different network/DNS/VPN. You can always browse full docs in the <a href="https://github.com/hhh2006/HN-NEXUS" target="_blank" rel="noopener">repository</a>, download the <a href="https://github.com/hhh2006/HN-NEXUS/releases/tag/v1.0.0" target="_blank" rel="noopener">v1.0.0 release</a>, or clone/download and open <code>website/index.html</code> locally for a static preview of this page.</p>
@@ -416,9 +612,10 @@
       </div>
     </section>
 
+    <!-- ======================= FINAL CTA ======================= -->
     <section class="final-cta">
       <div class="container reveal">
-        <img src="assets/cit-seal-emblem.png" alt="CIT seal" class="final-seal">
+        <img src="assets/agency-seal.svg" alt="HN // CIT Agency Seal" class="final-seal">
         <div class="eyebrow">HN // CIT — COMMAND CENTER</div>
         <h2>Take command.<br><em>Stay in control.</em></h2>
         <p>HN NEXUS is built to make the terminal clearer, more expressive, and more recoverable — without surrendering user agency. Explore the source, read the docs, and deploy it on your terms.</p>
@@ -433,7 +630,7 @@
   </main>
 
   <footer class="site-footer">
-    <div class="footer-brand"><img src="assets/agency-seal.svg" alt="" class="footer-seal seal-footer-designed"> HN <b>NEXUS</b> <span>· HN // CIT</span></div>
+    <div class="footer-brand"><img src="assets/agency-seal.svg" alt="HN // CIT Agency Seal" class="footer-seal seal-footer-designed"> HN <b>NEXUS</b> <span>· HN // CIT</span></div>
     <div class="grad-text-soft">CYBER CITADEL AGENCY · ENGINEERED BY HN · Pack v1.0.0 / Baseline 4.4.2</div>
     <div>© <span id="year">2026</span> <strong>Hani Khaled Nasser Al-Nasiri</strong> · AGPL-3.0 (see LICENSE)</div>
   </footer>
