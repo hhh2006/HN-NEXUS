@@ -88,15 +88,15 @@
       <circle cx="34" cy="36" r="6" fill="#ff6b87" opacity=".9"/>
       <circle cx="56" cy="36" r="6" fill="#ffd166" opacity=".9"/>
       <circle cx="78" cy="36" r="6" fill="#5ff0b6" opacity=".9"/>
-      <text x="110" y="41" font-family="'DM Mono','Cascadia Mono',Consolas,monospace" font-size="14" fill="#8fbde0" letter-spacing="2">HN NEXUS · COMMAND HUD · v1.0.0 / 4.4.2</text>
+      <text x="100" y="41" font-family="'DM Mono','Cascadia Mono',Consolas,monospace" font-size="13" fill="#8fbde0" letter-spacing="1.2">HN NEXUS · COMMAND HUD · v1.0.0 / 4.4.2</text>
       <line x1="20" y1="72" x2="450" y2="72" stroke="url(#line)" stroke-opacity=".5"/>
 
       <g font-family="'DM Mono','Cascadia Mono',Consolas,monospace" font-size="16">
-        <text x="28" y="112" fill="#5ff0b6">● CONTEXT</text><text x="150" y="112" fill="#dff4ff">Kali · zsh · ~/HN-NEXUS · main</text>
-        <text x="28" y="148" fill="#4de7f7">◉ IDENTITY</text><text x="150" y="148" fill="#dff4ff">HN // CIT · CYBER CITADEL AGENCY</text>
-        <text x="28" y="184" fill="#c7a6ff">◆ PROFILE</text><text x="150" y="184" fill="#dff4ff">hnstyle set aurora  ·  15 visual modes</text>
-        <text x="28" y="220" fill="#ffd166">▣ RECOVERY</text><text x="150" y="220" fill="#dff4ff">backup-aware · rollback-ready</text>
-        <text x="28" y="256" fill="#8ff4ff">➜ COMMAND</text><text x="150" y="256" fill="#dff4ff">hnstatus · hndoctor · hnsuggest</text>
+        <text x="28" y="112" fill="#5ff0b6">● CONTEXT</text><text x="134" y="112" fill="#dff4ff">Kali · zsh · ~/HN-NEXUS · main</text>
+        <text x="28" y="148" fill="#4de7f7">◉ IDENTITY</text><text x="134" y="148" fill="#dff4ff">HN // CIT · CYBER CITADEL AGENCY</text>
+        <text x="28" y="184" fill="#c7a6ff">◆ PROFILE</text><text x="134" y="184" font-size="14" fill="#dff4ff">hnstyle set aurora  ·  15 visual modes</text>
+        <text x="28" y="220" fill="#ffd166">▣ RECOVERY</text><text x="134" y="220" fill="#dff4ff">backup-aware · rollback-ready</text>
+        <text x="28" y="256" fill="#8ff4ff">➜ COMMAND</text><text x="134" y="256" fill="#dff4ff">hnstatus · hndoctor · hnsuggest</text>
       </g>
       <rect x="28" y="284" width="414" height="1.5" fill="url(#line)" opacity=".45"/>
       <g font-family="'DM Mono','Cascadia Mono',Consolas,monospace" font-size="15" fill="#9fc9e8">
@@ -137,7 +137,7 @@
       <defs>
         <path id="sealArc" d="M 34,120 A 86,86 0 0 1 206,120"/>
       </defs>
-      <text font-family="'Segoe UI',Arial,sans-serif" font-size="11.5" font-weight="700" fill="#dff7ff" letter-spacing="2.4">
+      <text font-family="'Segoe UI',Arial,sans-serif" font-size="11.5" font-weight="700" fill="#dff7ff" letter-spacing="2">
         <textPath href="#sealArc" startOffset="50%" text-anchor="middle">HN // CIT · CYBER CITADEL AGENCY</textPath>
       </text>
     </g>
@@ -147,10 +147,11 @@
       <text x="0" y="138" font-family="'DM Mono','Cascadia Mono',Consolas,monospace" font-size="18" fill="#7ff6ff" letter-spacing="5">HN // CIT  ·  CYBER CITADEL AGENCY</text>
       <rect x="0" y="154" width="420" height="1.5" fill="url(#line)" opacity=".7"/>
       <text x="0" y="235" font-family="'Space Grotesk','Segoe UI',Arial,sans-serif" font-size="92" font-weight="700" fill="url(#titleGrad)" letter-spacing="1">HN NEXUS</text>
-      <text x="0" y="282" font-family="'Space Grotesk','Segoe UI',Arial,sans-serif" font-size="30" font-weight="500" fill="#d8ecff">A Cinematic, Context-Aware ZSH Command Environment</text>
-      <text x="0" y="322" font-family="'Space Grotesk','Segoe UI',Arial,sans-serif" font-size="22" fill="#95b4d0">For Kali Linux — engineered for control, designed for precision, recovery-aware by design.</text>
+      <text x="0" y="282" font-family="'Space Grotesk','Segoe UI',Arial,sans-serif" font-size="25" font-weight="500" fill="#d8ecff">A Cinematic, Context-Aware ZSH Command Environment</text>
+      <text x="0" y="318" font-family="'Space Grotesk','Segoe UI',Arial,sans-serif" font-size="20" fill="#95b4d0">For Kali Linux — engineered for control,</text>
+      <text x="0" y="348" font-family="'Space Grotesk','Segoe UI',Arial,sans-serif" font-size="20" fill="#95b4d0">designed for precision, recovery-aware by design.</text>
 
-      <g transform="translate(0,360)">
+      <g transform="translate(0,376)">
         <rect x="0" y="0" width="620" height="132" rx="18" fill="#0b1829" fill-opacity=".72" stroke="#2b4666" stroke-width="1.2"/>
         <rect x="0" y="0" width="620" height="132" rx="18" fill="url(#titleGrad)" fill-opacity=".05"/>
         <text x="26" y="38" font-family="'DM Mono','Cascadia Mono',Consolas,monospace" font-size="14" fill="#8fbde0" letter-spacing="3">ENGINEERED &amp; CREATED BY</text>

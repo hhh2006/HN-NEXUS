@@ -14,6 +14,13 @@
     <a href="LICENSE"><img alt="License AGPL v3" src="https://img.shields.io/badge/License-AGPL--3.0-ffd166?style=flat-square&labelColor=0b1220"></a>
   </p>
 
+  <p>
+    <a href="https://github.com/hhh2006/HN-NEXUS"><img alt="Stars" src="https://img.shields.io/github/stars/hhh2006/HN-NEXUS?style=flat-square&label=Stars&color=ff5dd8&labelColor=0b1220"></a>
+    <a href="https://github.com/hhh2006/HN-NEXUS/forks"><img alt="Forks" src="https://img.shields.io/github/forks/hhh2006/HN-NEXUS?style=flat-square&label=Forks&color=4f8dff&labelColor=0b1220"></a>
+    <a href="https://github.com/hhh2006/HN-NEXUS/issues"><img alt="Issues" src="https://img.shields.io/github/issues/hhh2006/HN-NEXUS?style=flat-square&label=Issues&color=17f1d1&labelColor=0b1220"></a>
+    <a href="https://github.com/hhh2006/HN-NEXUS/commits/main"><img alt="Last commit" src="https://img.shields.io/github/last-commit/hhh2006/HN-NEXUS?style=flat-square&label=Last%20commit&color=a78bfa&labelColor=0b1220"></a>
+  </p>
+
   <h3>
     <img src="assets/branding/agency-seal.svg" width="30" alt="" valign="middle"/>
     &nbsp; HN // CIT &nbsp;·&nbsp; CYBER CITADEL AGENCY &nbsp;·&nbsp; ENGINEERED BY HN &nbsp;
@@ -24,6 +31,7 @@
   <p><i>Engineered for control. Designed for precision. Local-first by intent.</i></p>
 
   <p>
+    <a href="https://github.com/hhh2006/HN-BlackBox-CyberSecurity"><b>HN BlackBox</b></a> ·
     <a href="https://hhh2006.github.io/HN-NEXUS/"><b>Website</b></a> ·
     <a href="https://github.com/hhh2006/HN-NEXUS/releases/tag/v1.0.0"><b>Release v1.0.0</b></a> ·
     <a href="docs/COMMAND-REFERENCE.md"><b>Command Reference</b></a> ·
@@ -51,6 +59,7 @@
 - [Installation](#installation)
 - [Quick Start & Usage Examples](#quick-start--usage-examples)
 - [Complete Command Reference](#complete-command-reference)
+- [Architecture at a glance](#architecture-at-a-glance)
 - [Repository Structure](#repository-structure)
 - [Documentation](#documentation)
 - [Validation & Quality](#validation--quality)
@@ -329,6 +338,25 @@ All listed commands are provided by HN NEXUS configuration/runtime as implemente
 
 > For exhaustive, implementation-aligned details, see [docs/COMMAND-REFERENCE.md](docs/COMMAND-REFERENCE.md).
 
+<p align="center"><img src="assets/branding/readme-divider.svg" width="100%" alt="" /></p>
+
+## Architecture at a glance
+
+The runtime is layered so that the shell core, the HUD, the operator utilities, and the recovery flow stay separable and inspectable. Full detail lives in [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md).
+
+<div align="center">
+  <img src="assets/branding/architecture-mockup.svg" width="100%" alt="HN NEXUS layered architecture: 01 interactive shell core (ZSH hooks, completion, prompt rendering), 02 HUD and context engine (three-row geometry, palettes, Git/runtime indicators), 03 Prism and operator utilities, 04 recovery and verification (backups, rollback, diagnostics, tests)" />
+  <br/>
+  <sub><i>Illustrative layer diagram (SVG), not a runtime screenshot.</i></sub>
+</div>
+
+| Layer | Responsibility |
+|---|---|
+| **01 · Interactive Shell Core** | ZSH hooks, completion, correction, prompt rendering — event-driven |
+| **02 · HUD &amp; Context Engine** | Three-row responsive geometry, palettes, context markers, Git/runtime indicators |
+| **03 · Prism &amp; Operator Utilities** | On-demand local tools: files/logs/data, process/network views, output analyzers |
+| **04 · Recovery &amp; Verification** | Backups, rollback scripts, diagnostics, tests — no full system snapshot |
+
 ## Repository Structure
 
 ```text
@@ -397,8 +425,6 @@ Contributions, issue reports, and improvement ideas are welcome.
 
 <div align="center">
   <img src="assets/branding/agency-seal.svg" width="200" alt="HN // CIT Agency Seal — designed cinematic seal for HN NEXUS" />
-  <br/>
-  <sub><i>Designed HN // CIT agency seal (SVG) created for this project's identity presentation.</i></sub>
 </div>
 
 | | |
@@ -409,6 +435,9 @@ Contributions, issue reports, and improvement ideas are welcome.
 | **Creator** | **Hani Khaled Nasser Al-Nasiri** |
 | **Role** | Cybersecurity Student — **Al-Razi University** |
 | **GitHub** | [@hhh2006](https://github.com/hhh2006) · [hhh2006/HN-NEXUS](https://github.com/hhh2006/HN-NEXUS) |
+| **Instagram** | [@haninazarene](https://www.instagram.com/haninazarene/) |
+| **Threads** | [@haninazarene](https://www.threads.net/@haninazarene) |
+| **Facebook** | [Hani Khaled](https://www.facebook.com/profile.php?id=100093188341353) |
 | **Contact** | [alnasryhany185@gmail.com](mailto:alnasryhany185@gmail.com) |
 
 ## Release & License
@@ -426,6 +455,13 @@ Contributions, issue reports, and improvement ideas are welcome.
   <b>HN // CIT · CYBER CITADEL AGENCY</b><br/>
   <sub><b>ENGINEERED BY HN</b> — Hani Khaled Nasser Al-Nasiri</sub><br/>
   <sub>Cybersecurity Student — Al-Razi University · <a href="https://github.com/hhh2006">@hhh2006</a> · <a href="mailto:alnasryhany185@gmail.com">alnasryhany185@gmail.com</a></sub>
+  <p>
+    <a href="https://github.com/hhh2006"><img alt="GitHub @hhh2006" src="https://img.shields.io/badge/GitHub-@hhh2006-0b1220?style=flat-square&logo=github&logoColor=white&labelColor=22d3ee"></a>
+    <a href="https://www.instagram.com/haninazarene/"><img alt="Instagram @haninazarene" src="https://img.shields.io/badge/Instagram-@haninazarene-E4405F?style=flat-square&logo=instagram&logoColor=white"></a>
+    <a href="https://www.threads.net/@haninazarene"><img alt="Threads @haninazarene" src="https://img.shields.io/badge/Threads-@haninazarene-000000?style=flat-square&logo=threads&logoColor=white"></a>
+    <a href="https://www.facebook.com/profile.php?id=100093188341353"><img alt="Facebook" src="https://img.shields.io/badge/Facebook-Hani-1877F2?style=flat-square&logo=facebook&logoColor=white"></a>
+  </p>
+  <p><sub>Sibling project: <a href="https://github.com/hhh2006/HN-BlackBox-CyberSecurity"><b>HN BlackBox CyberSecurity</b></a></sub></p>
   <br/><br/>
   <i>Control. Precision. Recovery. Clarity.</i>
 </div>
