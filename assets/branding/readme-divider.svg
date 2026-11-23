@@ -14,9 +14,18 @@
   <path d="M40 18 H430" stroke="url(#g)" stroke-width="1.5" filter="url(#glow)"/>
   <path d="M770 18 H1160" stroke="url(#g)" stroke-width="1.5" filter="url(#glow)"/>
   <g transform="translate(600,18)" filter="url(#glow)">
-    <path d="M0 -7 L7 0 L0 7 L-7 0 Z" fill="#0b1829" stroke="#7ff6ff" stroke-width="1.2"/>
-    <circle cx="0" cy="0" r="2" fill="#7ff6ff"/>
-    <circle cx="-24" cy="0" r="1.8" fill="#2cb8ff" opacity=".8"/>
-    <circle cx="24" cy="0" r="1.8" fill="#ff5dd8" opacity=".8"/>
+    <path d="M0 -7 L7 0 L0 7 L-7 0 Z" fill="#0b1829" stroke="#7ff6ff" stroke-width="1.2">
+      <animate attributeName="stroke-opacity" values="0.55;1;0.55" dur="2.8s" repeatCount="indefinite"/>
+    </path>
+    <circle cx="0" cy="0" r="2" fill="#7ff6ff">
+      <animate attributeName="r" values="1.6;2.8;1.6" dur="2.2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.7;1;0.7" dur="2.2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="-24" cy="0" r="1.8" fill="#2cb8ff" opacity=".8">
+      <animate attributeName="opacity" values="0.35;0.95;0.35" dur="2.6s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="24" cy="0" r="1.8" fill="#ff5dd8" opacity=".8">
+      <animate attributeName="opacity" values="0.95;0.35;0.95" dur="2.6s" repeatCount="indefinite"/>
+    </circle>
   </g>
 </svg>
